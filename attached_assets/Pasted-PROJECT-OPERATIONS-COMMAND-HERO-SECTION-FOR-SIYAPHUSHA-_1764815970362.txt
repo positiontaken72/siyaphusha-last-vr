@@ -1,0 +1,50 @@
+PROJECT: "OPERATIONS COMMAND" HERO SECTION FOR SIYAPHUSHA CONSORTIUM
+
+## OBJECTIVE
+Build the definitive, 8.9/10 hero section. This is the first 100 viewport seconds of a corporate film. Its purpose is to establish irreversible credibility and visceral scale. It must feel like the HUD of a modern mining operation: data-rich, calm, and overwhelmingly capable. Every millisecond and pixel must convey that this company moves mountains.
+
+## VISION
+A hyper-professional, cinematic digital asset that immediately positions Siyaphusha as the intelligent, indispensable partner in the South African mining sector. It must surpass benchmarks in **clarity, performance, and authoritative presence.**
+
+---
+
+## I. NON-NEGOTIABLE DESIGN MANDATE
+
+### 1. VISUAL HIERARCHY & GEOMETRY
+- **Zero Border Radius:** All elements have sharp, 90-degree corners. `border-radius: 0;` is a law.
+- **Monochrome Palette:** Exclusively:
+  - Black: `#0a0a0a`
+  - True White: `#ffffff`
+  - Grayscale Spectrum: `#111111` to `#f5f5f5`
+  - *No color accents.*
+- **Typography:** `Montserrat` exclusively.
+  - Weights: `900` (primary logo/title), `600` (headers), `400` (body).
+  - Letter-spacing: `-0.05em` for headlines (compact, technical feel).
+
+### 2. THE VIDEO ASSET ("THE PROOF LAYER")
+- **Content:** A 12-18 second, seamless loop of a **daylight, aerial drone shot** over an active Mpumalanga coal mine. The shot must be steady, high-altitude, and show geometric precision (haul truck patterns, bench terraces). It conveys scale, not chaos.
+- **Technical Spec:** Use pre-compressed multi-format assets under **2.5MB**.
+  - `hero-bg.webm` (VP9 codec, primary)
+  - `hero-bg.mp4` (H.264 codec, fallback)
+- **Styling:**
+  - Video: `position: absolute;` with `object-fit: cover;`.
+  - Overlay: A white gradient overlay (`to bottom, transparent, rgba(255,255,255,0.1)`) to lift shadows and match the "light" aesthetic.
+
+### 3. THE INTERFACE ("THE COMMAND LAYER")
+- **Navigation:**
+  - A fixed, sharp-edged bar at the viewport top.
+  - Left: Logotype **"SIYAPHUSHA CONSORTIUM (PTY) LTD"** in Montserrat Black.
+  - Right: Minimalist nav links (HOME, ABOUT, PROJECTS, CONTACT, PROFILE) with a subtle underline hover effect.
+- **Copy Block:** Centered vertically, aligned left for modern, asymmetric balance.
+  - **H1:** `Siyaphusha Consortium` (Montserrat Black, `font-size: clamp(3rem, 8vw, 5rem)`)
+  - **H2:** `Powering Progress, Responsibly.` (Montserrat 600, smaller, letter-spaced)
+  - **Body:** `Your trusted partner in mining, earthworks, and logistics — transforming resources into community wealth and industrial growth.` (Montserrat 400, `max-width: 38ch`, line-height: 1.6).
+- **CTAs:** Two buttons on the same baseline as the body text.
+  - Primary: `Our Services` (`background: #0a0a0a; color: white;`)
+  - Secondary: `View Projects` (`background: transparent; border: 1px solid #0a0a0a; color: #0a0a0a;`)
+  - Hover: Swift `transform: translateY(-2px);` with **no** color change.
+
+---
+
+
+</header>
