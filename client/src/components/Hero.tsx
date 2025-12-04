@@ -1,11 +1,10 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, ArrowDown } from "lucide-react";
 import heroVideo from "@assets/generated_videos/drone_ascending_over_coal_mine_site.mp4";
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen w-full overflow-hidden bg-white text-black flex flex-col justify-center hero-section pb-24">
-      {/* Background with Overlay */}
+    <section className="relative min-h-screen w-full overflow-hidden bg-[#0a0a0a] flex items-center" data-testid="hero-section">
+      {/* Video Background - The Proof Layer */}
       <div className="absolute inset-0 z-0">
         <video 
           src={heroVideo}
@@ -13,39 +12,109 @@ export function Hero() {
           muted
           loop
           playsInline
-          className="w-full h-full object-cover brightness-40 scale-110 animate-in fade-in duration-1000"
+          className="w-full h-full object-cover"
+          style={{ filter: 'brightness(0.6) contrast(1.1)' }}
+          data-testid="hero-video"
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/60 to-black/70" />
-        <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-white/5" />
+        {/* White gradient overlay to lift shadows */}
+        <div 
+          className="absolute inset-0" 
+          style={{ 
+            background: 'linear-gradient(to bottom, transparent 0%, rgba(255,255,255,0.08) 100%)' 
+          }} 
+        />
+        {/* Subtle dark vignette for depth */}
+        <div 
+          className="absolute inset-0" 
+          style={{ 
+            background: 'radial-gradient(ellipse at center, transparent 40%, rgba(10,10,10,0.4) 100%)' 
+          }} 
+        />
       </div>
 
-      <div className="container relative z-10 mx-auto px-4 pt-24 sm:pt-28">
-        <div className="max-w-2xl">
-          {/* Simple Main Heading */}
-          <h1 className="font-heading font-bold text-3xl sm:text-4xl md:text-5xl leading-tight mb-6">
-            <span className="text-white" style={{textShadow: '0 2px 8px rgba(0,0,0,0.5)'}}>Siyaphusha Consortium</span>
+      {/* Content - The Command Layer */}
+      <div className="container relative z-10 mx-auto px-6 sm:px-8 lg:px-12">
+        <div className="max-w-3xl">
+          {/* H1 - Main Title */}
+          <h1 
+            className="font-heading text-white mb-4"
+            style={{ 
+              fontWeight: 900,
+              fontSize: 'clamp(2.5rem, 8vw, 5rem)',
+              letterSpacing: '-0.05em',
+              lineHeight: 1.05
+            }}
+            data-testid="hero-title"
+          >
+            Siyaphusha Consortium
           </h1>
           
-          {/* Simple Description */}
-          <p className="text-base sm:text-lg text-white/80 mb-12 font-normal leading-relaxed" style={{textShadow: '0 1px 4px rgba(0,0,0,0.4)'}}>
-            Mining and logistics solutions you can trust.
+          {/* H2 - Tagline */}
+          <h2 
+            className="text-white/90 mb-8"
+            style={{ 
+              fontWeight: 600,
+              fontSize: 'clamp(1rem, 2.5vw, 1.5rem)',
+              letterSpacing: '0.05em',
+              textTransform: 'uppercase'
+            }}
+            data-testid="hero-tagline"
+          >
+            Powering Progress, Responsibly.
+          </h2>
+          
+          {/* Body Text */}
+          <p 
+            className="text-white/70 mb-12"
+            style={{ 
+              fontWeight: 400,
+              fontSize: 'clamp(0.95rem, 1.5vw, 1.125rem)',
+              lineHeight: 1.7,
+              maxWidth: '42ch'
+            }}
+            data-testid="hero-description"
+          >
+            Your trusted partner in mining, earthworks, and logistics — transforming resources into community wealth and industrial growth.
           </p>
 
-          {/* Two Simple Buttons */}
-          <div className="flex flex-col sm:flex-row gap-3">
-            <a href="#services" className="inline-block">
-              <Button className="bg-white text-black hover:bg-white/90 font-semibold h-11 px-8 rounded-lg text-sm transition-colors duration-300">
+          {/* CTAs - Sharp, Minimal */}
+          <div className="flex flex-col sm:flex-row gap-4" data-testid="hero-cta-container">
+            <a href="#services">
+              <Button 
+                className="bg-white text-[#0a0a0a] hover:bg-white font-semibold px-8 py-6 text-sm uppercase tracking-widest transition-transform duration-200 hover:-translate-y-0.5"
+                style={{ 
+                  fontWeight: 600,
+                  borderRadius: 0
+                }}
+                data-testid="button-services"
+              >
                 Our Services
               </Button>
             </a>
-            <a href="/assets/company-profile.pdf" download="SIYAPHUSHA-Company-Profile.pdf">
-              <Button className="border border-white text-white hover:bg-white/10 font-semibold h-11 px-8 rounded-lg text-sm transition-colors duration-300 bg-transparent">
-                Learn More
+            <a href="/projects">
+              <Button 
+                className="bg-transparent text-[#0a0a0a] hover:bg-transparent border border-[#0a0a0a] font-semibold px-8 py-6 text-sm uppercase tracking-widest transition-transform duration-200 hover:-translate-y-0.5"
+                style={{ 
+                  fontWeight: 600,
+                  borderRadius: 0,
+                  backgroundColor: 'transparent'
+                }}
+                data-testid="button-projects"
+              >
+                View Projects
               </Button>
             </a>
           </div>
         </div>
       </div>
+
+      {/* Subtle scan line effect for technical feel */}
+      <div 
+        className="absolute inset-0 z-20 pointer-events-none opacity-[0.02]"
+        style={{
+          backgroundImage: 'repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255,255,255,0.03) 2px, rgba(255,255,255,0.03) 4px)'
+        }}
+      />
     </section>
   );
 }
