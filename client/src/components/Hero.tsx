@@ -31,10 +31,8 @@ export function Hero() {
         <div className="max-w-4xl">
           {/* Main Headline - The Star */}
           <h1 
-            className="text-white leading-[1.1]"
+            className="font-heading font-bold text-white leading-[1.1]"
             style={{ 
-              fontFamily: 'Montserrat, sans-serif',
-              fontWeight: 400,
               fontSize: 'clamp(2.5rem, 7vw, 5rem)',
               letterSpacing: '-0.02em',
               textShadow: '0 2px 20px rgba(0,0,0,0.3)'

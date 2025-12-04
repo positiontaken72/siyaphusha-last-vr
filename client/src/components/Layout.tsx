@@ -36,30 +36,13 @@ export function Layout({ children }: { children: React.ReactNode }) {
         data-testid="main-header"
       >
         <div className="container mx-auto px-6 sm:px-8 flex justify-between items-center">
-          {/* Logotype - Montserrat Black */}
-          <Link href="/" className="flex flex-col cursor-pointer" data-testid="logo-link">
-            <span 
-              className="text-white leading-none"
-              style={{ 
-                fontFamily: 'Montserrat, sans-serif',
-                fontWeight: 900,
-                fontSize: 'clamp(1rem, 2.5vw, 1.5rem)',
-                letterSpacing: '-0.02em'
-              }}
-            >
+          {/* Logotype */}
+          <Link href="/" className="flex flex-col cursor-pointer group" data-testid="logo-link">
+            <span className="font-heading font-black text-xl sm:text-2xl md:text-3xl text-white tracking-tighter leading-none">
               SIYAPHUSHA
             </span>
-            <span 
-              className="text-[#888888]"
-              style={{ 
-                fontFamily: 'Montserrat, sans-serif',
-                fontWeight: 600,
-                fontSize: '0.6rem',
-                letterSpacing: '0.1em',
-                textTransform: 'uppercase'
-              }}
-            >
-              CONSORTIUM (PTY) LTD
+            <span className="font-heading font-bold text-gray-400 text-xs tracking-tight uppercase">
+              Consortium (PTY) Ltd
             </span>
           </Link>
 
@@ -74,15 +57,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
               >
                 <span 
                   className={cn(
-                    "transition-colors duration-300",
-                    location === link.href ? "text-white" : "text-[#888888] group-hover:text-white"
+                    "font-heading font-bold text-xs uppercase tracking-wide transition-colors duration-300",
+                    location === link.href ? "text-white" : "text-white/70 group-hover:text-white"
                   )}
-                  style={{ 
-                    fontFamily: 'Montserrat, sans-serif',
-                    fontWeight: 600,
-                    fontSize: '0.75rem',
-                    letterSpacing: '0.08em'
-                  }}
                 >
                   {link.label}
                 </span>
@@ -97,14 +74,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
             ))}
             <a href="/assets/company-profile.pdf" download="SIYAPHUSHA-Company-Profile.pdf">
               <Button 
-                className="bg-white text-[#0a0a0a] hover:bg-white px-5 py-2 transition-transform duration-200 hover:-translate-y-0.5"
-                style={{ 
-                  fontFamily: 'Montserrat, sans-serif',
-                  fontWeight: 600,
-                  fontSize: '0.7rem',
-                  letterSpacing: '0.1em',
-                  borderRadius: 0
-                }}
+                className="font-heading font-bold bg-white text-black hover:bg-white px-5 uppercase tracking-widest text-xs transition-transform duration-200 hover:-translate-y-0.5"
                 data-testid="button-download-profile"
               >
                 <Download className="mr-2 h-3.5 w-3.5" />
@@ -124,11 +94,10 @@ export function Layout({ children }: { children: React.ReactNode }) {
           </button>
         </div>
 
-        {/* Mobile Menu - Sharp edges */}
+        {/* Mobile Menu */}
         {mobileMenuOpen && (
           <div 
-            className="md:hidden absolute top-full left-0 w-full bg-[#111111] border-t border-[#222222] p-6 flex flex-col gap-4"
-            style={{ borderRadius: 0 }}
+            className="md:hidden absolute top-full left-0 w-full bg-white border-t border-gray-200 p-4 flex flex-col gap-4 shadow-2xl"
             data-testid="mobile-menu"
           >
             {navLinks.map((link) => (
@@ -136,35 +105,22 @@ export function Layout({ children }: { children: React.ReactNode }) {
                 key={link.href} 
                 href={link.href}
                 className={cn(
-                  "block py-3 border-b border-[#222222] cursor-pointer",
-                  location === link.href ? "text-white" : "text-[#888888]"
+                  "font-heading font-bold text-base block py-2 border-b border-gray-100 cursor-pointer tracking-tight",
+                  location === link.href ? "text-black" : "text-gray-600"
                 )}
-                style={{ 
-                  fontFamily: 'Montserrat, sans-serif',
-                  fontWeight: 600,
-                  fontSize: '0.875rem',
-                  letterSpacing: '0.08em'
-                }}
                 onClick={() => setMobileMenuOpen(false)}
                 data-testid={`mobile-nav-link-${link.label.toLowerCase()}`}
               >
                 {link.label}
               </Link>
             ))}
-            <a href="/assets/company-profile.pdf" download="SIYAPHUSHA-Company-Profile.pdf" className="w-full mt-2">
+            <a href="/assets/company-profile.pdf" download="SIYAPHUSHA-Company-Profile.pdf" className="w-full">
               <Button 
-                className="w-full bg-white text-[#0a0a0a] hover:bg-white py-4"
-                style={{ 
-                  fontFamily: 'Montserrat, sans-serif',
-                  fontWeight: 600,
-                  fontSize: '0.75rem',
-                  letterSpacing: '0.1em',
-                  borderRadius: 0
-                }}
+                className="font-heading font-bold w-full bg-black text-white hover:bg-gray-800 uppercase mt-2 text-sm"
                 data-testid="mobile-button-download-profile"
               >
                 <Download className="mr-2 h-4 w-4" />
-                DOWNLOAD PROFILE
+                Download Profile
               </Button>
             </a>
           </div>
