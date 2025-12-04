@@ -55,7 +55,7 @@ export function Hero() {
             style={{ 
               fontWeight: 600,
               fontSize: 'clamp(1rem, 2.5vw, 1.5rem)',
-              letterSpacing: '0.05em',
+              letterSpacing: '-0.05em',
               textTransform: 'uppercase'
             }}
             data-testid="hero-tagline"
@@ -93,7 +93,7 @@ export function Hero() {
             </a>
             <a href="/projects">
               <Button 
-                className="bg-transparent text-[#0a0a0a] hover:bg-transparent border border-[#0a0a0a] font-semibold px-8 py-6 text-sm uppercase tracking-widest transition-transform duration-200 hover:-translate-y-0.5"
+                className="bg-transparent text-white hover:bg-transparent border border-white/80 font-semibold px-8 py-6 text-sm uppercase tracking-widest transition-transform duration-200 hover:-translate-y-0.5"
                 style={{ 
                   fontWeight: 600,
                   borderRadius: 0,
