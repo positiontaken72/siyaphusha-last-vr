@@ -4,10 +4,11 @@ import { MapPin, Phone, Mail, Clock } from "lucide-react";
 export function Contact() {
   return (
     <div className="animate-in fade-in duration-500">
-      <div className="bg-primary py-20 text-white text-center">
-        <div className="container mx-auto px-4">
-          <h1 className="font-heading font-black text-5xl mb-4">CONTACT US</h1>
-          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+      {/* Hero header with proper spacing for fixed navbar */}
+      <div className="bg-black pt-28 sm:pt-32 md:pt-36 pb-16 sm:pb-20 text-white text-center">
+        <div className="container mx-auto px-4 sm:px-6">
+          <h1 className="font-heading font-black text-3xl sm:text-4xl md:text-5xl mb-4">CONTACT US</h1>
+          <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-2xl mx-auto px-2">
             Get in touch to discuss your project requirements or request our company profile.
           </p>
         </div>

@@ -80,10 +80,11 @@ export function Projects() {
 
   return (
     <div className="animate-in fade-in duration-500">
-      <div className="bg-black py-20 text-white text-center">
-        <div className="container mx-auto px-4">
-          <h1 className="font-heading font-black text-4xl sm:text-5xl mb-4">OUR PROJECTS</h1>
-          <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto">
+      {/* Hero header with proper spacing for fixed navbar */}
+      <div className="bg-black pt-28 sm:pt-32 md:pt-36 pb-16 sm:pb-20 text-white text-center">
+        <div className="container mx-auto px-4 sm:px-6">
+          <h1 className="font-heading font-black text-3xl sm:text-4xl md:text-5xl mb-4">OUR PROJECTS</h1>
+          <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-2xl mx-auto px-2">
             Delivering value through operational excellence across South Africa's major mining houses.
           </p>
         </div>
