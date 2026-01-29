@@ -26,11 +26,11 @@ export function Layout({ children }: { children: React.ReactNode }) {
 
   return (
     <div className="min-h-screen flex flex-col font-sans bg-background text-foreground" style={{ colorScheme: 'dark' }}>
-      {/* Main Navigation - Sharp edges, fixed bar */}
+      {/* Main Navigation - Sharp edges, fixed bar, white background */}
       <header 
         className={cn(
-          "fixed top-0 z-50 w-full transition-all duration-300",
-          isScrolled ? "bg-[#0a0a0a]/98 backdrop-blur-sm py-4" : "bg-[#0a0a0a] py-5"
+          "fixed top-0 z-50 w-full transition-all duration-300 border-b",
+          isScrolled ? "bg-white/98 backdrop-blur-sm py-4 border-gray-200 shadow-sm" : "bg-white py-5 border-gray-100"
         )}
         style={{ borderRadius: 0 }}
         data-testid="main-header"
@@ -38,10 +38,10 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <div className="container mx-auto px-6 sm:px-8 flex justify-between items-center">
           {/* Logotype */}
           <Link href="/" className="flex flex-col cursor-pointer group" data-testid="logo-link">
-            <span className="font-heading font-black text-xl sm:text-2xl md:text-3xl text-white tracking-tighter leading-none">
+            <span className="font-heading font-black text-xl sm:text-2xl md:text-3xl text-black tracking-tighter leading-none">
               SIYAPHUSHA
             </span>
-            <span className="font-heading font-bold text-gray-400 text-xs tracking-tight uppercase">
+            <span className="font-heading font-bold text-gray-500 text-xs tracking-tight uppercase">
               Consortium (PTY) Ltd
             </span>
           </Link>
@@ -58,7 +58,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
                 <span 
                   className={cn(
                     "font-heading font-bold text-xs uppercase tracking-wide transition-colors duration-300",
-                    location === link.href ? "text-white" : "text-white/70 group-hover:text-white"
+                    location === link.href ? "text-black" : "text-gray-500 group-hover:text-black"
                   )}
                 >
                   {link.label}
@@ -66,7 +66,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
                 {/* Underline on hover */}
                 <span 
                   className={cn(
-                    "absolute bottom-0 left-0 h-[1px] bg-white transition-all duration-300",
+                    "absolute bottom-0 left-0 h-[1px] bg-black transition-all duration-300",
                     location === link.href ? "w-full" : "w-0 group-hover:w-full"
                   )}
                 />
@@ -74,7 +74,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
             ))}
             <a href="/assets/company-profile.pdf" download="SIYAPHUSHA-Company-Profile.pdf">
               <Button 
-                className="font-heading font-bold bg-white text-black hover:bg-white px-5 uppercase tracking-widest text-xs transition-transform duration-200 hover:-translate-y-0.5"
+                className="font-heading font-bold bg-black text-white hover:bg-black/90 px-5 uppercase tracking-widest text-xs transition-transform duration-200 hover:-translate-y-0.5"
                 data-testid="button-download-profile"
               >
                 <Download className="mr-2 h-3.5 w-3.5" />
@@ -85,7 +85,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
 
           {/* Mobile Toggle */}
           <button 
-            className="md:hidden p-2 bg-white text-[#0a0a0a] transition-transform duration-200 hover:-translate-y-0.5"
+            className="md:hidden p-2 bg-black text-white transition-transform duration-200 hover:-translate-y-0.5"
             style={{ borderRadius: 0 }}
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             data-testid="button-mobile-menu"
