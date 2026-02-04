@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Download } from "lucide-react";
 
 // Logos
-import transnetLogo from "@assets/kisspng-transnet-national-ports-authority-rail-transport-p-transnet-national-ports-authority-5b2fe7fb6a5106.2869857915298662354355_1763669634122.webp";
+import transnetLogo from "@assets/transnet-1-360x195-removebg-preview_1770227873561.png";
 import eskomLogo from "@assets/eskom-logo2_1763669662961.jpeg";
 import glencoreLogo from "@assets/Glencore-Logo.wine_1763669624672.png";
 import thungelaLogo from "@assets/1361743_1763669642408.png";
