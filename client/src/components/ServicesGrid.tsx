@@ -1,33 +1,23 @@
 import { ChevronRight } from "lucide-react";
 
-import rehabImg from "@assets/generated_images/green_reclaimed_mining_land_with_grass_and_trees..png";
-import soilImg from "@assets/generated_images/heavy_machinery_stripping_topsoil..png";
-import civilsImg from "@assets/generated_images/civil_engineering_construction_at_a_mine..png";
-import handlingImg from "@assets/generated_images/coal_conveyor_belts_and_material_handling..png";
-import crushingImg from "@assets/Rietvlei-Crushing-and-Screening_002_1764299692632.jpeg";
-import stockpileImg from "@assets/generated_images/wheel_loaders_loading_coal_onto_trucks..png";
-import logisticsImg from "@assets/generated_images/fleet_of_coal_haulage_trucks_on_the_road..png";
+import logisticsImg from "@assets/Logistics_1770225486111.jpeg";
+import materialHandlingImg from "@assets/material_handling_1764810320659-BkCG84J1_1770225486112.jpeg";
+import stockpileImg from "@assets/stock_pile_loading_1764810457750-Dd2_qpB6_1770225486115.webp";
+import crushingImg from "@assets/Crushing-and-Screening_002_1764299692632-BM8M1Hi1_1770225486108.jpeg";
+import soilImg from "@assets/soilstripping-1_1764810317359-CD2hhyIY_1770225486113.jpeg";
+import civilsImg from "@assets/Civil_Works_1770225486106.jpeg";
+import landRehabImg from "@assets/Land_Rehabilitation_1770225486109.jpeg";
 
 const services = [
   {
-    title: "Mine Rehabilitation",
-    description: "Restoring land for sustainable future use. We restore degraded mining areas back to productive landscapes, ensuring environmental compliance and community benefit.",
-    image: rehabImg,
+    title: "Logistics",
+    description: "Reliable coal haulage across the Mpumalanga corridor. Our professional fleet delivers efficient and safe transportation solutions.",
+    image: logisticsImg,
   },
   {
-    title: "Soil Stripping",
-    description: "Efficient overburden removal to access resources. Our expert teams handle large-scale topsoil removal with precision and environmental responsibility.",
-    image: soilImg,
-  },
-  {
-    title: "Civils Works",
-    description: "Building dams, roads, and essential mine infrastructure. We deliver critical civil engineering projects that support mining operations and community development.",
-    image: civilsImg,
-  },
-  {
-    title: "Material Handling",
-    description: "Safe and precise movement of bulk materials. State-of-the-art handling systems ensure optimal productivity and operational efficiency.",
-    image: handlingImg,
+    title: "Stock Pile",
+    description: "Managing inventory for seamless supply. Our stockpile management ensures consistent quality and availability for our mining partners.",
+    image: stockpileImg,
   },
   {
     title: "Screening & Crushing",
@@ -35,14 +25,24 @@ const services = [
     image: crushingImg,
   },
   {
-    title: "Strategic Stockpile Loading",
-    description: "Managing inventory for seamless supply. Our stockpile management ensures consistent quality and availability for our mining partners.",
-    image: stockpileImg,
+    title: "Mine Rehabilitation",
+    description: "Restoring mined land to its natural state. Our rehabilitation efforts focus on soil restoration, re-vegetation, and sustainable land management for future generations.",
+    image: landRehabImg,
   },
   {
-    title: "Logistics",
-    description: "Reliable coal haulage across the Mpumalanga corridor. Our professional fleet delivers efficient and safe transportation solutions.",
-    image: logisticsImg,
+    title: "Material Handling",
+    description: "Safe and precise movement of bulk materials. State-of-the-art handling systems ensure optimal productivity and operational efficiency.",
+    image: materialHandlingImg,
+  },
+  {
+    title: "Soil Stripping",
+    description: "Efficient overburden removal to access resources. Our expert teams handle large-scale topsoil removal with precision and environmental responsibility.",
+    image: soilImg,
+  },
+  {
+    title: "Civil Works",
+    description: "Building dams, roads, and essential mine infrastructure. We deliver critical civil engineering projects that support mining operations and community development.",
+    image: civilsImg,
   },
 ];
 

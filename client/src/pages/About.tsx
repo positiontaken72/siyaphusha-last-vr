@@ -1,20 +1,19 @@
-import { Target, Award, ChevronRight } from "lucide-react";
-
-import thembaNkosiImg from "@assets/WhatsApp_Image_2025-12-03_at_03.06.54_1468d7c2_1764724263634.jpg";
-import sollyHowardImg from "@assets/WhatsApp_Image_2025-12-03_at_03.06.55_712bfc15_1764724265338.jpg";
+import { Target, Award, ChevronRight, Mail, Linkedin } from "lucide-react";
 
 const leaders = [
   {
     name: "Themba Nkosi",
     title: "Founder & Executive Director",
-    image: thembaNkosiImg,
-    description: "A visionary leader with deep expertise in the South African mining sector, Themba founded Siyaphusha Consortium with a mission to deliver world-class mining services."
+    email: "themba@siyaphusha.co.za",
+    linkedin: "https://linkedin.com/in/themba-nkosi",
+    description: "A visionary leader with deep expertise in the South African mining sector, Themba founded Siyaphusha Consortium with a mission to deliver world-class mining services through innovation and sustainable growth."
   },
   {
     name: "Solly Howard",
     title: "Operations Director",
-    image: sollyHowardImg,
-    description: "With over 10 years of experience and a background as a safety officer, Solly ensures operational excellence and maintains our impeccable safety record."
+    email: "solly@siyaphusha.co.za",
+    linkedin: "https://linkedin.com/in/solly-howard",
+    description: "Driven by a passion for operational excellence and site safety, Solly leads our field teams with a motivational approach that empowers every employee to reach their full potential while maintaining our high standards."
   }
 ];
 
@@ -126,32 +125,32 @@ export function About() {
             {leaders.map((leader, index) => (
               <div
                 key={index}
-                className="group bg-gray-50 border border-gray-100 overflow-hidden transition-all duration-500 hover:shadow-lg"
+                className="group bg-gray-50 border border-gray-100 p-6 sm:p-10 transition-all duration-500 hover:shadow-lg"
               >
-                <div className="aspect-[4/5] overflow-hidden">
-                  <img
-                    src={leader.image}
-                    alt={leader.name}
-                    className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
-                  />
-                </div>
-                <div className="p-6 sm:p-8">
-                  <h3 className="font-heading font-bold text-lg sm:text-xl text-black mb-1">
-                    {leader.name}
-                  </h3>
-                  <p className="text-gray-500 font-bold uppercase text-xs tracking-wider mb-4">
-                    {leader.title}
-                  </p>
-                  <p className="text-gray-600 text-sm sm:text-base leading-relaxed mb-4">
+                <div className="flex flex-col h-full">
+                  <div className="mb-6">
+                    <h3 className="font-heading font-black text-xl sm:text-2xl text-black mb-1">
+                      {leader.name}
+                    </h3>
+                    <p className="text-gray-500 font-bold uppercase text-xs tracking-wider">
+                      {leader.title}
+                    </p>
+                  </div>
+                  
+                  <p className="text-gray-600 text-sm sm:text-base leading-relaxed mb-8 flex-grow">
                     {leader.description}
                   </p>
-                  <a
-                    href="#"
-                    className="inline-flex items-center text-sm font-semibold text-black hover:underline"
-                  >
-                    Read More
-                    <ChevronRight className="h-4 w-4 ml-1" />
-                  </a>
+
+                  <div className="space-y-4 pt-6 border-t border-gray-200">
+                    <a href={`mailto:${leader.email}`} className="flex items-center gap-3 text-sm text-gray-600 hover:text-black transition-colors">
+                      <Mail className="h-4 w-4" />
+                      {leader.email}
+                    </a>
+                    <a href={leader.linkedin} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-sm text-gray-600 hover:text-black transition-colors">
+                      <Linkedin className="h-4 w-4" />
+                      View LinkedIn Profile
+                    </a>
+                  </div>
                 </div>
               </div>
             ))}

@@ -27,7 +27,7 @@ const projects = [
     type: "Haulage",
     location: "Isibonelo",
     scope: "Hauling Coal to Landau MRD",
-    volume: "150,000 Tons",
+    volume: "800,000 Tons",
     status: "Ongoing",
     description: "Efficient haulage operations connecting Isibonelo Mine to Landau Material Recovery Depot."
   },
