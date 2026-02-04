@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Download } from "lucide-react";
 
 // Logos
-import transnetLogo from "@assets/kisspng-transnet-national-ports-authority-rail-transport-p-transnet-national-ports-authority-5b2fe7fb6a5106.2869857915298662354355_1763669634122.webp";
+import transnetLogo from "@assets/Transnet_Logo_1770228308433.png";
 import eskomLogo from "@assets/eskom-logo2_1763669662961.jpeg";
 import glencoreLogo from "@assets/Glencore-Logo.wine_1763669624672.png";
 import thungelaLogo from "@assets/1361743_1763669642408.png";
@@ -21,16 +21,26 @@ export function Home() {
       <StatsBar />
       
       {/* Trust Bar - Marquee Style */}
-      <section className="py-12 sm:py-20 border-y border-gray-100 bg-gray-50 overflow-hidden w-full">
+      <section className="py-12 sm:py-20 border-y border-gray-100 bg-white overflow-hidden w-full">
         <div className="flex whitespace-nowrap animate-marquee items-center">
           {/* Duplicated for seamless loop */}
           {[...Array(10)].map((_, i) => (
             <div key={i} className="flex items-center gap-12 sm:gap-20 md:gap-40 mx-4 sm:mx-10 md:mx-20 flex-shrink-0">
-               <img src={thungelaLogo} alt="Thungela Resources" className="h-12 sm:h-16 md:h-20 w-auto object-contain" />
-               <img src={glencoreLogo} alt="Glencore" className="h-12 sm:h-16 md:h-20 w-auto object-contain" />
-               <img src={transnetLogo} alt="Transnet" className="h-12 sm:h-16 md:h-20 w-auto object-contain" />
-               <img src={eskomLogo} alt="Eskom" className="h-12 sm:h-16 md:h-20 w-auto object-contain" />
-               <img src={angloLogo} alt="Anglo American" className="h-12 sm:h-16 md:h-20 w-auto object-contain" />
+               <div className="h-12 sm:h-16 md:h-20 flex items-center justify-center">
+                 <img src={thungelaLogo} alt="Thungela Resources" className="h-full w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" />
+               </div>
+               <div className="h-12 sm:h-16 md:h-20 flex items-center justify-center">
+                 <img src={glencoreLogo} alt="Glencore" className="h-full w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" />
+               </div>
+               <div className="h-12 sm:h-16 md:h-20 flex items-center justify-center p-2">
+                 <img src={transnetLogo} alt="Transnet" className="h-full w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" />
+               </div>
+               <div className="h-12 sm:h-16 md:h-20 flex items-center justify-center">
+                 <img src={eskomLogo} alt="Eskom" className="h-full w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" />
+               </div>
+               <div className="h-12 sm:h-16 md:h-20 flex items-center justify-center">
+                 <img src={angloLogo} alt="Anglo American" className="h-full w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" />
+               </div>
             </div>
           ))}
         </div>

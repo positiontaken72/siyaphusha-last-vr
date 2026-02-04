@@ -145,12 +145,12 @@ export function Layout({ children }: { children: React.ReactNode }) {
               A leading provider of expert mining, earthworks, and logistics solutions. Delivering scale, safety, and efficiency since 2020.
             </p>
             <div className="flex gap-4">
-              <div className="h-10 w-10 rounded bg-white/10 flex items-center justify-center hover:bg-white hover:text-black transition-colors cursor-pointer">
-                <Linkedin className="h-5 w-5" />
-              </div>
-              <div className="h-10 w-10 rounded bg-white/10 flex items-center justify-center hover:bg-white hover:text-black transition-colors cursor-pointer">
-                <Facebook className="h-5 w-5" />
-              </div>
+              <a href="https://linkedin.com/company/siyaphusha" target="_blank" rel="noopener noreferrer" className="h-10 w-10 rounded bg-white/5 flex items-center justify-center hover:bg-white hover:text-black transition-all cursor-pointer">
+                <Linkedin className="h-4 w-4" />
+              </a>
+              <a href="https://facebook.com/siyaphusha" target="_blank" rel="noopener noreferrer" className="h-10 w-10 rounded bg-white/5 flex items-center justify-center hover:bg-white hover:text-black transition-all cursor-pointer">
+                <Facebook className="h-4 w-4" />
+              </a>
             </div>
           </div>
 
