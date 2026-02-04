@@ -7,6 +7,7 @@ import { Home } from "@/pages/Home";
 import { About } from "@/pages/About";
 import { Projects } from "@/pages/Projects";
 import { Contact } from "@/pages/Contact";
+import { CompanyProfile } from "@/pages/CompanyProfile";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -17,6 +18,7 @@ function Router() {
         <Route path="/about" component={About} />
         <Route path="/projects" component={Projects} />
         <Route path="/contact" component={Contact} />
+        <Route path="/profile" component={CompanyProfile} />
         <Route component={NotFound} />
       </Switch>
     </Layout>

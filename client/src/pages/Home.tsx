@@ -58,14 +58,16 @@ export function Home() {
           <p className="text-base sm:text-lg md:text-xl text-gray-400 mb-8 sm:mb-10 max-w-2xl mx-auto px-2">
             Download our full company profile to learn more about our capabilities, fleet, and safety record.
           </p>
-          <a href="/assets/company-profile.pdf" download="SIYAPHUSHA-Company-Profile.pdf">
-            <Button size="lg" className="font-heading font-black bg-white text-black hover:bg-white/90 uppercase h-12 sm:h-14 md:h-16 px-6 sm:px-10 text-sm sm:text-base md:text-lg rounded-sm tracking-[0.15em] transition-all duration-500 overflow-hidden relative group">
-              <span className="relative z-10 group-hover:text-black flex items-center transition-colors">
-                <Download className="mr-3 h-4 sm:h-5 md:h-6 w-4 sm:w-5 md:w-6" />
-                Download Company Profile
-              </span>
-            </Button>
-          </a>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/profile">
+              <Button size="lg" className="w-full sm:w-auto font-heading font-black bg-white text-black hover:bg-white/90 uppercase h-12 sm:h-14 md:h-16 px-6 sm:px-10 text-sm sm:text-base md:text-lg rounded-sm tracking-[0.15em] transition-all duration-500 overflow-hidden relative group">
+                <span className="relative z-10 group-hover:text-black flex items-center transition-colors">
+                  <Download className="mr-3 h-4 sm:h-5 md:h-6 w-4 sm:w-5 md:w-6" />
+                  View Company Profile
+                </span>
+              </Button>
+            </a>
+          </div>
         </div>
       </section>
     </div>
