@@ -38,9 +38,6 @@ export function About() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white/5 to-transparent opacity-50" />
         <div className="container mx-auto px-4 sm:px-6 relative z-10">
           <h1 className="font-heading font-black text-4xl sm:text-5xl md:text-6xl mb-6 tracking-tighter uppercase">Our Identity</h1>
-          <p className="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto font-medium leading-relaxed italic">
-            "Forging industrial excellence through integrity, scale, and sustainable impact."
-          </p>
         </div>
       </div>
 
@@ -56,7 +53,7 @@ export function About() {
           </div>
 
           <div className="max-w-4xl mx-auto">
-            <div className="bg-gray-50 border border-gray-100 p-6 sm:p-12">
+            <div className="bg-gray-50 p-6 sm:p-12">
               <p className="text-gray-700 text-base sm:text-lg leading-relaxed mb-6 font-medium">
                 Siyaphusha Consortium (PTY) Ltd was established in 2020 with a singular vision: to provide world-class mining and logistics services that empower the South African economy.
               </p>
@@ -88,7 +85,7 @@ export function About() {
               return (
                 <div
                   key={index}
-                  className="group bg-white border border-gray-100 overflow-hidden transition-all duration-500 hover:shadow-xl p-8 sm:p-12"
+                  className="group bg-white overflow-hidden transition-all duration-500 hover:shadow-xl p-8 sm:p-12"
                 >
                   <div className="mb-8">
                     <div className="h-16 w-16 bg-black flex items-center justify-center">
@@ -128,7 +125,7 @@ export function About() {
             {leaders.map((leader, index) => (
               <div
                 key={index}
-                className="group bg-gray-50 border border-gray-200 p-8 sm:p-12 transition-all duration-500 hover:bg-white hover:shadow-2xl hover:-translate-y-2"
+                className="group bg-gray-50 p-8 sm:p-12 transition-all duration-500 hover:bg-white hover:shadow-2xl hover:-translate-y-2"
               >
                 <div className="flex flex-col h-full">
                   <div className="mb-8">
@@ -140,8 +137,8 @@ export function About() {
                     </p>
                   </div>
                   
-                  <p className="text-gray-600 text-base sm:text-lg leading-relaxed mb-10 flex-grow font-medium italic">
-                    "{leader.description}"
+                  <p className="text-gray-600 text-base sm:text-lg leading-relaxed mb-10 flex-grow font-medium">
+                    {leader.description}
                   </p>
 
                   <div className="space-y-4 pt-8 border-t border-gray-200">

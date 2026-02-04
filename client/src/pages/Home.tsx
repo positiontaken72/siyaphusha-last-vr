@@ -27,19 +27,19 @@ export function Home() {
           {[...Array(10)].map((_, i) => (
             <div key={i} className="flex items-center gap-12 sm:gap-20 md:gap-40 mx-4 sm:mx-10 md:mx-20 flex-shrink-0">
                <div className="h-12 sm:h-16 md:h-20 flex items-center justify-center">
-                 <img src={thungelaLogo} alt="Thungela Resources" className="h-full w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" />
+                 <img src={thungelaLogo} alt="Thungela Resources" className="h-full w-auto object-contain hover:grayscale-0 transition-all duration-300" />
                </div>
                <div className="h-12 sm:h-16 md:h-20 flex items-center justify-center">
-                 <img src={glencoreLogo} alt="Glencore" className="h-full w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" />
+                 <img src={glencoreLogo} alt="Glencore" className="h-full w-auto object-contain hover:grayscale-0 transition-all duration-300" />
                </div>
                <div className="h-12 sm:h-16 md:h-20 flex items-center justify-center p-2">
-                 <img src={transnetLogo} alt="Transnet" className="h-full w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" />
+                 <img src={transnetLogo} alt="Transnet" className="h-full w-auto object-contain hover:grayscale-0 transition-all duration-300" />
                </div>
                <div className="h-12 sm:h-16 md:h-20 flex items-center justify-center">
-                 <img src={eskomLogo} alt="Eskom" className="h-full w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" />
+                 <img src={eskomLogo} alt="Eskom" className="h-full w-auto object-contain hover:grayscale-0 transition-all duration-300" />
                </div>
                <div className="h-12 sm:h-16 md:h-20 flex items-center justify-center">
-                 <img src={angloLogo} alt="Anglo American" className="h-full w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" />
+                 <img src={angloLogo} alt="Anglo American" className="h-full w-auto object-contain hover:grayscale-0 transition-all duration-300" />
                </div>
             </div>
           ))}

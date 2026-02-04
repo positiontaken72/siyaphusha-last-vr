@@ -125,7 +125,7 @@ export function CommunityImpact() {
           {initiatives.map((initiative) => (
             <div
               key={initiative.id}
-              className="group bg-gray-50 border border-gray-100 overflow-hidden transition-all duration-500 hover:shadow-lg"
+              className="group bg-gray-50 overflow-hidden transition-all duration-500 hover:shadow-lg"
             >
               <ImageSlider images={initiative.images} alt={initiative.title} />
               <div className="p-6 sm:p-8">

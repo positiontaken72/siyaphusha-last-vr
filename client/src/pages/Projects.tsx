@@ -113,7 +113,7 @@ export function Projects() {
             {filteredProjects.map((project, index) => (
               <div 
                 key={index} 
-                className="group bg-gray-50 border border-gray-100 overflow-hidden transition-all duration-500 hover:shadow-lg"
+                className="group bg-gray-50 overflow-hidden transition-all duration-500 hover:shadow-lg"
               >
                 <div className="p-6 sm:p-8">
                   <div className="flex justify-between items-start mb-4">
@@ -139,7 +139,7 @@ export function Projects() {
                     {project.description}
                   </p>
                   
-                  <div className="grid grid-cols-2 gap-4 border-t border-gray-200 pt-4">
+                  <div className="grid grid-cols-2 gap-4 pt-4">
                     <div>
                       <span className="text-xs text-gray-400 uppercase block mb-1">Scope</span>
                       <p className="text-sm font-medium text-gray-700">{project.scope}</p>

@@ -64,7 +64,7 @@ export function Contact() {
               </div>
 
               {/* Embedded Map - Static Placeholder for Visual */}
-              <div className="h-64 bg-gray-200 rounded-lg overflow-hidden border-4 border-white shadow-lg">
+              <div className="h-64 bg-gray-200 rounded-lg overflow-hidden shadow-lg">
                 <iframe 
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d114584.75080886634!2d29.0!3d-26.0!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjbCsDAwJzAwLjAiUyAyOcKwMDAnMDAuMCJF!5e0!3m2!1sen!2sza!4v1625000000000!5m2!1sen!2sza" 
                   width="100%" 
@@ -72,7 +72,7 @@ export function Contact() {
                   style={{ border: 0 }} 
                   allowFullScreen 
                   loading="lazy"
-                  className="grayscale hover:grayscale-0 transition-all duration-500"
+                  className="transition-all duration-500"
                 ></iframe>
               </div>
             </div>
