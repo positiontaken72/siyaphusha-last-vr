@@ -51,7 +51,7 @@ const routes = [
     start: { lat: -26.3167, lng: 29.2500, label: "Isibonelo Coal Mine" },
     end: { lat: -25.8833, lng: 29.2333, label: "Landau MRD" },
     description: "Hauling Coal from Isibonelo to Landau MRD for Thungela Resources",
-    volume: "150,000 Tons"
+    volume: "800,000 Tons"
   },
   {
     id: 3,
