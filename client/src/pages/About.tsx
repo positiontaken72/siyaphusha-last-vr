@@ -5,14 +5,14 @@ const leaders = [
     name: "Themba Nkosi",
     title: "Founder & Executive Director",
     email: "themba@siyaphusha.co.za",
-    linkedin: "https://linkedin.com/in/themba-nkosi",
+    linkedin: "https://linkedin.com/company/siyaphusha",
     description: "A visionary leader with deep expertise in the South African mining sector, Themba founded Siyaphusha Consortium with a mission to deliver world-class mining services through innovation and sustainable growth."
   },
   {
     name: "Solly Howard",
     title: "Operations Director",
     email: "solly@siyaphusha.co.za",
-    linkedin: "https://linkedin.com/in/solly-howard",
+    linkedin: "https://linkedin.com/company/siyaphusha",
     description: "Driven by a passion for operational excellence and site safety, Solly leads our field teams with a motivational approach that empowers every employee to reach their full potential while maintaining our high standards."
   }
 ];
@@ -34,11 +34,12 @@ export function About() {
   return (
     <div className="animate-in fade-in duration-500">
       {/* Hero header with proper spacing for fixed navbar */}
-      <div className="bg-black pt-28 sm:pt-32 md:pt-36 pb-16 sm:pb-20 text-white text-center">
-        <div className="container mx-auto px-4 sm:px-6">
-          <h1 className="font-heading font-black text-3xl sm:text-4xl md:text-5xl mb-4 tracking-tighter">ABOUT US</h1>
-          <p className="text-base sm:text-lg md:text-xl text-gray-400 max-w-2xl mx-auto px-2 font-medium leading-relaxed">
-            Building the future of South African mining through excellence, integrity, and sustainable practices.
+      <div className="bg-black pt-28 sm:pt-32 md:pt-36 pb-16 sm:pb-20 text-white text-center relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white/5 to-transparent opacity-50" />
+        <div className="container mx-auto px-4 sm:px-6 relative z-10">
+          <h1 className="font-heading font-black text-4xl sm:text-5xl md:text-6xl mb-6 tracking-tighter uppercase">Our Identity</h1>
+          <p className="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto font-medium leading-relaxed italic">
+            "Forging industrial excellence through integrity, scale, and sustainable impact."
           </p>
         </div>
       </div>
@@ -163,9 +164,6 @@ export function About() {
           </div>
         </div>
       </section>
-    </div>
-  );
-}
     </div>
   );
 }
