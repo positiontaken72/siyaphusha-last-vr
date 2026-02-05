@@ -37,8 +37,13 @@ export function Layout({ children }: { children: React.ReactNode }) {
       >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
           {/* Logotype */}
-          <Link href="/" className="flex items-center gap-3 cursor-pointer group" data-testid="logo-link">
-            <img src="/src/assets/logo.svg" alt="Siyaphusha Logo" className="h-12 w-auto brightness-0 invert" />
+          <Link href="/" className="flex flex-col cursor-pointer group" data-testid="logo-link">
+            <span className="font-heading font-black text-lg sm:text-xl md:text-2xl text-white tracking-tighter leading-none drop-shadow-md">
+              SIYAPHUSHA
+            </span>
+            <span className="font-heading font-bold text-white/70 text-[10px] sm:text-xs tracking-tight uppercase">
+              Consortium (PTY) Ltd
+            </span>
           </Link>
 
           {/* Desktop Nav - Underline hover effect */}
@@ -131,7 +136,10 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <div className="container mx-auto px-4 grid sm:grid-cols-2 md:grid-cols-4 gap-8 sm:gap-12 mb-12">
           <div>
             <div className="mb-6">
-              <img src="/src/assets/logo.svg" alt="Siyaphusha Logo" className="h-12 w-auto brightness-0 invert" />
+              <span className="font-heading font-black text-lg sm:text-xl md:text-2xl text-white tracking-tight block">
+                SIYAPHUSHA
+              </span>
+              <span className="text-gray-400 font-bold text-xs tracking-[0.2em] uppercase">Consortium (PTY) Ltd</span>
             </div>
             <p className="text-gray-400 text-xs sm:text-sm leading-relaxed mb-6">
               A leading provider of expert mining, earthworks, and logistics solutions. Delivering scale, safety, and efficiency since 2020.
