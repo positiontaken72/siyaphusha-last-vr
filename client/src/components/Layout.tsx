@@ -4,6 +4,8 @@ import { Menu, X, Download, Phone, Mail, MapPin, Facebook, Linkedin, Twitter } f
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 
+import logoImg from "@assets/Copy_of_SIYAPHUSHA_LOGO_WHITE_(1)_1770261121543.png";
+
 export function Layout({ children }: { children: React.ReactNode }) {
   const [location] = useLocation();
   const [isScrolled, setIsScrolled] = useState(false);
@@ -38,7 +40,12 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
           {/* Logotype */}
           <Link href="/" className="flex items-center gap-3 cursor-pointer group" data-testid="logo-link">
-            <img src="/attached_assets/Copy_of_SIYAPHUSHA_LOGO_WHITE_(1)_1770260074500.png" alt="Siyaphusha Logo" className="h-10 sm:h-12 w-auto brightness-0 invert" />
+            <img 
+              src={logoImg} 
+              alt="Siyaphusha Consortium (PTY) Ltd Logo" 
+              className="h-10 sm:h-12 w-auto object-contain transition-all duration-300 brightness-0 invert" 
+              style={{ filter: 'brightness(0) invert(1)' }}
+            />
           </Link>
 
           {/* Desktop Nav - Underline hover effect */}
@@ -131,7 +138,12 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <div className="container mx-auto px-4 grid sm:grid-cols-2 md:grid-cols-4 gap-8 sm:gap-12 mb-12">
           <div>
             <div className="mb-6">
-              <img src="/attached_assets/Copy_of_SIYAPHUSHA_LOGO_WHITE_(1)_1770260074500.png" alt="Siyaphusha Logo" className="h-10 sm:h-12 w-auto brightness-0 invert" />
+              <img 
+                src={logoImg} 
+                alt="Siyaphusha Consortium (PTY) Ltd Logo" 
+                className="h-10 sm:h-12 w-auto object-contain brightness-0 invert" 
+                style={{ filter: 'brightness(0) invert(1)' }}
+              />
             </div>
             <p className="text-gray-400 text-xs sm:text-sm leading-relaxed mb-6">
               A leading provider of expert mining, earthworks, and logistics solutions. Delivering scale, safety, and efficiency since 2020.
