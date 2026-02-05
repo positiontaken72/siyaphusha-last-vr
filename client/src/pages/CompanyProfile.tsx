@@ -1,6 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Download, Mail, Phone, MapPin, Globe, CheckCircle2 } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 export function CompanyProfile() {
   const primaryColor = "hsl(0 0% 0%)";
@@ -165,29 +166,37 @@ export function CompanyProfile() {
         </div>
 
         <div className="border-t-2 border-black pt-12">
-          <h3 className="text-xl font-black uppercase mb-8 tracking-wider text-center">Our Partnership</h3>
-          <p className="text-center text-gray-600 max-w-2xl mx-auto mb-12 italic">
-            Together, we lead Siyaphusha. Themba looks ahead to where we are going. Solomon manages the work that gets us there. This balance is how we deliver for our clients. It is how we maintain our standards.
-          </p>
+          <h3 className="text-xl font-black uppercase mb-12 tracking-wider text-center">Organizational Structure</h3>
           <div className="flex flex-col items-center space-y-4">
-            <div className="bg-blue-900 text-white px-6 py-3 font-bold uppercase tracking-widest text-[10px] border-2 border-black">Siyaphusha Management</div>
-            <div className="w-px h-4 bg-gray-400"></div>
-            <div className="flex gap-8">
-              <div className="bg-blue-600 text-white p-4 w-48 text-center border-2 border-black">
-                <div className="font-black uppercase text-sm">Themba Nkosi</div>
-                <div className="text-[8px] font-bold opacity-80 uppercase tracking-widest">Executive Partner</div>
+            <div className="bg-black text-white px-8 py-4 font-black uppercase tracking-[0.2em] text-xs border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,0.1)]">
+              Siyaphusha Management Board
+            </div>
+            <div className="w-px h-8 bg-black"></div>
+            <div className="flex gap-12">
+              <div className="bg-white text-black p-6 w-56 text-center border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                <div className="font-black uppercase text-base mb-1">Themba Nkosi</div>
+                <div className="text-[10px] font-bold text-gray-500 uppercase tracking-widest">Executive Partner</div>
               </div>
-              <div className="bg-blue-600 text-white p-4 w-48 text-center border-2 border-black">
-                <div className="font-black uppercase text-sm">Solomon Howard</div>
-                <div className="text-[8px] font-bold opacity-80 uppercase tracking-widest">Operations Partner</div>
+              <div className="bg-white text-black p-6 w-56 text-center border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                <div className="font-black uppercase text-base mb-1">Solomon Howard</div>
+                <div className="text-[10px] font-bold text-gray-500 uppercase tracking-widest">Operations Partner</div>
               </div>
             </div>
-            <div className="w-px h-4 bg-gray-400"></div>
+            <div className="w-px h-8 bg-black"></div>
             <div className="grid grid-cols-4 gap-4 w-full px-4">
-              <div className="bg-emerald-600 text-white p-2 text-center text-[8px] font-black uppercase border-2 border-black">Business Development</div>
-              <div className="bg-emerald-600 text-white p-2 text-center text-[8px] font-black uppercase border-2 border-black">Finance & Admin</div>
-              <div className="bg-red-500 text-white p-2 text-center text-[8px] font-black uppercase border-2 border-black">Compliance</div>
-              <div className="bg-emerald-600 text-white p-2 text-center text-[8px] font-black uppercase border-2 border-black">Operations Management</div>
+              {[
+                { label: "Business Development", color: "bg-gray-100" },
+                { label: "Finance & Admin", color: "bg-gray-100" },
+                { label: "Compliance & SHEQ", color: "bg-black text-white" },
+                { label: "Operations & Fleet", color: "bg-gray-100" }
+              ].map((dept, i) => (
+                <div key={i} className={cn(
+                  "p-4 text-center text-[10px] font-black uppercase border-2 border-black",
+                  dept.color
+                )}>
+                  {dept.label}
+                </div>
+              ))}
             </div>
           </div>
         </div>
@@ -209,8 +218,8 @@ export function CompanyProfile() {
             { title: "Civil Works", desc: "We build strong, durable infrastructure including haul roads, dams, and site facilities. We build things right the first time to avoid problems later." },
             { title: "Soil Stripping", desc: "We remove overburden to access resources efficiently. We handle topsoil with care so it can be reused later, protecting the environment." }
           ].map((service, i) => (
-            <div key={i} className="group relative">
-              <div className="absolute -left-6 top-0 text-4xl font-black text-gray-100 group-hover:text-black transition-colors">0{i + 1}</div>
+            <div key={i} className="group relative pl-12">
+              <div className="absolute left-0 top-0 text-4xl font-black text-gray-100 group-hover:text-black transition-colors">0{i + 1}</div>
               <h3 className="text-xl font-black uppercase mb-3 tracking-tight">{service.title}</h3>
               <p className="text-sm text-gray-600 leading-relaxed border-l-2 border-gray-100 pl-4">
                 {service.desc}
@@ -230,10 +239,11 @@ export function CompanyProfile() {
         <div className="space-y-12">
           <section>
             <h3 className="text-xl font-black uppercase mb-6 tracking-wider">Key Routes and Volumes</h3>
-            <div className="grid md:grid-cols-3 gap-6">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {[
                 { route: "Phola to Greenside", tons: "500,000 Tons", client: "Thungela Resources" },
                 { route: "Isibonelo to Landau", tons: "150,000 Tons", client: "Thungela Resources" },
+                { route: "Stockpile Management", tons: "3,400,000 Tons", client: "Thungela Resources" },
                 { route: "Umsimbithi to Eskom", tons: "750,000 Tons", client: "Glencore" }
               ].map((item, i) => (
                 <div key={i} className="p-6 bg-gray-50 border-t-4 border-black">
@@ -244,10 +254,21 @@ export function CompanyProfile() {
               ))}
             </div>
           </section>
+
+          <section>
+            <h3 className="text-xl font-black uppercase mb-6 tracking-wider">Strategic Logistical Footprint</h3>
+            <div className="w-full border-2 border-black p-4 bg-gray-50">
+              <img 
+                src="/attached_assets/Copy_of_Operational_Footprint_1770260467399.png" 
+                alt="Operational Footprint Map" 
+                className="w-full h-auto grayscale hover:grayscale-0 transition-all duration-500"
+              />
+            </div>
+          </section>
           
-          <div className="p-12 border-2 border-black flex flex-col items-center justify-center text-center">
+          <div className="p-12 border-2 border-black flex flex-col items-center justify-center text-center bg-black text-white">
             <h3 className="text-2xl font-black uppercase mb-4 tracking-tighter">A Proven Track Record</h3>
-            <p className="text-gray-600 max-w-xl text-sm italic">
+            <p className="opacity-80 max-w-xl text-sm italic">
               "We measure our success by the trust our clients place in us. Our 30,000+ hour incident free record is our greatest achievement. Safety is not just a rule here. It is the foundation of our culture."
             </p>
           </div>
