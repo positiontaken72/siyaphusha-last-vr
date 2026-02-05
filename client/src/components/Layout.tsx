@@ -4,7 +4,7 @@ import { Menu, X, Download, Phone, Mail, MapPin, Facebook, Linkedin, Twitter } f
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 
-import logoImg from "@assets/SIYAPHUSHA_LOGO_B&W_(1)_1770261615618.png";
+import logoImg from "@assets/SIYAPHUSHA_LOGO_B_W__2_-removebg-preview_(1)_1770263085249.png";
 
 export function Layout({ children }: { children: React.ReactNode }) {
   const [location] = useLocation();
