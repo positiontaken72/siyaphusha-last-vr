@@ -13,8 +13,8 @@ export function CompanyProfile() {
         <div className="absolute inset-0 opacity-10 pointer-events-none industrial-pattern"></div>
         <div className="relative z-10 flex flex-col h-full">
           <div className="flex justify-between items-start mb-24">
-            <div className="bg-black text-white p-6 font-black text-3xl tracking-tighter">
-              SIYAPHUSHA
+            <div className="flex items-center gap-4">
+              <img src="/src/assets/logo.svg" alt="Siyaphusha Logo" className="h-16 w-auto" />
             </div>
             <div className="text-right uppercase tracking-[0.2em] font-bold text-sm">
               Established 2020
@@ -161,28 +161,25 @@ export function CompanyProfile() {
 
         <div className="border-t-2 border-black pt-12">
           <h3 className="text-xl font-black uppercase mb-8 tracking-wider text-center">Organizational Structure</h3>
-          <div className="flex flex-col items-center space-y-8">
-            <div className="bg-black text-white px-8 py-4 font-bold uppercase tracking-widest text-sm">Partners (Themba & Solomon)</div>
-            <div className="w-px h-8 bg-black"></div>
-            <div className="grid grid-cols-2 gap-16 w-full">
-              <div className="flex flex-col items-center">
-                <div className="border-2 border-black px-6 py-3 font-bold uppercase tracking-widest text-xs">Business Development</div>
+          <div className="flex flex-col items-center space-y-4">
+            <div className="bg-blue-900 text-white px-6 py-3 font-bold uppercase tracking-widest text-[10px] border-2 border-black">Siyaphusha Management</div>
+            <div className="w-px h-4 bg-gray-400"></div>
+            <div className="flex gap-8">
+              <div className="bg-blue-600 text-white p-4 w-48 text-center border-2 border-black">
+                <div className="font-black uppercase text-sm">Themba Nkosi</div>
+                <div className="text-[8px] font-bold opacity-80 uppercase tracking-widest">Executive Partner</div>
               </div>
-              <div className="flex flex-col items-center">
-                <div className="border-2 border-black px-6 py-3 font-bold uppercase tracking-widest text-xs">Operations & SHEQ</div>
+              <div className="bg-blue-600 text-white p-4 w-48 text-center border-2 border-black">
+                <div className="font-black uppercase text-sm">Solomon Howard</div>
+                <div className="text-[8px] font-bold opacity-80 uppercase tracking-widest">Operations Partner</div>
               </div>
             </div>
-            <div className="w-full h-px bg-black relative">
-              <div className="absolute left-1/4 -top-0 w-px h-8 bg-black"></div>
-              <div className="absolute right-1/4 -top-0 w-px h-8 bg-black"></div>
-            </div>
-            <div className="grid grid-cols-2 gap-16 w-full pt-8">
-              <div className="flex flex-col items-center">
-                <div className="bg-gray-100 px-4 py-2 text-[10px] font-bold uppercase tracking-tighter">Departmental Superintendents</div>
-              </div>
-              <div className="flex flex-col items-center">
-                <div className="bg-gray-100 px-4 py-2 text-[10px] font-bold uppercase tracking-tighter">Operational Teams</div>
-              </div>
+            <div className="w-px h-4 bg-gray-400"></div>
+            <div className="grid grid-cols-4 gap-4 w-full px-4">
+              <div className="bg-emerald-600 text-white p-2 text-center text-[8px] font-black uppercase border-2 border-black">Business Development</div>
+              <div className="bg-emerald-600 text-white p-2 text-center text-[8px] font-black uppercase border-2 border-black">Finance & Admin</div>
+              <div className="bg-red-500 text-white p-2 text-center text-[8px] font-black uppercase border-2 border-black">Compliance</div>
+              <div className="bg-emerald-600 text-white p-2 text-center text-[8px] font-black uppercase border-2 border-black">Operations Management</div>
             </div>
           </div>
         </div>
