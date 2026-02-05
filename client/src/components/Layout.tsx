@@ -43,8 +43,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
             <img 
               src={logoImg} 
               alt="Siyaphusha Consortium (PTY) Ltd Logo" 
-              className="h-10 sm:h-12 w-auto object-contain transition-all duration-300 brightness-0 invert" 
-              style={{ filter: 'brightness(0) invert(1)' }}
+              className="h-10 sm:h-12 w-auto object-contain transition-all duration-300" 
             />
           </Link>
 
@@ -141,8 +140,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
               <img 
                 src={logoImg} 
                 alt="Siyaphusha Consortium (PTY) Ltd Logo" 
-                className="h-10 sm:h-12 w-auto object-contain brightness-0 invert" 
-                style={{ filter: 'brightness(0) invert(1)' }}
+                className="h-10 sm:h-12 w-auto object-contain" 
               />
             </div>
             <p className="text-gray-400 text-xs sm:text-sm leading-relaxed mb-6">
