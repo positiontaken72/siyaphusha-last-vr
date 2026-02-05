@@ -134,7 +134,8 @@ export function Layout({ children }: { children: React.ReactNode }) {
 
       {/* Footer */}
       <footer className="bg-black text-white pt-16 sm:pt-24 pb-12 border-t-2 border-white/10 relative overflow-hidden industrial-pattern">
-        <div className="container mx-auto px-4 grid sm:grid-cols-2 md:grid-cols-4 gap-8 sm:gap-12 mb-12">
+        <div className="absolute inset-0 bg-gradient-to-t from-gray-900/50 to-transparent pointer-events-none"></div>
+        <div className="container mx-auto px-4 grid sm:grid-cols-2 md:grid-cols-4 gap-8 sm:gap-12 mb-12 relative z-10">
           <div>
             <div className="mb-6">
               <img 
@@ -198,7 +199,8 @@ export function Layout({ children }: { children: React.ReactNode }) {
           </div>
         </div>
 
-        <div className="container mx-auto px-4 pt-8 border-t border-white/10 text-center text-xs text-gray-500">
+        <div className="container mx-auto px-4 pt-8 border-t border-white/10 text-center text-xs text-gray-500 relative z-10">
+          <p className="mb-2">www.siyaphusha.co.za | info@siyaphusha.co.za</p>
           <p>&copy; {new Date().getFullYear()} Siyaphusha Consortium (PTY) Ltd. All Rights Reserved.</p>
         </div>
       </footer>

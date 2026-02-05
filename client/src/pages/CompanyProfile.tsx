@@ -76,27 +76,32 @@ export function CompanyProfile() {
         
         <div className="grid md:grid-cols-2 gap-12">
           <div className="space-y-6">
+            <h3 className="text-2xl font-black uppercase tracking-tight">Powering Progress Since 2020</h3>
             <p className="text-xl leading-relaxed font-medium">
-              Siyaphusha is a premier partner for integrated mining support, earthworks, and logistics services, founded on an impeccable safety record and deep operational expertise.
+              Four years ago we started with a simple goal. We wanted to be a different kind of partner in the Mpumalanga mining sector. One that combined real experience with genuine reliability.
             </p>
             <p className="text-gray-600 leading-relaxed">
-              Since 2020, we have powered progress for major industry clients by reliably executing large-scale projects, hauling 1,000,000+ tonnes, and maintaining a 100% commitment to safety, all from our strategic base in the heart of the Mpumalanga coal corridor.
+              Today, Siyaphusha delivers integrated mining support, earthworks, and logistics from our base in Phola. We have moved over 1,000,000 tonnes of material for leading industry clients. We have done this while building a perfect safety record across 30,000 operational hours. Our clients trust us because we understand the pressure they face. They know we will do what we say we will do.
             </p>
           </div>
           <div className="bg-gray-50 p-8 border-l-4 border-black">
-            <h3 className="font-black text-sm uppercase tracking-widest mb-6">Key Achievements</h3>
+            <h3 className="font-black text-sm uppercase tracking-widest mb-6">A Record of Reliable Delivery</h3>
             <div className="space-y-8">
               <div>
                 <div className="text-4xl font-black">1M+</div>
-                <div className="text-xs uppercase tracking-widest font-bold text-gray-500">Tonnes Hauled</div>
+                <div className="text-xs uppercase tracking-widest font-bold text-gray-500">Tonnes Transported with our haulage fleet</div>
               </div>
               <div>
-                <div className="text-4xl font-black">100%</div>
-                <div className="text-xs uppercase tracking-widest font-bold text-gray-500">Safety Record</div>
+                <div className="text-4xl font-black">30k+</div>
+                <div className="text-xs uppercase tracking-widest font-bold text-gray-500">Operational Hours with zero lost time incidents</div>
               </div>
               <div>
-                <div className="text-4xl font-black">04+</div>
-                <div className="text-xs uppercase tracking-widest font-bold text-gray-500">Years Excellence</div>
+                <div className="text-4xl font-black">25k+</div>
+                <div className="text-xs uppercase tracking-widest font-bold text-gray-500">Daily tons material handling</div>
+              </div>
+              <div>
+                <div className="text-4xl font-black">3.4M+</div>
+                <div className="text-xs uppercase tracking-widest font-bold text-gray-500">Tons managed and stockpiled</div>
               </div>
             </div>
           </div>
@@ -112,23 +117,23 @@ export function CompanyProfile() {
 
         <div className="space-y-12">
           <section>
-            <h3 className="text-xl font-black uppercase mb-4 tracking-wider">Our Story</h3>
+            <h3 className="text-xl font-black uppercase mb-4 tracking-wider">How We Began</h3>
             <p className="text-gray-600 leading-relaxed max-w-2xl">
-              Founded in 2020 in Phola, Siyaphusha was built by partners with decades of frontline industry experience. We combine large-scale project capability with the agility and direct partner involvement of a dedicated contractor.
+              Our story is not complicated. Two partners with deep industry experience saw a need for a contractor who did things properly. In 2020 we established Siyaphusha in Phola. We built the company on a foundation of hands on knowledge. We believe the best way to run a project is to understand the work from the ground up.
             </p>
           </section>
 
           <div className="grid md:grid-cols-2 gap-8">
             <div className="p-8 border border-black hover:bg-black hover:text-white transition-colors duration-500">
-              <h3 className="text-lg font-black uppercase mb-4 tracking-widest">Our Vision</h3>
+              <h3 className="text-lg font-black uppercase mb-4 tracking-widest">Where We Are Headed</h3>
               <p className="text-sm leading-relaxed opacity-80">
-                To be the trusted partner of choice for mining and civil entities, recognized for relentless reliability, operational excellence, and responsible stewardship.
+                Our vision is clear. We want to be the first company mining and civil clients think of when they need work done. They should think of us not because we are the largest but because we are the most dependable. We aim to build partnerships that last for years, not just for one project.
               </p>
             </div>
             <div className="p-8 bg-black text-white">
-              <h3 className="text-lg font-black uppercase mb-4 tracking-widest">Our Mission</h3>
+              <h3 className="text-lg font-black uppercase mb-4 tracking-widest">What We Do Every Day</h3>
               <p className="text-sm leading-relaxed opacity-80">
-                To deliver superior, safe, and integrated service solutions that drive our clients' productivity while positively impacting our people and environment.
+                Our mission is our daily practice. We come to work to deliver safe, effective service. We enhance our clients productivity. We care for our team and the environment where we work. We measure our success by the trust our clients place in us.
               </p>
             </div>
           </div>
@@ -147,20 +152,23 @@ export function CompanyProfile() {
             <h3 className="text-2xl font-black mb-2">Themba Nkosi</h3>
             <p className="text-xs font-bold text-gray-500 uppercase tracking-widest mb-6">Executive Partner</p>
             <p className="text-sm text-gray-600 leading-relaxed">
-              Provides strategic vision and oversees commercial growth, leveraging extensive experience in mining services and business development.
+              Themba focuses on our future. He builds the partnerships that drive our growth. With years of experience, he understands what clients really need from a service provider. His work connects our operations to long term opportunities. You will often find him discussing project goals with clients or reviewing site progress with our teams.
             </p>
           </Card>
           <Card className="p-8 rounded-none border-2 border-black bg-black text-white">
             <h3 className="text-2xl font-black mb-2">Solomon Howard</h3>
             <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-6">Operations Partner</p>
             <p className="text-sm opacity-80 leading-relaxed">
-              Directs all field operations and logistics, with a hands-on track record in earthworks, plant management, and large-scale haulage.
+              Solomon focuses on today’s work. He directs all field operations with a hands on approach. His experience means he knows how to get things done safely and on time. He believes that protecting our team is the first step to any successful project. His day is spent on site, with our equipment, and with our crews.
             </p>
           </Card>
         </div>
 
         <div className="border-t-2 border-black pt-12">
-          <h3 className="text-xl font-black uppercase mb-8 tracking-wider text-center">Organizational Structure</h3>
+          <h3 className="text-xl font-black uppercase mb-8 tracking-wider text-center">Our Partnership</h3>
+          <p className="text-center text-gray-600 max-w-2xl mx-auto mb-12 italic">
+            Together, we lead Siyaphusha. Themba looks ahead to where we are going. Solomon manages the work that gets us there. This balance is how we deliver for our clients. It is how we maintain our standards.
+          </p>
           <div className="flex flex-col items-center space-y-4">
             <div className="bg-blue-900 text-white px-6 py-3 font-bold uppercase tracking-widest text-[10px] border-2 border-black">Siyaphusha Management</div>
             <div className="w-px h-4 bg-gray-400"></div>
@@ -194,12 +202,12 @@ export function CompanyProfile() {
 
         <div className="grid md:grid-cols-2 gap-x-12 gap-y-16">
           {[
-            { title: "Mine Rehabilitation", desc: "Planning, implementation, and monitoring for sustainable land restoration." },
-            { title: "Soil Stripping", desc: "Precision overburden removal and large-scale earthmoving." },
-            { title: "Civil Works", desc: "Construction of dams, roads, and essential mine infrastructure." },
-            { title: "Logistics", desc: "Safe, efficient haulage and transport solutions across Mpumalanga." },
-            { title: "Plant Hire", desc: "Raw material processing with mobile plant hire." },
-            { title: "Stockpile Management", desc: "Systematic inventory control for seamless supply chain support." }
+            { title: "Logistics and Haulage", desc: "We transport bulk materials safely across Mpumalanga. Our 34-ton side tippers form a core part of this capability, handling over 25,000 tons daily." },
+            { title: "Stockpile Management", desc: "Good stockpile management prevents delays and ensures consistency. Our team has managed over 3,400,000 tons in stockpile volumes." },
+            { title: "Mine Rehabilitation", desc: "We restore mining land to a productive state. Our work follows careful plans and meets all regulations to leave the land better for future use." },
+            { title: "Crushing and Plant Hire", desc: "We process raw materials to meet specific client grades using mobile plants on site. We also hire out this equipment to other operators." },
+            { title: "Civil Works", desc: "We build strong, durable infrastructure including haul roads, dams, and site facilities. We build things right the first time to avoid problems later." },
+            { title: "Soil Stripping", desc: "We remove overburden to access resources efficiently. We handle topsoil with care so it can be reused later, protecting the environment." }
           ].map((service, i) => (
             <div key={i} className="group relative">
               <div className="absolute -left-6 top-0 text-4xl font-black text-gray-100 group-hover:text-black transition-colors">0{i + 1}</div>
@@ -221,7 +229,7 @@ export function CompanyProfile() {
 
         <div className="space-y-12">
           <section>
-            <h3 className="text-xl font-black uppercase mb-6 tracking-wider">Strategic Logistical Footprint</h3>
+            <h3 className="text-xl font-black uppercase mb-6 tracking-wider">Key Routes and Volumes</h3>
             <div className="grid md:grid-cols-3 gap-6">
               {[
                 { route: "Phola to Greenside", tons: "500,000 Tons", client: "Thungela Resources" },
@@ -240,7 +248,7 @@ export function CompanyProfile() {
           <div className="p-12 border-2 border-black flex flex-col items-center justify-center text-center">
             <h3 className="text-2xl font-black uppercase mb-4 tracking-tighter">A Proven Track Record</h3>
             <p className="text-gray-600 max-w-xl text-sm italic">
-              "Siyaphusha consistently delivers on their commitments. Their operational agility and focus on safety make them a preferred partner in our coal corridor operations."
+              "We measure our success by the trust our clients place in us. Our 30,000+ hour incident free record is our greatest achievement. Safety is not just a rule here. It is the foundation of our culture."
             </p>
           </div>
         </div>
@@ -256,15 +264,17 @@ export function CompanyProfile() {
         <div className="grid md:grid-cols-2 gap-12">
           <div className="space-y-8">
             <div>
-              <h3 className="text-lg font-black uppercase mb-4 border-b-2 border-black inline-block">Haulage & Logistics</h3>
+              <h3 className="text-lg font-black uppercase mb-4 border-b-2 border-black inline-block">Haulage Fleet</h3>
+              <p className="text-sm text-gray-600 mb-4">We operate a modern fleet of side tipper trucks, including 34-ton capacity vehicles. We support them with fuel tankers and lowbed trailers. This fleet handles over 25,000 tons in our daily operations.</p>
               <ul className="space-y-2 text-sm font-medium">
-                <li>• Side Tipper Trucks</li>
+                <li>• Side Tipper Trucks (34-ton capacity)</li>
                 <li>• Fuel Tankers</li>
                 <li>• Lowbed Trailers</li>
               </ul>
             </div>
             <div>
-              <h3 className="text-lg font-black uppercase mb-4 border-b-2 border-black inline-block">Earthworks & Mining</h3>
+              <h3 className="text-lg font-black uppercase mb-4 border-b-2 border-black inline-block">Earthmoving Equipment</h3>
+              <p className="text-sm text-gray-600 mb-4">We use excavators, dozers, graders, and loaders. We choose the right size machine for each job, making our work efficient and cost effective.</p>
               <ul className="space-y-2 text-sm font-medium">
                 <li>• Excavators & Dozers</li>
                 <li>• Graders & Front-End Loaders</li>
@@ -274,6 +284,7 @@ export function CompanyProfile() {
           <div className="space-y-8">
             <div>
               <h3 className="text-lg font-black uppercase mb-4 border-b-2 border-black inline-block">Processing Plant</h3>
+              <p className="text-sm text-gray-600 mb-4">We have mobile crushing and screening plants. These allow us to process material on site to produce the exact product specifications required.</p>
               <ul className="space-y-2 text-sm font-medium">
                 <li>• Mobile Crushing Units</li>
                 <li>• Screening Plants</li>
@@ -282,7 +293,7 @@ export function CompanyProfile() {
             </div>
             <div className="bg-black text-white p-8">
               <div className="text-3xl font-black mb-2">&gt;95%</div>
-              <div className="text-xs font-bold uppercase tracking-widest opacity-70">Fleet Availability System</div>
+              <div className="text-xs font-bold uppercase tracking-widest opacity-70">Operational Availability</div>
             </div>
           </div>
         </div>
@@ -303,26 +314,26 @@ export function CompanyProfile() {
             <div>
               <h3 className="text-2xl font-black uppercase mb-4 tracking-tight">Safety First</h3>
               <p className="text-gray-600 leading-relaxed text-sm">
-                Zero-harm philosophy, rigorous protocols, and continuous training. 100% commitment to safety. Our safety record is the foundation of our reputation.
+                Our 30,000+ hour incident free record is our greatest achievement. Safety is the foundation of our culture. We train thoroughly, we speak up about concerns, and we stop work if something is not right.
               </p>
             </div>
           </div>
 
           <div className="grid md:grid-cols-2 gap-12">
             <div>
-              <h3 className="text-xl font-black uppercase mb-4 border-l-4 border-black pl-4">Environment</h3>
+              <h3 className="text-xl font-black uppercase mb-4 border-l-4 border-black pl-4">Environmental Care</h3>
               <p className="text-sm text-gray-600 leading-relaxed">
-                Sustainable operational practices and expert mine rehabilitation to ensure land is restored for future generations.
+                We take our environmental responsibility seriously. Our rehabilitation work uses proven scientific methods to return land to a healthy, sustainable condition.
               </p>
             </div>
             <div>
-              <h3 className="text-xl font-black uppercase mb-4 border-l-4 border-black pl-4">Community</h3>
+              <h3 className="text-xl font-black uppercase mb-4 border-l-4 border-black pl-4">Community Investment</h3>
               <p className="text-sm text-gray-600 leading-relaxed mb-4">
-                Active investment in our local Phola community through sports sponsorship and educational resources.
+                We are invested in Phola. We sponsor the local Chakalaka Future Stars football team and support early childhood education with learning supplies.
               </p>
               <div className="flex gap-4">
-                <span className="text-[10px] font-bold bg-gray-100 px-3 py-1 uppercase tracking-tighter">Chakalaka Stars</span>
-                <span className="text-[10px] font-bold bg-gray-100 px-3 py-1 uppercase tracking-tighter">ECD Investment</span>
+                <span className="text-[10px] font-bold bg-gray-100 px-3 py-1 uppercase tracking-tighter">Chakalaka Future Stars</span>
+                <span className="text-[10px] font-bold bg-gray-100 px-3 py-1 uppercase tracking-tighter">ECD Supplies</span>
               </div>
             </div>
           </div>
@@ -349,8 +360,8 @@ export function CompanyProfile() {
                 {[
                   { purpose: "Strategic Projects", channel: "Themba Nkosi / themba@siyaphusha.co.za" },
                   { purpose: "Operations & Fleet", channel: "Solomon Howard / solly@siyaphusha.co.za" },
-                  { purpose: "Safety (SHEQ)", channel: "safety@siyaphusha.co.za" },
-                  { purpose: "Finance & Admin", channel: "finance@siyaphusha.co.za" }
+                  { purpose: "Daily Operations", channel: "operations@siyaphusha.co.za" },
+                  { purpose: "General Info", channel: "info@siyaphusha.co.za" }
                 ].map((row, i) => (
                   <TableRow key={i} className="border-b border-black">
                     <TableCell className="font-bold text-xs uppercase py-6">{row.purpose}</TableCell>
@@ -365,7 +376,7 @@ export function CompanyProfile() {
         <div className="bg-black text-white p-12 mt-auto">
           <div className="grid md:grid-cols-2 gap-12">
             <div>
-              <div className="font-black text-3xl mb-8 tracking-tighter">SIYAPHUSHA</div>
+              <div className="font-black text-3xl mb-8 tracking-tighter uppercase">SIYAPHUSHA Consortium (PTY) Ltd</div>
               <div className="space-y-4 text-sm opacity-80">
                 <div className="flex items-center gap-3">
                   <MapPin className="w-4 h-4" />
@@ -375,11 +386,15 @@ export function CompanyProfile() {
                   <Globe className="w-4 h-4" />
                   <span>www.siyaphusha.co.za</span>
                 </div>
+                <div className="flex items-center gap-3">
+                  <Mail className="w-4 h-4" />
+                  <span>info@siyaphusha.co.za</span>
+                </div>
               </div>
             </div>
             <div className="flex flex-col justify-end text-right">
               <div className="text-[10px] font-bold uppercase tracking-[0.5em] mb-4">Powering Progress, Responsibly.</div>
-              <div className="text-[8px] opacity-40">© 2026 Siyaphusha Integrated Mining & Logistics</div>
+              <div className="text-[8px] opacity-40">© {new Date().getFullYear()} Siyaphusha Consortium (PTY) Ltd</div>
             </div>
           </div>
         </div>
