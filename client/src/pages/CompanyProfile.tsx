@@ -13,8 +13,8 @@ export function CompanyProfile() {
         <div className="absolute inset-0 opacity-10 pointer-events-none industrial-pattern"></div>
         <div className="relative z-10 flex flex-col h-full">
           <div className="flex justify-between items-start mb-24">
-            <div className="bg-black text-white p-6 font-black text-3xl tracking-tighter">
-              SIYAPHUSHA
+            <div className="flex items-center gap-4">
+              <img src="/attached_assets/Copy_of_SIYAPHUSHA_LOGO_WHITE_(1)_1770260074500.png" alt="Siyaphusha Logo" className="h-16 w-auto" />
             </div>
             <div className="text-right uppercase tracking-[0.2em] font-bold text-sm">
               Established 2020
