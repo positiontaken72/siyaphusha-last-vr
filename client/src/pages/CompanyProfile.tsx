@@ -203,75 +203,73 @@ export function CompanyProfile() {
 
         <div className="border-t-2 border-black pt-12">
           <h3 className="text-xl font-black uppercase mb-12 tracking-wider text-center">Organizational Structure</h3>
-          <div className="flex flex-col items-center space-y-4">
-            <div className="bg-blue-900 text-white px-8 py-4 font-black uppercase tracking-[0.2em] text-xs border-2 border-black">
-              Siyaphusha Management Board
-            </div>
-            <div className="w-px h-8 bg-black"></div>
-            <div className="flex gap-12">
-              <div className="bg-blue-600 text-white p-6 w-56 text-center border-2 border-black">
-                <div className="font-black uppercase text-base mb-1">Themba Nkosi</div>
-                <div className="text-[10px] font-bold opacity-80 uppercase tracking-widest">Executive Partner</div>
+          <div className="max-w-full overflow-hidden">
+            <div className="flex flex-col items-center space-y-4 scale-[0.85] origin-top">
+              <div className="bg-blue-900 text-white px-8 py-4 font-black uppercase tracking-[0.2em] text-xs shadow-lg">
+                Siyaphusha Management Board
               </div>
-              <div className="bg-blue-600 text-white p-6 w-56 text-center border-2 border-black">
-                <div className="font-black uppercase text-base mb-1">Solomon Howard</div>
-                <div className="text-[10px] font-bold opacity-80 uppercase tracking-widest">Operations Partner</div>
-              </div>
-            </div>
-            <div className="w-px h-8 bg-black"></div>
-            <div className="grid grid-cols-4 gap-4 w-full px-4 items-start">
-              {/* BD */}
-              <div className="flex flex-col items-center">
-                <div className="bg-emerald-600 text-white p-4 w-full text-center text-[10px] font-black uppercase border-2 border-black">
-                  Business Development
+              <div className="w-px h-8 bg-gray-300"></div>
+              <div className="flex gap-8">
+                <div className="bg-blue-600 text-white p-6 w-52 text-center shadow-md">
+                  <div className="font-black uppercase text-base mb-1">Themba Nkosi</div>
+                  <div className="text-[10px] font-bold opacity-80 uppercase tracking-widest">Executive Partner</div>
                 </div>
-                <div className="w-px h-4 bg-black"></div>
-                <div className="bg-amber-500 text-black p-3 w-full text-center text-[9px] font-bold uppercase border-2 border-black">
-                  Business Executive
+                <div className="bg-blue-600 text-white p-6 w-52 text-center shadow-md">
+                  <div className="font-black uppercase text-base mb-1">Solomon Howard</div>
+                  <div className="text-[10px] font-bold opacity-80 uppercase tracking-widest">Operations Partner</div>
                 </div>
               </div>
-
-              {/* Finance */}
-              <div className="flex flex-col items-center">
-                <div className="bg-emerald-600 text-white p-4 w-full text-center text-[10px] font-black uppercase border-2 border-black">
-                  Finance & Administration
-                </div>
-                <div className="w-px h-4 bg-black"></div>
-                <div className="flex flex-col gap-2 w-full">
-                  <div className="bg-amber-500 text-black p-2 text-center text-[8px] font-bold uppercase border-2 border-black">HR & PROCUREMENT</div>
-                  <div className="bg-amber-500 text-black p-2 text-center text-[8px] font-bold uppercase border-2 border-black">FINANCE</div>
-                </div>
-              </div>
-
-              {/* Compliance */}
-              <div className="flex flex-col items-center">
-                <div className="bg-red-600 text-white p-4 w-full text-center text-[10px] font-black uppercase border-2 border-black">
-                  Compliance & SHEQ
-                </div>
-                <div className="w-px h-4 bg-black"></div>
-                <div className="bg-amber-500 text-black p-3 w-full text-center text-[9px] font-bold uppercase border-2 border-black">
-                  SHEQ Officer
-                </div>
-              </div>
-
-              {/* Operations */}
-              <div className="flex flex-col items-center">
-                <div className="bg-emerald-600 text-white p-4 w-full text-center text-[10px] font-black uppercase border-2 border-black">
-                  Operations Management
-                </div>
-                <div className="w-px h-4 bg-black"></div>
-                <div className="grid grid-cols-2 gap-2 w-full">
-                  <div className="flex flex-col items-center">
-                    <div className="bg-amber-500 text-black p-2 w-full text-center text-[7px] font-bold uppercase border-2 border-black leading-tight">LOGISTICS FLEET & SUPERINTENDENT</div>
-                    <div className="w-px h-2 bg-black"></div>
-                    <div className="bg-gray-200 text-black p-1 w-full text-center text-[6px] font-bold uppercase border border-black">Shift Supervisors</div>
-                    <div className="bg-gray-200 text-black p-1 w-full text-center text-[6px] font-bold uppercase border border-black mt-1">Haulage</div>
+              <div className="w-px h-8 bg-gray-300"></div>
+              <div className="grid grid-cols-4 gap-3 w-full px-2 items-start">
+                {/* BD */}
+                <div className="flex flex-col items-center">
+                  <div className="bg-emerald-600 text-white p-3 w-full text-center text-[9px] font-black uppercase shadow-sm">
+                    Business Development
                   </div>
-                  <div className="flex flex-col items-center">
-                    <div className="bg-amber-500 text-black p-2 w-full text-center text-[7px] font-bold uppercase border-2 border-black leading-tight">PLANT & CIVILS SUPERINTENDENT</div>
-                    <div className="w-px h-2 bg-black"></div>
-                    <div className="bg-gray-200 text-black p-1 w-full text-center text-[6px] font-bold uppercase border border-black">SITE FOREMAN</div>
-                    <div className="bg-gray-200 text-black p-1 w-full text-center text-[6px] font-bold uppercase border border-black mt-1">OPS TEAM</div>
+                  <div className="w-px h-3 bg-gray-200"></div>
+                  <div className="bg-amber-500 text-black p-2 w-full text-center text-[8px] font-bold uppercase shadow-sm">
+                    Business Executive
+                  </div>
+                </div>
+
+                {/* Finance */}
+                <div className="flex flex-col items-center">
+                  <div className="bg-emerald-600 text-white p-3 w-full text-center text-[9px] font-black uppercase shadow-sm">
+                    Finance & Administration
+                  </div>
+                  <div className="w-px h-3 bg-gray-200"></div>
+                  <div className="flex flex-col gap-1 w-full">
+                    <div className="bg-amber-500 text-black p-2 text-center text-[7px] font-bold uppercase shadow-sm">HR & PROCUREMENT</div>
+                    <div className="bg-amber-500 text-black p-2 text-center text-[7px] font-bold uppercase shadow-sm">FINANCE</div>
+                  </div>
+                </div>
+
+                {/* Compliance */}
+                <div className="flex flex-col items-center">
+                  <div className="bg-red-600 text-white p-3 w-full text-center text-[9px] font-black uppercase shadow-sm">
+                    Compliance & SHEQ
+                  </div>
+                  <div className="w-px h-3 bg-gray-200"></div>
+                  <div className="bg-amber-500 text-black p-2 w-full text-center text-[8px] font-bold uppercase shadow-sm">
+                    SHEQ Officer
+                  </div>
+                </div>
+
+                {/* Operations */}
+                <div className="flex flex-col items-center">
+                  <div className="bg-emerald-600 text-white p-3 w-full text-center text-[9px] font-black uppercase shadow-sm">
+                    Operations Management
+                  </div>
+                  <div className="w-px h-3 bg-gray-200"></div>
+                  <div className="grid grid-cols-1 gap-1 w-full">
+                    <div className="flex flex-col items-center">
+                      <div className="bg-amber-500 text-black p-2 w-full text-center text-[7px] font-bold uppercase leading-tight shadow-sm">LOGISTICS FLEET & SUP.</div>
+                      <div className="bg-gray-100 text-black p-1 w-full text-center text-[6px] font-bold uppercase mt-1">Shift Supervisors / Haulage</div>
+                    </div>
+                    <div className="flex flex-col items-center mt-1">
+                      <div className="bg-amber-500 text-black p-2 w-full text-center text-[7px] font-bold uppercase leading-tight shadow-sm">PLANT & CIVILS SUP.</div>
+                      <div className="bg-gray-100 text-black p-1 w-full text-center text-[6px] font-bold uppercase mt-1">SITE FOREMAN / OPS TEAM</div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -317,24 +315,24 @@ export function CompanyProfile() {
         <div className="space-y-12">
           <section>
             <h3 className="text-xl font-black uppercase mb-6 tracking-wider">Key Routes and Volumes</h3>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
               {[
                 { route: "Phola to Greenside", tons: "500,000 Tons", client: "Thungela Resources", color: "border-blue-600", textColor: "text-blue-600" },
                 { route: "Isibonelo to Landau", tons: "800,000 Tons", client: "Thungela Resources", color: "border-emerald-600", textColor: "text-emerald-600" },
                 { route: "Stockpile Management", tons: "3.4 Million Tons", client: "Thungela Resources", color: "border-amber-500", textColor: "text-amber-500" },
                 { route: "Umsimbithi to Eskom", tons: "750,000 Tons", client: "Glencore", color: "border-red-600", textColor: "text-red-600" }
               ].map((item, i) => (
-                <div key={i} className={cn("p-6 bg-gray-50 border-t-8", item.color)}>
-                  <div className="text-xs font-bold text-gray-500 uppercase tracking-widest mb-2">{item.client}</div>
-                  <div className="text-lg font-black mb-1">{item.route}</div>
-                  <div className={cn("text-xl font-black", item.textColor)}>{item.tons}</div>
+                <div key={i} className={cn("p-4 bg-gray-50 border-t-8 shadow-sm", item.color)}>
+                  <div className="text-[10px] font-bold text-gray-500 uppercase tracking-widest mb-1">{item.client}</div>
+                  <div className="text-sm font-black mb-1 leading-tight">{item.route}</div>
+                  <div className={cn("text-lg font-black", item.textColor)}>{item.tons}</div>
                 </div>
               ))}
             </div>
           </section>
 
-          <div className="p-12 border-2 border-black flex flex-col items-center justify-center text-center bg-black text-white">
-            <h3 className="text-2xl font-black uppercase mb-4 tracking-tighter">A Proven Track Record</h3>
+          <div className="p-8 border-2 border-black flex flex-col items-center justify-center text-center bg-black text-white">
+            <h3 className="text-xl font-black uppercase mb-4 tracking-tighter">A Proven Track Record</h3>
             <p className="opacity-80 max-w-xl text-sm italic">
               "We measure our success by the trust our clients place in us. Our 30,000+ hour incident free record is our greatest achievement. Safety is not just a rule here. It is the foundation of our culture."
             </p>
@@ -351,7 +349,7 @@ export function CompanyProfile() {
 
         <div className="grid md:grid-cols-2 gap-12">
           <div className="space-y-8">
-            <div>
+            <div className="border-l-8 border-emerald-600 pl-6">
               <h3 className="text-lg font-black uppercase mb-4 border-b-2 border-black inline-block">Haulage Fleet</h3>
               <p className="text-sm text-gray-600 mb-4">We operate a modern fleet of side tipper trucks, including 34-ton capacity vehicles. We support them with fuel tankers and lowbed trailers. This fleet handles over 25,000 tons in our daily operations.</p>
               <ul className="space-y-2 text-sm font-medium">
@@ -360,7 +358,7 @@ export function CompanyProfile() {
                 <li>• Lowbed Trailers</li>
               </ul>
             </div>
-            <div>
+            <div className="border-l-8 border-[#FFD700] pl-6">
               <h3 className="text-lg font-black uppercase mb-4 border-b-2 border-black inline-block">Earthmoving Equipment</h3>
               <p className="text-sm text-gray-600 mb-4">We use excavators, dozers, graders, and loaders. We choose the right size machine for each job, making our work efficient and cost effective.</p>
               <ul className="space-y-2 text-sm font-medium">
@@ -370,7 +368,7 @@ export function CompanyProfile() {
             </div>
           </div>
           <div className="space-y-8">
-            <div>
+            <div className="border-l-8 border-[#FFFACD] pl-6">
               <h3 className="text-lg font-black uppercase mb-4 border-b-2 border-black inline-block">Processing Plant</h3>
               <p className="text-sm text-gray-600 mb-4">We have mobile crushing and screening plants. These allow us to process material on site to produce the exact product specifications required.</p>
               <ul className="space-y-2 text-sm font-medium">
@@ -380,7 +378,7 @@ export function CompanyProfile() {
               </ul>
             </div>
             <div className="bg-black text-white p-8">
-              <div className="text-3xl font-black mb-2">&gt;95%</div>
+              <div className="text-3xl font-black mb-2 text-emerald-500">&gt;95%</div>
               <div className="text-xs font-bold uppercase tracking-widest opacity-70">Operational Availability</div>
             </div>
           </div>
