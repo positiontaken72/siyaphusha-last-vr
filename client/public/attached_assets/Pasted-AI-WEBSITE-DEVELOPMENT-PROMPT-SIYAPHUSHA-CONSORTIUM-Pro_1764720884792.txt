@@ -1,0 +1,81 @@
+AI WEBSITE DEVELOPMENT PROMPT: SIYAPHUSHA CONSORTIUM
+
+**Project:** Build a production-ready corporate website for **Siyaphusha Consortium (PTY) Ltd**, a South African mining and construction services company based in Mpumalanga.
+
+**Core Mandate:** Create a definitive digital flagship for the South African mining sector. The design must be authoritative, uncluttered, and fast. It should reflect the grit, scale, and forward-thinking nature of the local industry while speaking directly to major clients like Thungela, Glencore, and Transnet.
+
+### **1. DESIGN SYSTEM & GLOBAL RULES**
+*   **Color Palette:** Exclusively Black (`#000000`), White (`#FFFFFF`), and Grayscale (`#111111` to `#EEEEEE`). **No accent colors.**
+*   **Geometry:** Apply `border-radius: 0;` (sharp 90-degree corners) to **ALL** elements: containers, cards, images, buttons, modals.
+*   **Typography:** Use `'Montserrat', sans-serif` for all text. Create hierarchy **only** through font weight (300, 400, 600, 900) and size.
+*   **Imagery Style:** Use authentic, high-quality images of South African coal mining operations (e.g., "Mpumalanga earthworks," "Phola coal haulage," "mine rehabilitation Highveld"). **All images must have sharp 90-degree corners** and use `object-fit: cover`.
+
+### **2. COMPONENT SPECIFICATIONS**
+
+**A. Hero Section (`/src/components/HeroSection.tsx`)**
+*   **Background:** Full-viewport, muted, auto-playing video. Source footage of "South African coal mining haul truck fleet" or "Mpumalanga mining landscape aerial view."
+*   **Overlay:** Apply a light overlay (`background: rgba(255, 255, 255, 0.1)`) to slightly lighten the video.
+*   **Content (Centered, over video):**
+    *   **H1 (Montserrat Black):** "Siyaphusha Consortium"
+    *   **H2 (Montserrat SemiBold):** "Building South Africa's Resource Future"
+    *   **Subtitle (Montserrat Regular):** "From the heart of Mpumalanga, we deliver expert earthworks, reliable haulage, and responsible mining solutions."
+    *   **CTA Buttons:** "View Our Work" | "Partner With Us"
+
+**B. Services Grid (`/src/components/ServicesGrid.tsx`)**
+*   **Layout:** A grid displaying **two service cards per row** on desktop. Use `display: grid;` with `grid-template-columns: repeat(2, 1fr);` for large screens and `1fr` for mobile.
+*   **Card Design:** Each card is a sharp-cornered container. Structure:
+    1.  Top: A square, sharp-cornered image relevant to the service.
+    2.  Bottom: The service title (in bold) and a one-line description.
+*   **Services & Descriptions (Use this exact list):**
+    1.  **Mine Rehabilitation:** Restoring land for sustainable future use.
+    2.  **Soil Stripping:** Efficient overburden removal to access resources.
+    3.  **Civils Works:** Building dams, roads, and essential mine infrastructure.
+    4.  **Material Handling:** Safe and precise movement of bulk materials.
+    5.  **Screening & Crushing:** Processing raw coal to specified grades.
+    6.  **Strategic Stockpile Loading:** Managing inventory for seamless supply.
+    7.  **Logistics:** Reliable coal haulage across the Mpumalanga corridor.
+
+**C. Social Responsibility Section (`/src/components/CommunityImpact.tsx`)**
+*   **Header:** "OUR COMMUNITY IMPACT" with a subtitle "Investing where we operate."
+*   **Component:** Implement an **auto-advancing, horizontal carousel** that shows two large cards per slide.
+*   **Card Design:** Sharp-cornered card with:
+    1.  A lightened, sharp-cornered image on top.
+    2.  A title (e.g., "CHAKALAKA FUTURE STARS").
+    3.  A one-line description underneath (e.g., "Empowering Phola's youth through sports sponsorship").
+*   **Initial Data:** Populate with the two confirmed initiatives (Chakalaka FC and Early Childhood Development). Structure the component to easily accept more items.
+
+**D. Interactive Route Map (`/src/components/OperationsMap.tsx`)**
+*   **Style:** A custom, vector-based map of Mpumalanga with sharp lines.
+*   **Data:** Plot these exact coordinates as clickable markers:
+    *   Phola Plant: `-26.0560, 29.0172`
+    *   Greenside RLT: `-25.9419, 29.1895`
+    *   Isibonelo Mine: `-26.4354, 29.2111`
+    *   Landau MRD: `-25.9153, 29.1694`
+    *   Umsimbithi Mine: `-25.8466, 29.8654`
+    *   Zibulo Colliery: `-26.1992, 29.0107`
+*   **Interaction:** Clicking a route line opens a sharp-cornered modal with the exact project details (client, scope, volume) from the company profile.
+
+**E. Project Portfolio & Value Calculator**
+*   **Portfolio:** Create a filterable gallery of their 6 key projects (including the 3.4M ton Zibulo stockpile management for Thungela).
+*   **Calculator Widget:** A tool titled "Plan Your Project."
+    *   Input: "Enter tonnage."
+    *   Logic: Based on 6 trucks, ~4.5 loads/day, ~43 tons/load.
+    *   Output: Displays "Estimated Timeline: X days" and "Daily Volume: Y tons."
+
+### **3. DATA INTEGRATION COMMANDS**
+Use ONLY this provided company data. Do not hallucinate details.
+- **Foundation Story:** Use the text beginning "Siyaphusha Consortium (PTY) Ltd. was established..."
+- **Vision/Mission/Objectives:** Use the exact text from the profile.
+- **Projects:** Use all 5 projects from the profile table, PLUS the "Stockpile Management for Thungela at Zibulo Colliery (3.4M Tons)."
+- **Leaders:** Themba Nkosi (Founder, Executive Director), Solly Howard (Operations Manager, 10+ years, ex-safety officer).
+- **Address:** "1855 Finca Street, Phola Location, Ogies, Mpumalanga, 2230"
+- **Email:** `info@siyaphusha.co.za`
+
+### **4. TECHNICAL REQUIREMENTS**
+- **Framework:** Use a modern React/Next.js stack optimized for Vercel deployment.
+- **Performance:** Achieve a Google PageSpeed Insights mobile score >95. Implement lazy loading for images and components.
+- **Responsiveness:** **Mobile-first approach.** Ensure flawless usability on phones.
+- **Code Quality:** Write clean, modular, and well-commented code.
+
+### **FINAL INSTRUCTION**
+Generate the complete, structured codebase for this website. Begin by setting up the project structure and creating the core layout. Each component must follow the design system and use the provided data precisely. Prioritize creating a feel of robust, South African industrial expertise.

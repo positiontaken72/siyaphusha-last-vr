@@ -66,7 +66,7 @@ export function CompanyProfile() {
       <div className="min-h-[1056px] flex flex-col justify-between p-12 mb-16 relative overflow-hidden page-break-after-always">
         <div className="absolute inset-0 z-0">
           <img 
-            src="/attached_assets/hero_video_screenshot.png" 
+            src="/attached_assets/generated_images/dramatic_wide_shot_of_open_cast_coal_mining_operation_in_south_africa_with_heavy_machinery_and_dust_at_sunset..png" 
             alt="Hero Background" 
             className="w-full h-full object-cover"
           />

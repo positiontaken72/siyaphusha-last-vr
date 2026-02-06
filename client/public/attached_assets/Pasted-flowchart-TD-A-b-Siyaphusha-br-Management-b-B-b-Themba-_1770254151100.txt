@@ -1,0 +1,74 @@
+flowchart TD
+    A["<b>Siyaphusha<br>Management</b>"]
+    
+    B["<b>Themba Nkosi<br>Executive Partner</b>"]
+    C["<b>Solomon Howard<br>Operations Partner</b>"]
+    
+    %% Main vertical connections - Themba on LEFT, Solomon on RIGHT
+    A --- B
+    A --- C
+    
+    D["<b>Operations<br>Management</b>"]
+    E["<b>Business Development</b>"]
+    F["<b>Finance &<br>Administration</b>"]
+    G["<b>COMPLIANCE</b>"]
+    
+    %% Horizontal connections from partners to departments
+    B --- E
+    B --- F
+    C --- D
+    
+    %% Diagonal connections to Compliance
+    B --- G
+    C --- G
+    
+    H["<b>SHEQ Officer</b><br><small>Safety, Health, Environment, Quality</small>"]
+    G --- H
+    
+    I["Logistics & Fleet<br>Superintendent"]
+    J["Plant & Civil Works<br>Superintendent"]
+    D --- I
+    D --- J
+    
+    K["Shift Supervisors"]
+    L["Haulage Teams"]
+    I --- K
+    I --- L
+    
+    M["Site Foremen"]
+    N["Plant Operations Teams"]
+    J --- M
+    J --- N
+    
+    O["Safety Inspectors"]
+    H --- O
+    
+    P["Business Development Executive"]
+    E --- P
+    
+    Q["HR & Procurement Officer"]
+    R["Finance Officer"]
+    F --- Q
+    F --- R
+    
+    %% Set line style - using light gray for visibility
+    linkStyle default stroke:#666666,stroke-width:2px,stroke-dasharray:0
+    
+    style A fill:#1e3a8a,color:#ffffff
+    style B fill:#3b82f6,color:#ffffff
+    style C fill:#3b82f6,color:#ffffff
+    style D fill:#10b981,color:#ffffff
+    style E fill:#10b981,color:#ffffff
+    style F fill:#10b981,color:#ffffff
+    style G fill:#ef4444,color:#ffffff,stroke-width:3px
+    style H fill:#f59e0b,color:#000000
+    style I fill:#f59e0b,color:#000000
+    style J fill:#f59e0b,color:#000000
+    style K fill:#d1d5db,color:#000000
+    style L fill:#d1d5db,color:#000000
+    style M fill:#d1d5db,color:#000000
+    style N fill:#d1d5db,color:#000000
+    style O fill:#d1d5db,color:#000000
+    style P fill:#f59e0b,color:#000000
+    style Q fill:#f59e0b,color:#000000
+    style R fill:#f59e0b,color:#000000

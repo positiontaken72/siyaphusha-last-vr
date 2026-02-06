@@ -1,0 +1,147 @@
+Act as a professional web designer specializing in modern, corporate B2B websites for the mining and heavy industrial sectors. Generate a complete, multi-page website for Siyaphusha Consortium (PTY) Ltd with all advanced features we've discussed.
+
+## COMPANY PROFILE INTEGRATION
+**Company:** Siyaphusha Consortium (PTY) Ltd
+**Use the company name as logo** in bold, modern typography (Poppins ExtraBold or Montserrat Black)
+
+## DESIGN REQUIREMENTS
+**Visual Theme:** Industrial mining sophistication
+**Color Palette:** Deep charcoals, slate grays, navy blues, safety yellow/orange accents, clean whites
+**Imagery:** High-quality South African coal mining stock photos (hauling, crushing, earthworks, rehabilitation)
+**Tone:** Authoritative, experienced, trustworthy corporate voice
+**Era:** Forward-looking 2025/2026 aesthetic - clean, uncluttered, professional
+
+## MANDATORY FEATURES TO IMPLEMENT
+
+### 1. DYNAMIC HERO SECTION
+- Full-screen video background or image slideshow of SA coal operations
+- Overlay text: "SIYAPHUSHA CONSORTIUM: Powering South Africa's Mining Industry"
+- Sub-headline: "A leading provider of expert mining, earthworks, and logistics solutions. Delivering scale, safety, and efficiency since 2020."
+- Dual CTA buttons: "View Our Services" + "Download Company Profile (PDF)"
+
+### 2. ANIMATED IMPACT COUNTERS
+Create a stats bar with animated counters that tick up to:
+- "1,400,000+ Tonnes Hauled"
+- "25,000+ Tonnes Handled" 
+- "100% Commitment to Safety"
+- "Nationwide Operations"
+
+### 3. INTERACTIVE SERVICES GRID
+**Seven core services** in a dynamic, hover-responsive grid:
+- Mine Rehabilitation
+- Soil Stripping  
+- Civils Works (dams, earthstrips, roads)
+- Material Handling
+- Screening and Crushing
+- Strategic Stockpile Loading
+- Logistics & Coal Haulage
+
+**Each service tile must:** Have hover effects, reveal detailed descriptions on interaction, use relevant icons/imagery
+
+### 4. DYNAMIC PROJECT PORTFOLIO
+Transform their project table into a **filterable, interactive gallery** with:
+- Filter by client: Thungela Resources, Glencore, Transnet
+- Filter by service type
+- Project tiles showing: Client, scope, volume (500,000 Tons, etc.)
+- Modal popups with full project details and client contacts from profile
+
+### 5. CLIENT TRUST BAR
+Sleek marquee or grid displaying **client logo placeholders** for:
+- **Thungela Resources** (placeholder box)
+- **Glencore** (placeholder box) 
+- **Transnet** (placeholder box)
+- **Eskom** (placeholder box)
+- **Anglo American** (placeholder box)
+
+*Note: User will manually upload actual logos*
+
+### 6. INTERACTIVE ROUTE MAP WITH ANIMATED PATHS
+**Create an animated map showing coal hauling routes with clickable paths:**
+
+**Route 1: Phola Plant to Greenside**
+- Start: Phola Plant (W2V8+HV Ogies) 
+- End: Greenside RLT (355Q+7Q eMalahleni)
+- **Click Description:** "Hauling Coal from Phola Plant to Greenside (RLT) for Thungela Resources - 500,000 Tons"
+
+**Route 2: Isibonelo Coal Mine to Landau MRD**
+- Start: Isibonelo Coal Mine (H676+VC Secunda)
+- End: Landau MRD (35F4+G7 eMalahleni)
+- **Click Description:** "Hauling Coal from Isibonelo to Landau MRD for Thungela Resources - 150,000 Tons"
+
+**Route 3: Umsimbithi Mine to Eskom Power Stations**
+- Start: Umsimbithi Mine (5V39+72 Grootpan)
+- End: Eskom Power Stations (93GQ+8P Ermelo)
+- **Click Description:** "Hauling Coal for Umsimbithi Mine to Eskom Power Stations for Glencore - 750,000 Tons"
+
+**Map Features:**
+- Animated moving trucks along each route
+- Clickable route lines that show project scope popups
+- Interactive markers at each location
+- Toggle visibility for different routes
+- Volume indicators on each route
+
+### 7. ESG COMMITMENT SECTION
+Three-pillar layout with icons:
+- **Safety:** "Zero harm philosophy, safety record second to none"
+- **Excellence:** "On-schedule delivery, highest standards of proficiency"  
+- **Sustainability:** "Mine rehabilitation, environmental stewardship"
+
+### 8. STICKY NAVIGATION & DOWNLOAD CTA
+- Persistent header with always-visible "Download Company Profile" button
+- Multiple download CTAs throughout site
+
+## WEBSITE STRUCTURE
+
+### PAGE 1: HOME PAGE
+1. Hero Section (as described)
+2. Animated Impact Counters
+3. Client Trust Bar
+4. Interactive Services Grid
+5. **Interactive Route Map with animated paths**
+6. Dynamic Project Portfolio
+7. ESG Commitment Section
+8. Final CTA Section
+
+### PAGE 2: ABOUT US
+- Foundation story from profile
+- Vision & Mission sections
+- Leadership team (Themba Nkosi, Solly Howard) with placeholder headshots
+- Company values and objectives
+
+### PAGE 3: CONTACT
+- Modern contact form with dual CTAs: "Request Quote" + "Download Profile"
+- Company details: 1855 Finca Street, Phola, Mpumalanga
+- Contact persons and numbers
+- Embedded Mpumalanga map
+
+## TECHNICAL REQUIREMENTS
+- Fully responsive design (mobile-first)
+- Fast loading times
+- Accessibility compliant (alt text, contrast ratios)
+- Subtle scroll-triggered animations
+- Professional typography hierarchy
+- SEO-optimized structure
+
+## CONTENT GUIDELINES
+**Use exact wording from company profile for:**
+- Foundation story
+- Vision, Mission, Objectives
+- Service descriptions (expand with detail)
+- Project details and client information
+- **Route descriptions and scope of work exactly as provided**
+
+**Generate professional copy for:**
+- Service explanations
+- ESG commitments
+- CTAs and value propositions
+- Team bios (enhance from basic profile)
+- Map interface and route descriptions
+
+## FINAL INSTRUCTION
+Create a complete, ready-to-deploy corporate website that positions Siyaphusha Consortium as a top-tier mining services leader. Ensure every feature is fully functional and the design reflects a forward-thinking 2026 company while maintaining absolute professionalism for the B2B mining sector.
+
+**CRITICAL:** The interactive route map must show animated paths between the specified coordinates, with clickable routes that display the exact scope of work descriptions from their projects. This should visually demonstrate their logistical expertise and operational reach.
+
+**Logo Note:** Use placeholder boxes with company names for all client logos. The user will manually upload the actual SVG logos in Loveable.
+
+**Priority:** Make it visually striking yet completely uncluttered - every element should serve a purpose and enhance the user experience while showcasing their expertise and scale. The route map should be a standout feature that immediately communicates their logistical capabilities.
