@@ -10,7 +10,6 @@ const projects = [
     location: "Phola Plant",
     scope: "Hauling Coal from Phola Plant to Greenside RLT",
     volume: "500 000 tons",
-    status: "Ongoing",
     description: "Reliable coal transportation services from Phola Plant to Greenside Rail Load-out Terminal for Thungela Resources."
   },
   {
@@ -19,25 +18,14 @@ const projects = [
     location: "Isibonelo",
     scope: "Hauling Coal from Isibonelo to Landua MRD",
     volume: "800 000 tons",
-    status: "Ongoing",
     description: "Efficient haulage operations connecting Isibonelo Mine to Landau Material Recovery Depot for Thungela Resources."
   },
   {
     client: "Thungela Resources",
-    type: "Material Handling",
-    location: "Operations",
-    scope: "Material Handling using 34 ton side tiper trucks",
-    volume: "25 000 tons",
-    status: "Ongoing",
-    description: "Specialized material handling using 34 ton side tipper trucks for Thungela Resources."
-  },
-  {
-    client: "Thungela Resources",
     type: "Stockpile Management",
-    location: "Operations",
+    location: "Zibulo Colliery",
     scope: "Stockpile Management for Thungela Resources",
     volume: "3,4+ Million tons",
-    status: "Ongoing",
     description: "Comprehensive stockpile management ensuring strategic resource availability for Thungela Resources."
   },
   {
@@ -46,17 +34,15 @@ const projects = [
     location: "Umsimbithi Mine",
     scope: "Hauling coal Umsibithi mine to Eskom Power Stations",
     volume: "750 000 tons",
-    status: "Ongoing",
-    tags: ["Eskom"],
+    tags: ["Glencore", "Eskom"],
     description: "Strategic coal supply logistics from Umsimbithi mine to various Eskom Power Stations."
   },
   {
     client: "Transnet",
     type: "Material Handling",
-    location: "Operations",
+    location: "Zibulo Colliery",
     scope: "Material Handling using 34 tons side tipper trucks",
     volume: "25 000 tons",
-    status: "Ongoing",
     description: "Bulk material handling and logistics support for Transnet operations."
   }
 ];
@@ -68,7 +54,7 @@ export function Projects() {
 
   const filteredProjects = filter === "All" 
     ? projects 
-    : projects.filter(p => p.client === filter);
+    : projects.filter(p => p.client.includes(filter) || (p.tags && p.tags.includes(filter)));
 
   return (
     <div className="animate-in fade-in duration-500">
@@ -119,16 +105,6 @@ export function Projects() {
                         </Badge>
                       ))}
                     </div>
-                    <span className={cn(
-                      "text-xs font-bold flex items-center",
-                      project.status === "Ongoing" ? "text-green-600" : "text-gray-500"
-                    )}>
-                      <span className={cn(
-                        "w-2 h-2 rounded-full mr-2",
-                        project.status === "Ongoing" ? "bg-green-600 animate-pulse" : "bg-gray-400"
-                      )} />
-                      {project.status}
-                    </span>
                   </div>
                   
                   <h3 className="font-heading font-bold text-xl text-black mb-2">{project.client}</h3>

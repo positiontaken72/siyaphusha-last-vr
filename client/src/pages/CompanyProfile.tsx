@@ -60,18 +60,19 @@ export function CompanyProfile() {
       </div>
 
       {/* Cover Page */}
-      <div className="min-h-[1056px] flex flex-col justify-between border-8 border-black p-12 mb-16 relative overflow-hidden page-break-after-always">
-        <div className="absolute inset-0 opacity-20 pointer-events-none">
+      <div className="min-h-[1056px] flex flex-col justify-between p-12 mb-16 relative overflow-hidden page-break-after-always">
+        <div className="absolute inset-0 z-0">
           <img 
             src="/attached_assets/hero_video_screenshot.png" 
             alt="Hero Background" 
-            className="w-full h-full object-cover grayscale"
+            className="w-full h-full object-cover"
           />
+          <div className="absolute inset-0 bg-black/40"></div>
         </div>
-        <div className="relative z-10 flex flex-col h-full">
+        <div className="relative z-10 flex flex-col h-full text-white">
           <div className="flex justify-between items-start mb-24">
             <div className="flex items-center gap-4">
-              <img src="/attached_assets/Copy_of_SIYAPHUSHA_LOGO_WHITE_(1)_1770260074500.png" alt="Siyaphusha Logo" className="h-16 w-auto brightness-0" />
+              <img src="/attached_assets/Copy_of_SIYAPHUSHA_LOGO_WHITE_(1)_1770260074500.png" alt="Siyaphusha Logo" className="h-24 w-auto drop-shadow-lg" />
             </div>
             <div className="text-right uppercase tracking-[0.2em] font-bold text-sm">
               Established 2020
@@ -79,15 +80,15 @@ export function CompanyProfile() {
           </div>
 
           <div className="flex-1 flex flex-col justify-center">
-            <h2 className="text-xl font-bold tracking-[0.3em] mb-4 text-gray-500 uppercase">Powering Progress, Responsibly.</h2>
+            <h2 className="text-xl font-bold tracking-[0.3em] mb-4 text-white/80 uppercase">Powering Progress, Responsibly.</h2>
             <h1 className="text-7xl md:text-8xl font-black leading-none mb-8 tracking-tighter">COMPANY<br />PROFILE</h1>
-            <div className="h-2 w-32 bg-black mb-8"></div>
+            <div className="h-2 w-32 bg-white mb-8"></div>
             <p className="text-2xl font-bold uppercase tracking-widest max-w-md">
               Integrated Mining, Earthworks & Logistics Solutions
             </p>
           </div>
 
-          <div className="mt-auto pt-12 border-t-4 border-black flex justify-between items-end">
+          <div className="mt-auto pt-12 border-t-4 border-white flex justify-between items-end">
             <div className="text-sm font-bold uppercase tracking-wider">
               Phola, Ogies, Mpumalanga
             </div>
@@ -404,10 +405,10 @@ export function CompanyProfile() {
                 <tbody className="text-xs">
                   {[
                     { client: "Thungela Resources", project: "Zibulo Colliery", desc: "Stockpile Management", vol: "3.4M Tons", color: "text-red-600" },
-                    { client: "Thungela Resources", project: "Phola Plant to Greenside RLT", desc: "Coal Hauling", vol: "500,000 Tons", color: "text-blue-600" },
-                    { client: "Thungela Resources", project: "Isibonelo Mine to Landau MRD", desc: "Coal Hauling", vol: "800,000 Tons", color: "text-emerald-600" },
-                    { client: "Glencore", project: "Umsimbithi Mine to Eskom", desc: "Coal Hauling to Power Stations", vol: "750,000 Tons", color: "text-orange-600" },
-                    { client: "Transnet", project: "Material Handling", desc: "34-ton Side Tipper Truck Operations", vol: "25,000 Tons", color: "text-purple-600" }
+                    { client: "Thungela Resources", project: "Phola Plant", desc: "Coal Hauling", vol: "500,000 Tons", color: "text-blue-600" },
+                    { client: "Thungela Resources", project: "Isibonelo", desc: "Coal Hauling", vol: "800,000 Tons", color: "text-emerald-600" },
+                    { client: "Glencore / Eskom", project: "Umsimbithi Mine", desc: "Coal Hauling to Power Stations", vol: "750,000 Tons", color: "text-orange-600" },
+                    { client: "Transnet", project: "Zibulo Colliery", desc: "34-ton Side Tipper Truck Operations", vol: "25,000 Tons", color: "text-purple-600" }
                   ].map((row, i) => (
                     <tr key={i} className="hover:bg-gray-50 transition-colors">
                       <td className="p-4 font-black border-b border-gray-100">{i + 1}</td>
