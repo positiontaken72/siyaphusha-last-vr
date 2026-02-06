@@ -39,10 +39,29 @@ const projects = [
     volume: "3,4+ Million tons",
     status: "Ongoing",
     description: "Comprehensive stockpile management ensuring strategic resource availability for Thungela Resources."
+  },
+  {
+    client: "Glencore / Eskom",
+    type: "Haulage",
+    location: "Umsimbithi Mine",
+    scope: "Hauling coal Umsibithi mine to Eskom Power Stations",
+    volume: "750 000 tons",
+    status: "Ongoing",
+    tags: ["Eskom"],
+    description: "Strategic coal supply logistics from Umsimbithi mine to various Eskom Power Stations."
+  },
+  {
+    client: "Transnet",
+    type: "Material Handling",
+    location: "Operations",
+    scope: "Material Handling using 34 tons side tipper trucks",
+    volume: "25 000 tons",
+    status: "Ongoing",
+    description: "Bulk material handling and logistics support for Transnet operations."
   }
 ];
 
-const clients = ["All", "Thungela Resources"];
+const clients = ["All", "Thungela Resources", "Glencore", "Eskom", "Transnet"];
 
 export function Projects() {
   const [filter, setFilter] = useState("All");
@@ -90,9 +109,16 @@ export function Projects() {
               >
                 <div className="p-6 sm:p-8">
                   <div className="flex justify-between items-start mb-4">
-                    <Badge className="bg-black text-white hover:bg-gray-800">
-                      {project.type}
-                    </Badge>
+                    <div className="flex flex-wrap gap-2">
+                      <Badge className="bg-black text-white hover:bg-gray-800">
+                        {project.type}
+                      </Badge>
+                      {project.tags?.map(tag => (
+                        <Badge key={tag} variant="outline" className="border-black text-black">
+                          {tag}
+                        </Badge>
+                      ))}
+                    </div>
                     <span className={cn(
                       "text-xs font-bold flex items-center",
                       project.status === "Ongoing" ? "text-green-600" : "text-gray-500"

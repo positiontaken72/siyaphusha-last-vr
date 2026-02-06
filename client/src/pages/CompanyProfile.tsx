@@ -111,11 +111,10 @@ export function CompanyProfile() {
               { title: "Executive Summary", page: "01" },
               { title: "Our Story & Vision", page: "02" },
               { title: "Leadership", page: "03" },
-              { title: "Our Services", page: "04" },
-              { title: "Scope of Work", page: "05" },
-              { title: "Fleet & Assets", page: "06" },
-              { title: "Our Commitment", page: "07" },
-              { title: "Partner With Us", page: "08" },
+              { title: "Operational Excellence", page: "04" },
+              { title: "Fleet & Assets", page: "05" },
+              { title: "Our Commitment", page: "06" },
+              { title: "Partner With Us", page: "07" },
             ].map((item, i) => (
               <div key={i} className="flex items-end gap-4 group cursor-default">
                 <span className="text-sm font-black text-gray-400 group-hover:text-black transition-colors w-6">0{i + 1}</span>
@@ -357,45 +356,80 @@ export function CompanyProfile() {
             </div>
       </div>
 
-      {/* 4. Our Services */}
+      {/* 4. Operational Excellence */}
       <div className="min-h-[1056px] p-12 mb-16 page-break-after-always">
         <div className="flex items-center gap-4 mb-12">
-          <div className="w-12 h-12 bg-black text-white flex items-center justify-center font-black text-xl">05</div>
-          <h2 className="text-4xl font-black uppercase tracking-tight">Scope of Work</h2>
+          <div className="w-12 h-12 bg-black text-white flex items-center justify-center font-black text-xl">04</div>
+          <h2 className="text-4xl font-black uppercase tracking-tight">Operational Excellence</h2>
         </div>
 
         <div className="space-y-12">
           <section>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <h3 className="text-xl font-black uppercase mb-6 tracking-wider">Key Routes and Volumes</h3>
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
               {[
-                { route: "Hauling Coal from Phola Plant to Greenside RLT for Thungela Resources", tons: "Volume 500 000 tons", client: "Thungela Resources", color: "border-blue-600", textColor: "text-blue-600", desc: "Scope of Work" },
-                { route: "Hauling Coal from Isibonelo to Landua MRD for Thungela Resources", tons: "Volume 800 000 tons", client: "Thungela Resources", color: "border-emerald-600", textColor: "text-emerald-600", desc: "Scope of Work" },
-                { route: "Material Handling using 34 ton side tiper trucks", tons: "Volume :25 000 tons", client: "Thungela Resources", color: "border-amber-500", textColor: "text-amber-500", desc: "Scope of Work" },
-                { route: "Stockpile Management for Thungela Resources", tons: "Volume 3,4+ Million tons", client: "Thungela Resources", color: "border-red-600", textColor: "text-red-600", desc: "Scope of Work" }
+                { route: "Phola to Greenside", tons: "500,000 Tons", client: "Thungela Resources", color: "border-blue-600", textColor: "text-blue-600" },
+                { route: "Isibonelo to Landau", tons: "800,000 Tons", client: "Thungela Resources", color: "border-emerald-600", textColor: "text-emerald-600" },
+                { route: "Stockpile Management", tons: "3.4 Million Tons", client: "Thungela Resources", color: "border-amber-500", textColor: "text-amber-500" },
+                { route: "Umsimbithi to Eskom", tons: "750,000 Tons", client: "Glencore", color: "border-red-600", textColor: "text-red-600" }
               ].map((item, i) => (
-                <div key={i} className={cn("p-6 bg-gray-50 border-t-8 shadow-sm flex flex-col justify-between h-full relative", item.color)}>
-                  <div className="hidden print:flex absolute bottom-4 right-4 opacity-30 grayscale brightness-0">
-                    <img src="/attached_assets/Copy_of_SIYAPHUSHA_LOGO_WHITE_(1)_1770260074500.png" alt="Logo" className="h-4 w-auto" />
-                  </div>
-                  <div>
-                    <div className="flex justify-between items-start mb-2">
-                      <span className="text-[10px] font-black uppercase tracking-widest text-gray-400">{item.client}</span>
-                      <span className={cn("text-sm font-black", item.textColor)}>{item.tons}</span>
-                    </div>
-                    <h4 className="text-xl font-black uppercase leading-tight mb-2">{item.route}</h4>
-                    <p className="text-sm font-bold text-gray-500 uppercase tracking-widest">{item.desc}</p>
-                  </div>
+                <div key={i} className={cn("p-4 bg-gray-50 border-t-8 shadow-sm", item.color)}>
+                  <div className="text-[10px] font-bold text-gray-500 uppercase tracking-widest mb-1">{item.client}</div>
+                  <div className="text-sm font-black mb-1 leading-tight">{item.route}</div>
+                  <div className={cn("text-lg font-black", item.textColor)}>{item.tons}</div>
                 </div>
               ))}
+            </div>
+          </section>
+
+          <div className="p-8 border-2 border-black flex flex-col items-center justify-center text-center bg-black text-white">
+            <h3 className="text-xl font-black uppercase mb-4 tracking-tighter">A Proven Track Record</h3>
+            <p className="opacity-80 max-w-xl text-sm italic">
+              "We measure our success by the trust our clients place in us. Our 30,000+ hour incident free record is our greatest achievement. Safety is not just a rule here. It is the foundation of our culture."
+            </p>
+          </div>
+
+          <section className="pt-8">
+            <h3 className="text-xl font-black uppercase mb-8 border-b-4 border-black inline-block">Scope of Work</h3>
+            <div className="overflow-hidden border border-gray-200">
+              <table className="w-full text-left border-collapse">
+                <thead>
+                  <tr className="bg-gray-100">
+                    <th className="p-4 text-[10px] font-black uppercase tracking-widest border-b border-gray-200">#</th>
+                    <th className="p-4 text-[10px] font-black uppercase tracking-widest border-b border-gray-200">Client / Project</th>
+                    <th className="p-4 text-[10px] font-black uppercase tracking-widest border-b border-gray-200">Description</th>
+                    <th className="p-4 text-[10px] font-black uppercase tracking-widest border-b border-gray-200">Volume</th>
+                  </tr>
+                </thead>
+                <tbody className="text-xs">
+                  {[
+                    { client: "Thungela Resources", project: "Zibulo Colliery", desc: "Stockpile Management", vol: "3.4M Tons", color: "text-red-600" },
+                    { client: "Thungela Resources", project: "Phola Plant to Greenside RLT", desc: "Coal Hauling", vol: "500,000 Tons", color: "text-blue-600" },
+                    { client: "Thungela Resources", project: "Isibonelo Mine to Landau MRD", desc: "Coal Hauling", vol: "800,000 Tons", color: "text-emerald-600" },
+                    { client: "Glencore", project: "Umsimbithi Mine to Eskom", desc: "Coal Hauling to Power Stations", vol: "750,000 Tons", color: "text-orange-600" },
+                    { client: "Transnet", project: "Material Handling", desc: "34-ton Side Tipper Truck Operations", vol: "25,000 Tons", color: "text-purple-600" }
+                  ].map((row, i) => (
+                    <tr key={i} className="hover:bg-gray-50 transition-colors">
+                      <td className="p-4 font-black border-b border-gray-100">{i + 1}</td>
+                      <td className="p-4 border-b border-gray-100">
+                        <div className="font-black uppercase tracking-tight">{row.client}</div>
+                        <div className="text-[9px] text-gray-500 font-bold uppercase">{row.project}</div>
+                      </td>
+                      <td className="p-4 font-bold border-b border-gray-100 uppercase text-gray-600">{row.desc}</td>
+                      <td className={cn("p-4 font-black text-base border-b border-gray-100", row.color)}>{row.vol}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
             </div>
           </section>
         </div>
       </div>
 
-      {/* 6. Capabilities */}
+      {/* 5. Fleet & Assets */}
       <div className="min-h-[1056px] p-12 mb-16 page-break-after-always">
         <div className="flex items-center gap-4 mb-12">
-          <div className="w-12 h-12 bg-black text-white flex items-center justify-center font-black text-xl">07</div>
+          <div className="w-12 h-12 bg-black text-white flex items-center justify-center font-black text-xl">05</div>
           <h2 className="text-4xl font-black uppercase tracking-tight">Fleet & Assets</h2>
         </div>
 
@@ -437,10 +471,10 @@ export function CompanyProfile() {
         </div>
       </div>
 
-      {/* 8. Our Commitment */}
+      {/* 6. Our Commitment */}
       <div className="min-h-[1056px] p-12 mb-16 page-break-after-always">
         <div className="flex items-center gap-4 mb-12">
-          <div className="w-12 h-12 bg-black text-white flex items-center justify-center font-black text-xl">08</div>
+          <div className="w-12 h-12 bg-black text-white flex items-center justify-center font-black text-xl">06</div>
           <h2 className="text-4xl font-black uppercase tracking-tight">Our Commitment</h2>
         </div>
 
@@ -507,11 +541,11 @@ export function CompanyProfile() {
         </div>
       </div>
 
-      {/* 8. Partner With Us */}
+      {/* 7. Partner With Us */}
       <div className="min-h-[1056px] p-12 mb-16 flex flex-col justify-between">
         <div>
           <div className="flex items-center gap-4 mb-12">
-            <div className="w-12 h-12 bg-black text-white flex items-center justify-center font-black text-xl">08</div>
+            <div className="w-12 h-12 bg-black text-white flex items-center justify-center font-black text-xl">07</div>
             <h2 className="text-4xl font-black uppercase tracking-tight">Partner With Us</h2>
           </div>
 
