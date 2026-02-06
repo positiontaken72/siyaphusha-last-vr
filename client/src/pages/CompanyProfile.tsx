@@ -411,7 +411,7 @@ export function CompanyProfile() {
                     { client: "Thungela Resources", project: "Phola Plant", desc: "Coal Hauling", vol: "500,000 Tons", color: "text-blue-600" },
                     { client: "Thungela Resources", project: "Isibonelo", desc: "Coal Hauling", vol: "800,000 Tons", color: "text-emerald-600" },
                     { client: "Glencore / Eskom", project: "Umsimbithi Mine", desc: "Coal Hauling to Power Stations", vol: "750,000 Tons", color: "text-orange-600" },
-                    { client: "Transnet", project: "Zibulo Colliery", desc: "34-ton Side Tipper Truck Operations", vol: "25,000 Tons", color: "text-purple-600" }
+                    { client: "Transnet", project: "Zibulo Colliery", desc: "34-ton Side Tipper Truck Operations", vol: "25,000 Tons", color: "text-lime-600" }
                   ].map((row, i) => (
                     <tr key={i} className="hover:bg-gray-50 transition-colors">
                       <td className="p-4 font-black border-b border-gray-100">{i + 1}</td>
