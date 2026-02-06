@@ -8,10 +8,46 @@ export function CompanyProfile() {
   const secondaryColor = "hsl(0 0% 100%)";
 
   return (
-    <div className="bg-white min-h-screen p-8 md:p-16 max-w-4xl mx-auto print:p-0 print:max-w-none text-black selection:bg-black selection:text-white" id="profile-container">
+    <div className="bg-white min-h-screen text-black selection:bg-black selection:text-white" id="profile-container">
+      <style>{`
+        @media screen {
+          #profile-container {
+            padding: 2rem;
+            max-width: 56rem;
+            margin: 0 auto;
+          }
+        }
+        @media print {
+          @page {
+            size: A4;
+            margin: 0;
+          }
+          body {
+            print-color-adjust: exact;
+            -webkit-print-color-adjust: exact;
+          }
+          .page-break-after-always {
+            page-break-after: always;
+          }
+          #profile-container {
+            padding: 0;
+            max-width: none;
+            margin: 0;
+          }
+        }
+        #profile-container {
+          font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+      `}</style>
       {/* Cover Page */}
       <div className="min-h-[1056px] flex flex-col justify-between border-8 border-black p-12 mb-16 relative overflow-hidden page-break-after-always">
-        <div className="absolute inset-0 opacity-10 pointer-events-none industrial-pattern"></div>
+        <div className="absolute inset-0 opacity-20 pointer-events-none">
+          <img 
+            src="/attached_assets/hero_video_screenshot.png" 
+            alt="Hero Background" 
+            className="w-full h-full object-cover grayscale"
+          />
+        </div>
         <div className="relative z-10 flex flex-col h-full">
           <div className="flex justify-between items-start mb-24">
             <div className="flex items-center gap-4">
@@ -85,23 +121,23 @@ export function CompanyProfile() {
               Today, Siyaphusha delivers integrated mining support, earthworks, and logistics from our base in Phola. We have moved over 1,000,000 tonnes of material for leading industry clients. We have done this while building a perfect safety record across 30,000 operational hours. Our clients trust us because we understand the pressure they face. They know we will do what we say we will do.
             </p>
           </div>
-          <div className="bg-gray-50 p-8 border-l-4 border-black">
+          <div className="bg-gray-50 p-8 border-l-8 border-emerald-600">
             <h3 className="font-black text-sm uppercase tracking-widest mb-6">A Record of Reliable Delivery</h3>
             <div className="space-y-8">
               <div>
-                <div className="text-4xl font-black">1M+</div>
+                <div className="text-4xl font-black text-blue-600">1M+</div>
                 <div className="text-xs uppercase tracking-widest font-bold text-gray-500">Tonnes Transported with our haulage fleet</div>
               </div>
               <div>
-                <div className="text-4xl font-black">30k+</div>
+                <div className="text-4xl font-black text-emerald-600">30k+</div>
                 <div className="text-xs uppercase tracking-widest font-bold text-gray-500">Operational Hours with zero lost time incidents</div>
               </div>
               <div>
-                <div className="text-4xl font-black">25k+</div>
+                <div className="text-4xl font-black text-amber-500">25k+</div>
                 <div className="text-xs uppercase tracking-widest font-bold text-gray-500">Daily tons material handling</div>
               </div>
               <div>
-                <div className="text-4xl font-black">3.4M+</div>
+                <div className="text-4xl font-black text-red-500">3.4M+</div>
                 <div className="text-xs uppercase tracking-widest font-bold text-gray-500">Tons managed and stockpiled</div>
               </div>
             </div>
@@ -168,35 +204,77 @@ export function CompanyProfile() {
         <div className="border-t-2 border-black pt-12">
           <h3 className="text-xl font-black uppercase mb-12 tracking-wider text-center">Organizational Structure</h3>
           <div className="flex flex-col items-center space-y-4">
-            <div className="bg-black text-white px-8 py-4 font-black uppercase tracking-[0.2em] text-xs border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,0.1)]">
+            <div className="bg-blue-900 text-white px-8 py-4 font-black uppercase tracking-[0.2em] text-xs border-2 border-black">
               Siyaphusha Management Board
             </div>
             <div className="w-px h-8 bg-black"></div>
             <div className="flex gap-12">
-              <div className="bg-white text-black p-6 w-56 text-center border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+              <div className="bg-blue-600 text-white p-6 w-56 text-center border-2 border-black">
                 <div className="font-black uppercase text-base mb-1">Themba Nkosi</div>
-                <div className="text-[10px] font-bold text-gray-500 uppercase tracking-widest">Executive Partner</div>
+                <div className="text-[10px] font-bold opacity-80 uppercase tracking-widest">Executive Partner</div>
               </div>
-              <div className="bg-white text-black p-6 w-56 text-center border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+              <div className="bg-blue-600 text-white p-6 w-56 text-center border-2 border-black">
                 <div className="font-black uppercase text-base mb-1">Solomon Howard</div>
-                <div className="text-[10px] font-bold text-gray-500 uppercase tracking-widest">Operations Partner</div>
+                <div className="text-[10px] font-bold opacity-80 uppercase tracking-widest">Operations Partner</div>
               </div>
             </div>
             <div className="w-px h-8 bg-black"></div>
-            <div className="grid grid-cols-4 gap-4 w-full px-4">
-              {[
-                { label: "Business Development", color: "bg-gray-100" },
-                { label: "Finance & Admin", color: "bg-gray-100" },
-                { label: "Compliance & SHEQ", color: "bg-black text-white" },
-                { label: "Operations & Fleet", color: "bg-gray-100" }
-              ].map((dept, i) => (
-                <div key={i} className={cn(
-                  "p-4 text-center text-[10px] font-black uppercase border-2 border-black",
-                  dept.color
-                )}>
-                  {dept.label}
+            <div className="grid grid-cols-4 gap-4 w-full px-4 items-start">
+              {/* BD */}
+              <div className="flex flex-col items-center">
+                <div className="bg-emerald-600 text-white p-4 w-full text-center text-[10px] font-black uppercase border-2 border-black">
+                  Business Development
                 </div>
-              ))}
+                <div className="w-px h-4 bg-black"></div>
+                <div className="bg-amber-500 text-black p-3 w-full text-center text-[9px] font-bold uppercase border-2 border-black">
+                  Business Executive
+                </div>
+              </div>
+
+              {/* Finance */}
+              <div className="flex flex-col items-center">
+                <div className="bg-emerald-600 text-white p-4 w-full text-center text-[10px] font-black uppercase border-2 border-black">
+                  Finance & Administration
+                </div>
+                <div className="w-px h-4 bg-black"></div>
+                <div className="flex flex-col gap-2 w-full">
+                  <div className="bg-amber-500 text-black p-2 text-center text-[8px] font-bold uppercase border-2 border-black">HR & PROCUREMENT</div>
+                  <div className="bg-amber-500 text-black p-2 text-center text-[8px] font-bold uppercase border-2 border-black">FINANCE</div>
+                </div>
+              </div>
+
+              {/* Compliance */}
+              <div className="flex flex-col items-center">
+                <div className="bg-red-600 text-white p-4 w-full text-center text-[10px] font-black uppercase border-2 border-black">
+                  Compliance & SHEQ
+                </div>
+                <div className="w-px h-4 bg-black"></div>
+                <div className="bg-amber-500 text-black p-3 w-full text-center text-[9px] font-bold uppercase border-2 border-black">
+                  SHEQ Officer
+                </div>
+              </div>
+
+              {/* Operations */}
+              <div className="flex flex-col items-center">
+                <div className="bg-emerald-600 text-white p-4 w-full text-center text-[10px] font-black uppercase border-2 border-black">
+                  Operations Management
+                </div>
+                <div className="w-px h-4 bg-black"></div>
+                <div className="grid grid-cols-2 gap-2 w-full">
+                  <div className="flex flex-col items-center">
+                    <div className="bg-amber-500 text-black p-2 w-full text-center text-[7px] font-bold uppercase border-2 border-black leading-tight">LOGISTICS FLEET & SUPERINTENDENT</div>
+                    <div className="w-px h-2 bg-black"></div>
+                    <div className="bg-gray-200 text-black p-1 w-full text-center text-[6px] font-bold uppercase border border-black">Shift Supervisors</div>
+                    <div className="bg-gray-200 text-black p-1 w-full text-center text-[6px] font-bold uppercase border border-black mt-1">Haulage</div>
+                  </div>
+                  <div className="flex flex-col items-center">
+                    <div className="bg-amber-500 text-black p-2 w-full text-center text-[7px] font-bold uppercase border-2 border-black leading-tight">PLANT & CIVILS SUPERINTENDENT</div>
+                    <div className="w-px h-2 bg-black"></div>
+                    <div className="bg-gray-200 text-black p-1 w-full text-center text-[6px] font-bold uppercase border border-black">SITE FOREMAN</div>
+                    <div className="bg-gray-200 text-black p-1 w-full text-center text-[6px] font-bold uppercase border border-black mt-1">OPS TEAM</div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -241,31 +319,20 @@ export function CompanyProfile() {
             <h3 className="text-xl font-black uppercase mb-6 tracking-wider">Key Routes and Volumes</h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {[
-                { route: "Phola to Greenside", tons: "500,000 Tons", client: "Thungela Resources" },
-                { route: "Isibonelo to Landau", tons: "150,000 Tons", client: "Thungela Resources" },
-                { route: "Stockpile Management", tons: "3,400,000 Tons", client: "Thungela Resources" },
-                { route: "Umsimbithi to Eskom", tons: "750,000 Tons", client: "Glencore" }
+                { route: "Phola to Greenside", tons: "500,000 Tons", client: "Thungela Resources", color: "border-blue-600", textColor: "text-blue-600" },
+                { route: "Isibonelo to Landau", tons: "800,000 Tons", client: "Thungela Resources", color: "border-emerald-600", textColor: "text-emerald-600" },
+                { route: "Stockpile Management", tons: "3.4 Million Tons", client: "Thungela Resources", color: "border-amber-500", textColor: "text-amber-500" },
+                { route: "Umsimbithi to Eskom", tons: "750,000 Tons", client: "Glencore", color: "border-red-600", textColor: "text-red-600" }
               ].map((item, i) => (
-                <div key={i} className="p-6 bg-gray-50 border-t-4 border-black">
+                <div key={i} className={cn("p-6 bg-gray-50 border-t-8", item.color)}>
                   <div className="text-xs font-bold text-gray-500 uppercase tracking-widest mb-2">{item.client}</div>
                   <div className="text-lg font-black mb-1">{item.route}</div>
-                  <div className="text-sm font-bold text-black">{item.tons}</div>
+                  <div className={cn("text-xl font-black", item.textColor)}>{item.tons}</div>
                 </div>
               ))}
             </div>
           </section>
 
-          <section>
-            <h3 className="text-xl font-black uppercase mb-6 tracking-wider">Strategic Logistical Footprint</h3>
-            <div className="w-full border-2 border-black p-4 bg-gray-50">
-              <img 
-                src="/attached_assets/Copy_of_Operational_Footprint_1770260467399.png" 
-                alt="Operational Footprint Map" 
-                className="w-full h-auto grayscale hover:grayscale-0 transition-all duration-500"
-              />
-            </div>
-          </section>
-          
           <div className="p-12 border-2 border-black flex flex-col items-center justify-center text-center bg-black text-white">
             <h3 className="text-2xl font-black uppercase mb-4 tracking-tighter">A Proven Track Record</h3>
             <p className="opacity-80 max-w-xl text-sm italic">
@@ -349,8 +416,8 @@ export function CompanyProfile() {
             </div>
             <div>
               <h3 className="text-xl font-black uppercase mb-4 border-l-4 border-black pl-4">Community Investment</h3>
-              <p className="text-sm text-gray-600 leading-relaxed mb-4">
-                We are invested in Phola. We sponsor the local Chakalaka Future Stars football team and support early childhood education with learning supplies.
+              <p className="text-sm text-gray-600 leading-relaxed mb-4 font-medium">
+                "We invest in the communities where we operate. Our commitment goes beyond our work sites. We focus on skills improvement and creating opportunities that empower people. We support initiatives that build confidence and motivation for a better future. We believe that by helping communities grow stronger, we all move forward together. Our involvement reflects our core values of responsibility and progress."
               </p>
               <div className="flex gap-4">
                 <span className="text-[10px] font-bold bg-gray-100 px-3 py-1 uppercase tracking-tighter">Chakalaka Future Stars</span>
@@ -413,9 +480,9 @@ export function CompanyProfile() {
                 </div>
               </div>
             </div>
-            <div className="flex flex-col justify-end text-right">
-              <div className="text-[10px] font-bold uppercase tracking-[0.5em] mb-4">Powering Progress, Responsibly.</div>
-              <div className="text-[8px] opacity-40">© {new Date().getFullYear()} Siyaphusha Consortium (PTY) Ltd</div>
+            <div className="flex flex-col justify-end items-end gap-4">
+              <img src="/attached_assets/Copy_of_SIYAPHUSHA_LOGO_WHITE_(1)_1770260074500.png" alt="Siyaphusha Logo" className="h-12 w-auto brightness-0 invert" />
+              <p className="text-[10px] opacity-40 uppercase tracking-[0.2em]">&copy; 2026 Siyaphusha Consortium (PTY) Ltd</p>
             </div>
           </div>
         </div>

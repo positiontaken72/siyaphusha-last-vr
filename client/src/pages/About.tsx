@@ -200,18 +200,16 @@ export function About() {
                   <div className="w-px h-8 bg-gray-400"></div>
                   <div className="flex gap-4 w-full">
                     <div className="flex flex-col items-center flex-1">
-                      <div className="bg-amber-500 text-black p-3 w-full text-center text-[9px] font-bold uppercase border-2 border-black leading-tight">Logistics & Fleet<br/>Superintendent</div>
+                      <div className="bg-amber-500 text-black p-3 w-full text-center text-[9px] font-bold uppercase border-2 border-black leading-tight">Logistics Fleet & Superintendent</div>
                       <div className="w-px h-4 bg-gray-400"></div>
                       <div className="bg-gray-300 text-black p-2 w-full text-center text-[8px] font-bold uppercase border-2 border-black">Shift Supervisors</div>
-                      <div className="w-px h-2 bg-gray-400"></div>
-                      <div className="bg-gray-300 text-black p-2 w-full text-center text-[8px] font-bold uppercase border-2 border-black">Haulage Teams</div>
+                      <div className="bg-gray-200 text-black p-2 w-full text-center text-[8px] font-bold uppercase border-2 border-black mt-1">Haulage</div>
                     </div>
                     <div className="flex flex-col items-center flex-1">
-                      <div className="bg-amber-500 text-black p-3 w-full text-center text-[9px] font-bold uppercase border-2 border-black leading-tight">Plant & Civils<br/>Superintendent</div>
+                      <div className="bg-amber-500 text-black p-3 w-full text-center text-[9px] font-bold uppercase border-2 border-black leading-tight">Plant & Civils Superintendent</div>
                       <div className="w-px h-4 bg-gray-400"></div>
-                      <div className="bg-gray-300 text-black p-2 w-full text-center text-[8px] font-bold uppercase border-2 border-black">Site Foremen</div>
-                      <div className="w-px h-2 bg-gray-400"></div>
-                      <div className="bg-gray-300 text-black p-2 w-full text-center text-[8px] font-bold uppercase border-2 border-black">Ops Teams</div>
+                      <div className="bg-gray-300 text-black p-2 w-full text-center text-[8px] font-bold uppercase border-2 border-black">Site Foreman</div>
+                      <div className="bg-gray-200 text-black p-2 w-full text-center text-[8px] font-bold uppercase border-2 border-black mt-1">Ops Team</div>
                     </div>
                   </div>
                 </div>
