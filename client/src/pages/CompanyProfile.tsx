@@ -96,6 +96,7 @@ export function CompanyProfile() {
               { title: "Operational Excellence", page: "06" },
               { title: "Fleet & Assets", page: "07" },
               { title: "Our Commitment", page: "08" },
+              { title: "Partner With Us", page: "09" },
             ].map((item, i) => (
               <div key={i} className="flex items-end gap-4 group cursor-default">
                 <span className="text-sm font-black text-gray-400 group-hover:text-black transition-colors w-6">0{i + 1}</span>
@@ -240,8 +241,8 @@ export function CompanyProfile() {
                 {/* Horizontal Dashed Line between Themba and Solomon */}
                 <div className="absolute top-[60px] left-[144px] right-[144px] h-0.5 border-t-2 border-dashed border-blue-400/30"></div>
                 
-                {/* Vertical line from center of dashed line */}
-                <div className="absolute top-[60px] left-1/2 -translate-x-1/2 w-0.5 h-16 border-l-2 border-dashed border-gray-400"></div>
+                {/* Vertical line from center of dashed line joining main horizontal line */}
+                <div className="absolute top-[60px] left-1/2 -translate-x-1/2 w-0.5 h-[52px] border-l-2 border-dashed border-gray-400"></div>
 
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[calc(100%-160px)] h-1 bg-black"></div>
                 <div className="flex flex-col items-center">
@@ -321,15 +322,15 @@ export function CompanyProfile() {
                         Shift Supervisors
                       </div>
                       <div className="w-0.5 h-6 bg-gray-400"></div>
-                      <div className="bg-amber-100 text-black p-2 w-full text-center text-[8px] font-bold uppercase border border-amber-300">
+                      <div className="bg-gray-100 text-black p-2 w-full text-center text-[8px] font-bold uppercase border border-gray-300">
                         Drivers, Fleet Operators & Mechanics
                       </div>
                       <div className="w-0.5 h-6 bg-gray-400"></div>
-                      <div className="bg-amber-50 text-black p-2 w-full text-center text-[7px] font-bold uppercase border border-amber-200 italic">
+                      <div className="bg-gray-50 text-black p-2 w-full text-center text-[7px] font-bold uppercase border border-gray-200 italic">
                         Site Foreman
                       </div>
                       <div className="w-0.5 h-6 bg-gray-400"></div>
-                      <div className="bg-amber-50 text-black p-2 w-full text-center text-[7px] font-bold uppercase border border-amber-200">
+                      <div className="bg-gray-50 text-black p-2 w-full text-center text-[7px] font-bold uppercase border border-gray-200">
                         Machinery, Civil Operators & Mechanics
                       </div>
                     </div>
@@ -337,6 +338,10 @@ export function CompanyProfile() {
                     <div className="flex flex-col items-center">
                       <div className="bg-amber-500 text-black p-4 w-full text-center text-[9px] font-black uppercase shadow-md border-b-2 border-amber-700 leading-tight min-h-[60px] flex items-center justify-center">
                         Plant & Civils Superintendent
+                      </div>
+                      <div className="w-0.5 h-6 bg-gray-400"></div>
+                      <div className="bg-gray-50 text-black p-2 w-full text-center text-[7px] font-bold uppercase border border-gray-200">
+                        Plant & Civils
                       </div>
                     </div>
                   </div>
@@ -356,19 +361,19 @@ export function CompanyProfile() {
 
         <div className="grid md:grid-cols-2 gap-x-12 gap-y-16">
           {[
-            { title: "Logistics and Haulage", desc: "We transport bulk materials safely across Mpumalanga. Our 34-ton side tippers form a core part of this capability, handling over 25,000 tons daily." },
-            { title: "Stockpile Management", desc: "Good stockpile management prevents delays and ensures consistency. Our team has managed over 3,400,000 tons in stockpile volumes." },
-            { title: "Mine Rehabilitation", desc: "We restore mining land to a productive state. Our work follows careful plans and meets all regulations to leave the land better for future use." },
-            { title: "Crushing and Plant Hire", desc: "We process raw materials to meet specific client grades using mobile plants on site. We also hire out this equipment to other operators." },
-            { title: "Civil Works", desc: "We build strong, durable infrastructure including haul roads, dams, and site facilities. We build things right the first time to avoid problems later." },
-            { title: "Soil Stripping", desc: "We remove overburden to access resources efficiently. We handle topsoil with care so it can be reused later, protecting the environment." }
+            { title: "Logistics and Haulage", desc: <>We transport bulk materials safely across Mpumalanga. Our <span className="font-bold text-blue-600">34 to 50 tons</span> side tippers form a core part of this capability, handling over <span className="font-bold text-emerald-600">25,000 tons</span> daily.</>, border: "border-blue-500" },
+            { title: "Stockpile Management", desc: <>Good stockpile management prevents delays and ensures consistency. Our team has managed over <span className="font-bold bg-amber-100 px-1">3,400,000 tons</span> in stockpile volumes.</>, border: "border-amber-500" },
+            { title: "Mine Rehabilitation", desc: "We restore mining land to a productive state. Our work follows careful plans and meets all regulations to leave the land better for future use.", border: "border-emerald-500" },
+            { title: "Crushing and Plant Hire", desc: "We process raw materials to meet specific client grades using mobile plants on site. We also hire out this equipment to other operators.", border: "border-red-500" },
+            { title: "Civil Works", desc: "We build strong, durable infrastructure including haul roads, dams, and site facilities. We build things right the first time to avoid problems later.", border: "border-purple-500" },
+            { title: "Soil Stripping", desc: "We remove overburden to access resources efficiently. We handle topsoil with care so it can be reused later, protecting the environment.", border: "border-gray-500" }
           ].map((service, i) => (
             <div key={i} className="group relative pl-12">
               <div className="absolute left-0 top-0 text-4xl font-black text-gray-100 group-hover:text-black transition-colors">0{i + 1}</div>
               <h3 className="text-xl font-black uppercase mb-3 tracking-tight">{service.title}</h3>
-              <p className="text-sm text-gray-600 leading-relaxed border-l-2 border-gray-100 pl-4">
+              <div className={cn("text-sm text-gray-600 leading-relaxed border-l-4 pl-4", service.border)}>
                 {service.desc}
-              </p>
+              </div>
             </div>
           ))}
         </div>
