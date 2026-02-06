@@ -34,15 +34,19 @@ export function CompanyProfile() {
             max-width: none;
             margin: 0;
           }
-          footer-text {
+          .page-footer {
             position: fixed;
             bottom: 20px;
             width: 100%;
             text-align: center;
-            color: #888888;
-            font-size: 10px;
-            opacity: 0.5;
+            color: #aaaaaa;
+            font-size: 9px;
+            font-weight: 300;
+            opacity: 0.6;
             z-index: 1000;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            font-family: 'Inter', sans-serif;
           }
         }
         #profile-container {
@@ -50,8 +54,8 @@ export function CompanyProfile() {
         }
       `}</style>
       
-      {/* Footer text for every page in print */}
-      <div className="hidden print:block fixed bottom-4 w-full text-center text-gray-400 text-[10px] opacity-50 z-50">
+      {/* Page Footer for Print */}
+      <div className="hidden print:block page-footer">
         WWW.SIYAPHUSHA.CO.ZA | INFO@SIYAPHUSHA.CO.ZA
       </div>
 
@@ -108,7 +112,7 @@ export function CompanyProfile() {
               { title: "Our Story & Vision", page: "02" },
               { title: "Leadership", page: "03" },
               { title: "Our Services", page: "04" },
-              { title: "Operational Excellence", page: "05" },
+              { title: "Scope of Work", page: "05" },
               { title: "Fleet & Assets", page: "06" },
               { title: "Our Commitment", page: "07" },
               { title: "Partner With Us", page: "08" },
@@ -238,13 +242,7 @@ export function CompanyProfile() {
           </div>
         </div>
 
-        <div className="flex-1 flex flex-col justify-center">
-          <div className="flex flex-col items-center mb-8">
-            <h2 className="text-xl font-medium tracking-[0.2em] text-gray-400 uppercase">Management Hierarchy</h2>
-          </div>
-
-          <div className="max-w-full overflow-hidden">
-            <div className="flex flex-col items-center scale-[0.65] origin-top">
+            <div className="flex-1 flex flex-col justify-center">
               {/* Management Tier */}
               <div className="bg-black text-white px-10 py-5 font-black uppercase tracking-[0.3em] text-sm shadow-2xl border border-white/20">
                 Board of Directors / Management
@@ -357,69 +355,40 @@ export function CompanyProfile() {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
       </div>
 
       {/* 4. Our Services */}
       <div className="min-h-[1056px] p-12 mb-16 page-break-after-always">
         <div className="flex items-center gap-4 mb-12">
           <div className="w-12 h-12 bg-black text-white flex items-center justify-center font-black text-xl">05</div>
-          <h2 className="text-4xl font-black uppercase tracking-tight">Our Services</h2>
-        </div>
-
-        <div className="grid md:grid-cols-2 gap-x-12 gap-y-16">
-          {[
-            { title: "Logistics and Haulage", desc: <>We transport bulk materials safely across Mpumalanga. Our <span className="font-bold text-blue-600">34 to 50 tons</span> side tippers form a core part of this capability, handling over <span className="font-bold text-emerald-600">25,000 tons</span> daily.</>, border: "border-blue-500" },
-            { title: "Stockpile Management", desc: <>Good stockpile management prevents delays and ensures consistency. Our team has managed over <span className="font-bold bg-amber-100 px-1">3,400,000 tons</span> in stockpile volumes.</>, border: "border-amber-500" },
-            { title: "Mine Rehabilitation", desc: "We restore mining land to a productive state. Our work follows careful plans and meets all regulations to leave the land better for future use.", border: "border-emerald-500" },
-            { title: "Crushing and Plant Hire", desc: "We process raw materials to meet specific client grades using mobile plants on site. We also hire out this equipment to other operators.", border: "border-red-500" },
-            { title: "Civil Works", desc: "We build strong, durable infrastructure including haul roads, dams, and site facilities. We build things right the first time to avoid problems later.", border: "border-gray-500" },
-            { title: "Soil Stripping", desc: "We remove overburden to access resources efficiently. We handle topsoil with care so it can be reused later, protecting the environment.", border: "border-gray-500" }
-          ].map((service, i) => (
-            <div key={i} className="group relative pl-12">
-              <div className="absolute left-0 top-0 text-4xl font-black text-gray-100 group-hover:text-black transition-colors">0{i + 1}</div>
-              <h3 className="text-xl font-black uppercase mb-3 tracking-tight">{service.title}</h3>
-              <div className={cn("text-sm text-gray-600 leading-relaxed border-l-4 pl-4", service.border)}>
-                {service.desc}
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* 5. Operational Excellence */}
-      <div className="min-h-[1056px] p-12 mb-16 page-break-after-always">
-        <div className="flex items-center gap-4 mb-12">
-          <div className="w-12 h-12 bg-black text-white flex items-center justify-center font-black text-xl">06</div>
-          <h2 className="text-4xl font-black uppercase tracking-tight">Operational Excellence</h2>
+          <h2 className="text-4xl font-black uppercase tracking-tight">Scope of Work</h2>
         </div>
 
         <div className="space-y-12">
           <section>
-            <h3 className="text-xl font-black uppercase mb-6 tracking-wider">Key Routes and Volumes</h3>
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {[
-                { route: "Phola to Greenside", tons: "500,000 Tons", client: "Thungela Resources", color: "border-blue-600", textColor: "text-blue-600" },
-                { route: "Isibonelo to Landau", tons: "800,000 Tons", client: "Thungela Resources", color: "border-emerald-600", textColor: "text-emerald-600" },
-                { route: "Stockpile Management", tons: "3.4 Million Tons", client: "Thungela Resources", color: "border-amber-500", textColor: "text-amber-500" },
-                { route: "Umsimbithi to Eskom", tons: "750,000 Tons", client: "Glencore", color: "border-red-600", textColor: "text-red-600" }
+                { route: "Hauling Coal from Phola Plant to Greenside RLT for Thungela Resources", tons: "Volume 500 000 tons", client: "Thungela Resources", color: "border-blue-600", textColor: "text-blue-600", desc: "Scope of Work" },
+                { route: "Hauling Coal from Isibonelo to Landua MRD for Thungela Resources", tons: "Volume 800 000 tons", client: "Thungela Resources", color: "border-emerald-600", textColor: "text-emerald-600", desc: "Scope of Work" },
+                { route: "Material Handling using 34 ton side tiper trucks", tons: "Volume :25 000 tons", client: "Thungela Resources", color: "border-amber-500", textColor: "text-amber-500", desc: "Scope of Work" },
+                { route: "Stockpile Management for Thungela Resources", tons: "Volume 3,4+ Million tons", client: "Thungela Resources", color: "border-red-600", textColor: "text-red-600", desc: "Scope of Work" }
               ].map((item, i) => (
-                <div key={i} className={cn("p-4 bg-gray-50 border-t-8 shadow-sm", item.color)}>
-                  <div className="text-[10px] font-bold text-gray-500 uppercase tracking-widest mb-1">{item.client}</div>
-                  <div className="text-sm font-black mb-1 leading-tight">{item.route}</div>
-                  <div className={cn("text-lg font-black", item.textColor)}>{item.tons}</div>
+                <div key={i} className={cn("p-6 bg-gray-50 border-t-8 shadow-sm flex flex-col justify-between h-full relative", item.color)}>
+                  <div className="hidden print:flex absolute bottom-4 right-4 opacity-30 grayscale brightness-0">
+                    <img src="/attached_assets/Copy_of_SIYAPHUSHA_LOGO_WHITE_(1)_1770260074500.png" alt="Logo" className="h-4 w-auto" />
+                  </div>
+                  <div>
+                    <div className="flex justify-between items-start mb-2">
+                      <span className="text-[10px] font-black uppercase tracking-widest text-gray-400">{item.client}</span>
+                      <span className={cn("text-sm font-black", item.textColor)}>{item.tons}</span>
+                    </div>
+                    <h4 className="text-xl font-black uppercase leading-tight mb-2">{item.route}</h4>
+                    <p className="text-sm font-bold text-gray-500 uppercase tracking-widest">{item.desc}</p>
+                  </div>
                 </div>
               ))}
             </div>
           </section>
-
-          <div className="p-8 border-2 border-black flex flex-col items-center justify-center text-center bg-black text-white">
-            <h3 className="text-xl font-black uppercase mb-4 tracking-tighter">A Proven Track Record</h3>
-            <p className="opacity-80 max-w-xl text-sm italic">
-              "We measure our success by the trust our clients place in us. Our 30,000+ hour incident free record is our greatest achievement. Safety is not just a rule here. It is the foundation of our culture."
-            </p>
-          </div>
         </div>
       </div>
 
@@ -602,7 +571,7 @@ export function CompanyProfile() {
       <div className="fixed bottom-8 right-8 print:hidden flex flex-col gap-4">
         <button 
           onClick={() => window.print()}
-          className="bg-black text-white p-6 rounded-none font-black uppercase tracking-widest flex items-center gap-4 hover:bg-gray-800 transition-colors shadow-2xl animate-industrial-pulse"
+          className="bg-black text-white p-6 rounded-none font-black uppercase tracking-widest flex items-center gap-4 hover:bg-gray-800 transition-colors shadow-2xl"
         >
           <Download className="w-6 h-6" />
           Generate PDF Profile
