@@ -118,94 +118,116 @@ export function About() {
             </h2>
           </div>
 
-          <div className="max-w-6xl mx-auto overflow-x-auto pb-8">
-            <div className="min-w-[800px] flex flex-col items-center">
-              {/* Management */}
-              <div className="bg-blue-900 text-white px-8 py-4 font-black uppercase tracking-widest text-sm shadow-xl">
-                Siyaphusha Management
+          <div className="max-w-7xl mx-auto overflow-x-auto pb-8">
+            <div className="min-w-[1000px] flex flex-col items-center">
+              {/* Management Tier */}
+              <div className="bg-black text-white px-10 py-5 font-black uppercase tracking-[0.3em] text-sm shadow-2xl border border-white/20">
+                Board of Directors / Management
               </div>
-              <div className="w-px h-8 bg-gray-200"></div>
+              <div className="w-1 h-8 bg-black"></div>
 
-              {/* Partners */}
-              <div className="flex gap-16 relative">
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[calc(100%-120px)] h-px bg-gray-200"></div>
+              {/* Partners Tier */}
+              <div className="flex gap-20 relative">
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[calc(100%-160px)] h-1 bg-black"></div>
                 <div className="flex flex-col items-center">
-                  <div className="w-px h-8 bg-gray-200"></div>
-                  <div className="bg-blue-600 text-white p-6 w-64 text-center shadow-lg">
-                    <div className="font-black uppercase text-lg">Themba Nkosi</div>
-                    <div className="text-xs font-bold opacity-80 uppercase tracking-widest mt-1">Executive Partner</div>
+                  <div className="w-1 h-8 bg-black"></div>
+                  <div className="bg-blue-700 text-white p-6 w-72 text-center shadow-xl border-b-4 border-blue-900">
+                    <div className="font-black uppercase text-xl tracking-tight">Themba Nkosi</div>
+                    <div className="text-xs font-bold opacity-90 uppercase tracking-[0.2em] mt-2">Executive Partner</div>
                   </div>
-                  <div className="w-px h-8 bg-gray-200"></div>
+                  <div className="w-1 h-10 bg-black"></div>
                 </div>
                 <div className="flex flex-col items-center">
-                  <div className="w-px h-8 bg-gray-200"></div>
-                  <div className="bg-blue-600 text-white p-6 w-64 text-center shadow-lg">
-                    <div className="font-black uppercase text-lg">Solomon Howard</div>
-                    <div className="text-xs font-bold opacity-80 uppercase tracking-widest mt-1">Operations Partner</div>
+                  <div className="w-1 h-8 bg-black"></div>
+                  <div className="bg-blue-700 text-white p-6 w-72 text-center shadow-xl border-b-4 border-blue-900">
+                    <div className="font-black uppercase text-xl tracking-tight">Solomon Howard</div>
+                    <div className="text-xs font-bold opacity-90 uppercase tracking-[0.2em] mt-2">Operations Partner</div>
                   </div>
-                  <div className="w-px h-8 bg-gray-200"></div>
+                  <div className="w-1 h-10 bg-black"></div>
                 </div>
               </div>
 
-              {/* Departments */}
-              <div className="flex gap-8 relative w-full justify-center">
-                <div className="absolute top-0 left-[15%] right-[15%] h-px bg-gray-200"></div>
+              {/* Departmental Tier */}
+              <div className="flex gap-6 relative w-full justify-center">
+                <div className="absolute top-0 left-[5%] right-[5%] h-1 bg-black"></div>
                 
-                {/* BD */}
-                <div className="flex flex-col items-center w-48">
-                  <div className="w-px h-8 bg-gray-200"></div>
-                  <div className="bg-emerald-600 text-white p-4 w-full text-center text-xs font-black uppercase tracking-tight shadow-md">
+                {/* Business Development */}
+                <div className="flex flex-col items-center w-56">
+                  <div className="w-1 h-8 bg-black"></div>
+                  <div className="bg-emerald-700 text-white p-4 w-full text-center text-xs font-black uppercase tracking-widest shadow-lg border-b-4 border-emerald-900">
                     Business Development
                   </div>
-                  <div className="w-px h-8 bg-gray-200"></div>
-                  <div className="bg-amber-500 text-black p-3 w-full text-center text-[10px] font-bold uppercase shadow-sm">
+                  <div className="w-1 h-8 bg-black"></div>
+                  <div className="bg-amber-500 text-black p-4 w-full text-center text-[10px] font-black uppercase shadow-md border-b-2 border-amber-700">
                     BD Executive
                   </div>
                 </div>
 
-                {/* Finance */}
-                <div className="flex flex-col items-center w-48">
-                  <div className="w-px h-8 bg-gray-200"></div>
-                  <div className="bg-emerald-600 text-white p-4 w-full text-center text-xs font-black uppercase tracking-tight shadow-md">
+                {/* Finance & Admin */}
+                <div className="flex flex-col items-center w-64">
+                  <div className="w-1 h-8 bg-black"></div>
+                  <div className="bg-emerald-700 text-white p-4 w-full text-center text-xs font-black uppercase tracking-widest shadow-lg border-b-4 border-emerald-900">
                     Finance & Administration
                   </div>
-                  <div className="w-px h-8 bg-gray-200"></div>
-                  <div className="flex gap-2 w-full">
-                    <div className="bg-amber-500 text-black p-2 flex-1 text-center text-[9px] font-bold uppercase shadow-sm leading-tight">HR & PROCUREMENT</div>
-                    <div className="bg-amber-500 text-black p-2 flex-1 text-center text-[9px] font-bold uppercase shadow-sm leading-tight">FINANCE</div>
+                  <div className="w-1 h-8 bg-black"></div>
+                  <div className="grid grid-cols-2 gap-2 w-full">
+                    <div className="bg-amber-500 text-black p-3 text-center text-[9px] font-black uppercase shadow-md border-b-2 border-amber-700 leading-tight flex items-center justify-center">HR & Procurement</div>
+                    <div className="bg-amber-500 text-black p-3 text-center text-[9px] font-black uppercase shadow-md border-b-2 border-amber-700 leading-tight flex items-center justify-center">Finance Manager</div>
                   </div>
+                  <div className="w-1 h-6 bg-black"></div>
+                  <div className="bg-gray-200 text-black p-2 w-[80%] text-center text-[8px] font-bold uppercase shadow-sm border-b border-gray-400">Payroll & Admin Support</div>
                 </div>
 
-                {/* Compliance (Shared) */}
-                <div className="flex flex-col items-center w-48 relative">
-                  <div className="w-px h-8 bg-gray-200"></div>
-                  <div className="bg-red-500 text-white p-4 w-full text-center text-xs font-black uppercase tracking-tight shadow-md">
-                    Compliance
+                {/* Compliance & SHEQ */}
+                <div className="flex flex-col items-center w-56">
+                  <div className="w-1 h-8 bg-black"></div>
+                  <div className="bg-red-700 text-white p-4 w-full text-center text-xs font-black uppercase tracking-widest shadow-lg border-b-4 border-red-900">
+                    Compliance / SHEQ
                   </div>
-                  <div className="w-px h-8 bg-gray-200"></div>
-                  <div className="bg-amber-500 text-black p-4 w-full text-center shadow-sm">
-                    <div className="text-[10px] font-black uppercase">SHEQ Officer</div>
-                    <div className="text-[8px] font-bold opacity-60">Safety, Health, Environment, Quality</div>
+                  <div className="w-1 h-8 bg-black"></div>
+                  <div className="bg-amber-500 text-black p-4 w-full text-center shadow-md border-b-2 border-amber-700">
+                    <div className="text-[10px] font-black uppercase tracking-tighter">SHEQ Officer</div>
+                    <div className="text-[7px] font-bold opacity-80 mt-1">Safety, Health, Environment & Quality</div>
                   </div>
+                  <div className="w-1 h-6 bg-black"></div>
+                  <div className="bg-gray-200 text-black p-2 w-[80%] text-center text-[8px] font-bold uppercase shadow-sm border-b border-gray-400">Safety Representatives</div>
                 </div>
 
-                {/* Operations */}
-                <div className="flex flex-col items-center w-64">
-                  <div className="w-px h-8 bg-gray-200"></div>
-                  <div className="bg-emerald-600 text-white p-4 w-full text-center text-xs font-black uppercase tracking-tight shadow-md">
+                {/* Operations Management */}
+                <div className="flex flex-col items-center w-[400px]">
+                  <div className="w-1 h-8 bg-black"></div>
+                  <div className="bg-emerald-700 text-white p-4 w-full text-center text-xs font-black uppercase tracking-widest shadow-lg border-b-4 border-emerald-900">
                     Operations Management
                   </div>
-                  <div className="w-px h-8 bg-gray-200"></div>
-                  <div className="flex gap-4 w-full">
-                    <div className="flex flex-col items-center flex-1">
-                      <div className="bg-amber-500 text-black p-3 w-full text-center text-[9px] font-bold uppercase shadow-sm leading-tight">Logistics Fleet & Superintendent</div>
-                      <div className="w-px h-4 bg-gray-200"></div>
-                      <div className="bg-gray-100 text-black p-2 w-full text-center text-[8px] font-bold uppercase shadow-sm">Shift Supervisors / Haulage</div>
+                  <div className="w-1 h-8 bg-black"></div>
+                  <div className="grid grid-cols-2 gap-4 w-full">
+                    {/* Logistics Branch */}
+                    <div className="flex flex-col items-center">
+                      <div className="bg-amber-500 text-black p-4 w-full text-center text-[9px] font-black uppercase shadow-md border-b-2 border-amber-700 leading-tight min-h-[60px] flex items-center justify-center">
+                        Logistics Fleet Superintendent
+                      </div>
+                      <div className="w-1 h-6 bg-black"></div>
+                      <div className="bg-gray-200 text-black p-3 w-full text-center text-[8px] font-bold uppercase shadow-sm border-b border-gray-400">
+                        Shift Supervisors / Haulage
+                      </div>
+                      <div className="w-1 h-4 bg-black"></div>
+                      <div className="bg-gray-100 text-black p-2 w-full text-center text-[7px] font-bold uppercase italic">
+                        Drivers & Fleet Operators
+                      </div>
                     </div>
-                    <div className="flex flex-col items-center flex-1">
-                      <div className="bg-amber-500 text-black p-3 w-full text-center text-[9px] font-bold uppercase shadow-sm leading-tight">Plant & Civils Superintendent</div>
-                      <div className="w-px h-4 bg-gray-200"></div>
-                      <div className="bg-gray-100 text-black p-2 w-full text-center text-[8px] font-bold uppercase shadow-sm">SITE FOREMAN / OPS TEAM</div>
+                    {/* Plant & Civils Branch */}
+                    <div className="flex flex-col items-center">
+                      <div className="bg-amber-500 text-black p-4 w-full text-center text-[9px] font-black uppercase shadow-md border-b-2 border-amber-700 leading-tight min-h-[60px] flex items-center justify-center">
+                        Plant & Civils Superintendent
+                      </div>
+                      <div className="w-1 h-6 bg-black"></div>
+                      <div className="bg-gray-200 text-black p-3 w-full text-center text-[8px] font-bold uppercase shadow-sm border-b border-gray-400">
+                        Site Foreman / Ops Team
+                      </div>
+                      <div className="w-1 h-4 bg-black"></div>
+                      <div className="bg-gray-100 text-black p-2 w-full text-center text-[7px] font-bold uppercase italic">
+                        Machinery & Civil Operators
+                      </div>
                     </div>
                   </div>
                 </div>

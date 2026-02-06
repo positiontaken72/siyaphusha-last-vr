@@ -199,9 +199,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
           </div>
         </div>
 
-        <div className="container mx-auto px-4 pt-8 border-t border-white/10 text-center text-xs text-gray-500 relative z-10">
-          <p className="mb-2">www.siyaphusha.co.za | info@siyaphusha.co.za</p>
-          <p>&copy; {new Date().getFullYear()} Siyaphusha Consortium (PTY) Ltd. All Rights Reserved.</p>
+        <div className="container mx-auto px-4 pt-8 border-t border-white/10 text-center text-[10px] sm:text-xs text-gray-500 relative z-10 font-bold uppercase tracking-[0.2em]">
+          <p className="mb-2">WWW.SIYAPHUSHA.CO.ZA | INFO@SIYAPHUSHA.CO.ZA</p>
+          <p className="opacity-60">&copy; {new Date().getFullYear()} SIYAPHUSHA CONSORTIUM (PTY) LTD. ALL RIGHTS RESERVED.</p>
         </div>
       </footer>
     </div>
