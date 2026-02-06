@@ -56,7 +56,10 @@ export function CompanyProfile() {
       
       {/* Page Footer for Print */}
       <div className="hidden print:block page-footer">
-        WWW.SIYAPHUSHA.CO.ZA | INFO@SIYAPHUSHA.CO.ZA
+        <div className="flex flex-col items-center gap-2">
+          <img src="/attached_assets/SIYAPHUSHA_LOGO_B_W__2_-removebg-preview_(1)_1770360132076.png" alt="Siyaphusha Logo" className="h-8 w-auto opacity-40 grayscale" />
+          <span>WWW.SIYAPHUSHA.CO.ZA | INFO@SIYAPHUSHA.CO.ZA</span>
+        </div>
       </div>
 
       {/* Cover Page */}
@@ -72,7 +75,7 @@ export function CompanyProfile() {
         <div className="relative z-10 flex flex-col h-full text-white">
           <div className="flex justify-between items-start mb-24">
             <div className="flex items-center gap-4">
-              <img src="/attached_assets/Copy_of_SIYAPHUSHA_LOGO_WHITE_(1)_1770260074500.png" alt="Siyaphusha Logo" className="h-24 w-auto drop-shadow-lg" />
+              <img src="/attached_assets/SIYAPHUSHA_LOGO_B_W__2_-removebg-preview_(1)_1770360132076.png" alt="Siyaphusha Logo" className="h-28 w-auto drop-shadow-2xl" />
             </div>
             <div className="text-right uppercase tracking-[0.2em] font-bold text-sm">
               Established 2020
