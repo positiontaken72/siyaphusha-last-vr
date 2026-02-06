@@ -340,8 +340,12 @@ export function CompanyProfile() {
                         Plant & Civils Superintendent
                       </div>
                       <div className="w-0.5 h-6 bg-gray-400"></div>
-                      <div className="bg-gray-50 text-black p-2 w-full text-center text-[7px] font-bold uppercase border border-gray-200">
-                        Plant & Civils
+                      <div className="bg-amber-100 text-black p-2 w-full text-center text-[8px] font-bold uppercase border border-amber-300">
+                        SITE FOREMAN
+                      </div>
+                      <div className="w-0.5 h-6 bg-gray-400"></div>
+                      <div className="bg-gray-100 text-black p-2 w-full text-center text-[8px] font-bold uppercase border border-gray-300">
+                        Machinery, Civil Operators & Mechanics
                       </div>
                     </div>
                   </div>
@@ -365,7 +369,7 @@ export function CompanyProfile() {
             { title: "Stockpile Management", desc: <>Good stockpile management prevents delays and ensures consistency. Our team has managed over <span className="font-bold bg-amber-100 px-1">3,400,000 tons</span> in stockpile volumes.</>, border: "border-amber-500" },
             { title: "Mine Rehabilitation", desc: "We restore mining land to a productive state. Our work follows careful plans and meets all regulations to leave the land better for future use.", border: "border-emerald-500" },
             { title: "Crushing and Plant Hire", desc: "We process raw materials to meet specific client grades using mobile plants on site. We also hire out this equipment to other operators.", border: "border-red-500" },
-            { title: "Civil Works", desc: "We build strong, durable infrastructure including haul roads, dams, and site facilities. We build things right the first time to avoid problems later.", border: "border-purple-500" },
+            { title: "Civil Works", desc: "We build strong, durable infrastructure including haul roads, dams, and site facilities. We build things right the first time to avoid problems later.", border: "border-gray-500" },
             { title: "Soil Stripping", desc: "We remove overburden to access resources efficiently. We handle topsoil with care so it can be reused later, protecting the environment.", border: "border-gray-500" }
           ].map((service, i) => (
             <div key={i} className="group relative pl-12">
