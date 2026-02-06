@@ -34,11 +34,27 @@ export function CompanyProfile() {
             max-width: none;
             margin: 0;
           }
+          footer-text {
+            position: fixed;
+            bottom: 20px;
+            width: 100%;
+            text-align: center;
+            color: #888888;
+            font-size: 10px;
+            opacity: 0.5;
+            z-index: 1000;
+          }
         }
         #profile-container {
           font-family: 'Plus Jakarta Sans', sans-serif;
         }
       `}</style>
+      
+      {/* Footer text for every page in print */}
+      <div className="hidden print:block fixed bottom-4 w-full text-center text-gray-400 text-[10px] opacity-50 z-50">
+        WWW.SIYAPHUSHA.CO.ZA | INFO@SIYAPHUSHA.CO.ZA
+      </div>
+
       {/* Cover Page */}
       <div className="min-h-[1056px] flex flex-col justify-between border-8 border-black p-12 mb-16 relative overflow-hidden page-break-after-always">
         <div className="absolute inset-0 opacity-20 pointer-events-none">
@@ -51,7 +67,7 @@ export function CompanyProfile() {
         <div className="relative z-10 flex flex-col h-full">
           <div className="flex justify-between items-start mb-24">
             <div className="flex items-center gap-4">
-              <img src="/attached_assets/Copy_of_SIYAPHUSHA_LOGO_WHITE_(1)_1770260074500.png" alt="Siyaphusha Logo" className="h-16 w-auto" />
+              <img src="/attached_assets/Copy_of_SIYAPHUSHA_LOGO_WHITE_(1)_1770260074500.png" alt="Siyaphusha Logo" className="h-16 w-auto brightness-0" />
             </div>
             <div className="text-right uppercase tracking-[0.2em] font-bold text-sm">
               Established 2020
@@ -91,12 +107,11 @@ export function CompanyProfile() {
               { title: "Executive Summary", page: "01" },
               { title: "Our Story & Vision", page: "02" },
               { title: "Leadership", page: "03" },
-              { title: "Management Hierarchy", page: "04" },
-              { title: "Our Services", page: "05" },
-              { title: "Operational Excellence", page: "06" },
-              { title: "Fleet & Assets", page: "07" },
-              { title: "Our Commitment", page: "08" },
-              { title: "Partner With Us", page: "09" },
+              { title: "Our Services", page: "04" },
+              { title: "Operational Excellence", page: "05" },
+              { title: "Fleet & Assets", page: "06" },
+              { title: "Our Commitment", page: "07" },
+              { title: "Partner With Us", page: "08" },
             ].map((item, i) => (
               <div key={i} className="flex items-end gap-4 group cursor-default">
                 <span className="text-sm font-black text-gray-400 group-hover:text-black transition-colors w-6">0{i + 1}</span>
@@ -238,11 +253,8 @@ export function CompanyProfile() {
 
               {/* Partners Tier */}
               <div className="flex gap-20 relative">
-                {/* Horizontal Dashed Line between Themba and Solomon */}
-                <div className="absolute top-[60px] left-[144px] right-[144px] h-0.5 border-t-2 border-dashed border-blue-400/30"></div>
-                
-                {/* Vertical line from center of dashed line joining main horizontal line */}
-                <div className="absolute top-[60px] left-1/2 -translate-x-1/2 w-0.5 h-[52px] border-l-2 border-dashed border-gray-400"></div>
+                {/* Vertical line from center joining main horizontal line */}
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-0.5 h-[60px] border-l-2 border-dashed border-gray-400"></div>
 
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[calc(100%-160px)] h-1 bg-black"></div>
                 <div className="flex flex-col items-center">
@@ -265,6 +277,7 @@ export function CompanyProfile() {
 
               {/* Departmental Tier */}
               <div className="flex gap-6 relative w-full justify-center mt-12">
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-0.5 h-12 bg-black"></div>
                 <div className="absolute top-0 left-[5%] right-[5%] h-1 bg-black"></div>
                 
                 {/* Business Development */}
@@ -325,14 +338,6 @@ export function CompanyProfile() {
                       <div className="bg-gray-100 text-black p-2 w-full text-center text-[8px] font-bold uppercase border border-gray-300">
                         Drivers, Fleet Operators & Mechanics
                       </div>
-                      <div className="w-0.5 h-6 bg-gray-400"></div>
-                      <div className="bg-gray-50 text-black p-2 w-full text-center text-[7px] font-bold uppercase border border-gray-200 italic">
-                        Site Foreman
-                      </div>
-                      <div className="w-0.5 h-6 bg-gray-400"></div>
-                      <div className="bg-gray-50 text-black p-2 w-full text-center text-[7px] font-bold uppercase border border-gray-200">
-                        Machinery, Civil Operators & Mechanics
-                      </div>
                     </div>
                     {/* Plant & Civils Branch */}
                     <div className="flex flex-col items-center">
@@ -341,11 +346,11 @@ export function CompanyProfile() {
                       </div>
                       <div className="w-0.5 h-6 bg-gray-400"></div>
                       <div className="bg-amber-100 text-black p-2 w-full text-center text-[8px] font-bold uppercase border border-amber-300">
-                        SITE FOREMAN
+                        Shift Supervisors
                       </div>
                       <div className="w-0.5 h-6 bg-gray-400"></div>
                       <div className="bg-gray-100 text-black p-2 w-full text-center text-[8px] font-bold uppercase border border-gray-300">
-                        Machinery, Civil Operators & Mechanics
+                        Drivers, Fleet Operators & Mechanics
                       </div>
                     </div>
                   </div>

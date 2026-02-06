@@ -6,70 +6,43 @@ import { ChevronRight } from "lucide-react";
 const projects = [
   {
     client: "Thungela Resources",
-    type: "Stockpile Management",
-    location: "Zibulo Colliery",
-    scope: "Strategic Stockpile Management",
-    volume: "3.4M Tons",
-    status: "Ongoing",
-    description: "Managing large-scale coal stockpiles with precision loading and quality control for one of South Africa's largest thermal coal producers."
-  },
-  {
-    client: "Thungela Resources",
     type: "Haulage",
     location: "Phola Plant",
-    scope: "Hauling Coal to Greenside RLT",
-    volume: "500,000 Tons",
+    scope: "Hauling Coal from Phola Plant to Greenside RLT",
+    volume: "500 000 tons",
     status: "Ongoing",
-    description: "Reliable coal transportation services from Phola Plant to Greenside Rail Load-out Terminal."
+    description: "Reliable coal transportation services from Phola Plant to Greenside Rail Load-out Terminal for Thungela Resources."
   },
   {
     client: "Thungela Resources",
     type: "Haulage",
     location: "Isibonelo",
-    scope: "Hauling Coal to Landau MRD",
-    volume: "800,000 Tons",
+    scope: "Hauling Coal from Isibonelo to Landua MRD",
+    volume: "800 000 tons",
     status: "Ongoing",
-    description: "Efficient haulage operations connecting Isibonelo Mine to Landau Material Recovery Depot."
+    description: "Efficient haulage operations connecting Isibonelo Mine to Landau Material Recovery Depot for Thungela Resources."
   },
   {
-    client: "Glencore",
-    type: "Haulage",
-    location: "Umsimbithi Mine",
-    scope: "Hauling Coal to Eskom Power Stations",
-    volume: "750,000 Tons",
+    client: "Thungela Resources",
+    type: "Material Handling",
+    location: "Operations",
+    scope: "Material Handling using 34 ton side tiper trucks",
+    volume: "25 000 tons",
     status: "Ongoing",
-    description: "Critical coal supply chain management delivering to multiple Eskom power stations across Mpumalanga."
+    description: "Specialized material handling using 34 ton side tipper trucks for Thungela Resources."
   },
   {
-    client: "Transnet",
-    type: "Logistics",
-    location: "Mpumalanga",
-    scope: "Rail Siding Management",
-    volume: "Contract",
-    status: "Completed",
-    description: "Comprehensive rail siding operations management ensuring seamless logistics integration."
-  },
-  {
-    client: "Anglo American",
-    type: "Rehabilitation",
-    location: "Witbank",
-    scope: "Pit Rehabilitation Phase 1",
-    volume: "20 Hectares",
-    status: "Completed",
-    description: "Environmental restoration of mining areas, returning land to productive use for future generations."
-  },
-  {
-    client: "Eskom",
-    type: "Supply",
-    location: "Kendal",
-    scope: "Strategic Stockpile Management",
-    volume: "1.2M Tons",
+    client: "Thungela Resources",
+    type: "Stockpile Management",
+    location: "Operations",
+    scope: "Stockpile Management for Thungela Resources",
+    volume: "3,4+ Million tons",
     status: "Ongoing",
-    description: "Managing strategic coal reserves to ensure consistent power generation supply."
+    description: "Comprehensive stockpile management ensuring strategic resource availability for Thungela Resources."
   }
 ];
 
-const clients = ["All", "Thungela Resources", "Glencore", "Transnet", "Eskom", "Anglo American"];
+const clients = ["All", "Thungela Resources"];
 
 export function Projects() {
   const [filter, setFilter] = useState("All");

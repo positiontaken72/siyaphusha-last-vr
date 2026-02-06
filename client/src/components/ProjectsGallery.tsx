@@ -8,53 +8,37 @@ const projects = [
     client: "Thungela Resources",
     type: "Haulage",
     location: "Phola Plant",
-    scope: "Hauling Coal to Greenside RLT",
-    volume: "500,000 Tons",
+    scope: "Hauling Coal from Phola Plant to Greenside RLT",
+    volume: "500 000 tons",
     status: "Ongoing"
   },
   {
     client: "Thungela Resources",
     type: "Haulage",
     location: "Isibonelo",
-    scope: "Hauling Coal to Landau MRD",
-    volume: "150,000 Tons",
+    scope: "Hauling Coal from Isibonelo to Landua MRD",
+    volume: "800 000 tons",
     status: "Ongoing"
   },
   {
-    client: "Glencore",
-    type: "Haulage",
-    location: "Umsimbithi Mine",
-    scope: "Hauling Coal to Eskom Power Stations",
-    volume: "750,000 Tons",
+    client: "Thungela Resources",
+    type: "Material Handling",
+    location: "Operations",
+    scope: "Material Handling using 34 ton side tiper trucks",
+    volume: "25 000 tons",
     status: "Ongoing"
   },
   {
-    client: "Transnet",
-    type: "Logistics",
-    location: "Mpumalanga",
-    scope: "Rail Siding Management",
-    volume: "Contract",
-    status: "Completed"
-  },
-  {
-    client: "Anglo American",
-    type: "Rehabilitation",
-    location: "Witbank",
-    scope: "Pit Rehabilitation Phase 1",
-    volume: "20 Hectares",
-    status: "Completed"
-  },
-  {
-    client: "Eskom",
-    type: "Supply",
-    location: "Kendal",
-    scope: "Strategic Stockpile Management",
-    volume: "1.2M Tons",
+    client: "Thungela Resources",
+    type: "Stockpile Management",
+    location: "Operations",
+    scope: "Stockpile Management for Thungela Resources",
+    volume: "3,4+ Million tons",
     status: "Ongoing"
   }
 ];
 
-const clients = ["All", "Thungela Resources", "Glencore", "Transnet", "Eskom", "Anglo American"];
+const clients = ["All", "Thungela Resources"];
 
 export function ProjectsGallery() {
   const [filter, setFilter] = useState("All");

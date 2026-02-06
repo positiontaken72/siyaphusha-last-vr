@@ -37,7 +37,7 @@ export function About() {
       <div className="bg-black pt-28 sm:pt-32 md:pt-36 pb-16 sm:pb-20 text-white text-center relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white/5 to-transparent opacity-50" />
         <div className="container mx-auto px-4 sm:px-6 relative z-10">
-          <h1 className="font-heading font-black text-4xl sm:text-5xl md:text-6xl mb-6 tracking-tighter uppercase">Our Identity</h1>
+          <h1 className="font-heading font-black text-4xl sm:text-5xl md:text-6xl mb-6 tracking-tighter uppercase">About Us</h1>
         </div>
       </div>
 
