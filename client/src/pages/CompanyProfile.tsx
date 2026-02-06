@@ -79,28 +79,49 @@ export function CompanyProfile() {
       </div>
 
       {/* Table of Contents */}
-      <div className="min-h-[1056px] p-12 mb-16 border-l-8 border-black page-break-after-always">
-        <h2 className="text-4xl font-black mb-16 uppercase tracking-tight">Table of Contents</h2>
-        <div className="space-y-6">
-          {[
-            "Executive Summary",
-            "Our Story & Vision",
-            "Leadership",
-            "Management Hierarchy",
-            "Our Services",
-            "Operational Excellence",
-            "Fleet & Assets",
-            "Our Commitment",
-          ].map((item, i) => (
-            <div key={i} className="flex items-center justify-between border-b border-gray-100 pb-4 group">
-              <div className="flex items-center gap-6">
-                <span className="font-black text-2xl text-gray-300">0{i + 1}</span>
-                <span className="text-xl font-bold uppercase tracking-wide">{item}</span>
+      <div className="min-h-[1056px] p-12 mb-16 border-l-8 border-black page-break-after-always bg-gray-50">
+        <div className="max-w-3xl mx-auto">
+          <div className="flex items-baseline gap-4 mb-20">
+            <h2 className="text-6xl font-black uppercase tracking-tighter leading-none">Index</h2>
+            <div className="h-2 flex-1 bg-black"></div>
+          </div>
+          
+          <div className="space-y-4">
+            {[
+              { title: "Executive Summary", page: "01" },
+              { title: "Our Story & Vision", page: "02" },
+              { title: "Leadership", page: "03" },
+              { title: "Management Hierarchy", page: "04" },
+              { title: "Our Services", page: "05" },
+              { title: "Operational Excellence", page: "06" },
+              { title: "Fleet & Assets", page: "07" },
+              { title: "Our Commitment", page: "08" },
+            ].map((item, i) => (
+              <div key={i} className="flex items-end gap-4 group cursor-default">
+                <span className="text-sm font-black text-gray-400 group-hover:text-black transition-colors w-6">0{i + 1}</span>
+                <span className="text-xl font-bold uppercase tracking-widest whitespace-nowrap">{item.title}</span>
+                <div className="flex-1 border-b-2 border-dotted border-gray-200 group-hover:border-black transition-colors mb-1.5"></div>
+                <span className="text-lg font-black">{item.page}</span>
               </div>
-              <div className="h-px flex-1 mx-8 border-t border-dotted border-gray-300"></div>
-              <span className="font-bold">P. {i + 2}</span>
+            ))}
+          </div>
+
+          <div className="mt-24 pt-12 border-t border-gray-200">
+            <div className="grid grid-cols-2 gap-12">
+              <div>
+                <h4 className="text-[10px] font-black uppercase tracking-widest text-gray-400 mb-4">Confidentiality</h4>
+                <p className="text-[9px] leading-relaxed text-gray-500 uppercase font-bold tracking-wider">
+                  This document contains proprietary information intended solely for the use of the recipient. Unauthorized reproduction is prohibited.
+                </p>
+              </div>
+              <div className="text-right">
+                <h4 className="text-[10px] font-black uppercase tracking-widest text-gray-400 mb-4">Version</h4>
+                <p className="text-[9px] leading-relaxed text-gray-500 uppercase font-bold tracking-wider">
+                  Release v2.1.0 / Feb 2026<br />Siyaphusha Consortium (PTY) Ltd
+                </p>
+              </div>
             </div>
-          ))}
+          </div>
         </div>
       </div>
 
@@ -125,15 +146,15 @@ export function CompanyProfile() {
             <h3 className="font-black text-sm uppercase tracking-widest mb-6">A Record of Reliable Delivery</h3>
             <div className="space-y-8">
               <div>
-                <div className="text-4xl font-black text-blue-600">1M+</div>
+                <div className="text-4xl font-black text-blue-600">1,4M+</div>
                 <div className="text-xs uppercase tracking-widest font-bold text-gray-500">Tonnes Transported with our haulage fleet</div>
               </div>
               <div>
-                <div className="text-4xl font-black text-emerald-600">30k+</div>
+                <div className="text-4xl font-black text-emerald-600">30 000+</div>
                 <div className="text-xs uppercase tracking-widest font-bold text-gray-500">Operational Hours with zero lost time incidents</div>
               </div>
               <div>
-                <div className="text-4xl font-black text-amber-500">25k+</div>
+                <div className="text-4xl font-black text-amber-500">25 000</div>
                 <div className="text-xs uppercase tracking-widest font-bold text-gray-500">Daily tons material handling</div>
               </div>
               <div>
@@ -202,13 +223,12 @@ export function CompanyProfile() {
         </div>
 
         <div className="flex-1 flex flex-col justify-center">
-          <div className="flex items-center gap-4 mb-8">
-            <div className="w-12 h-12 bg-black text-white flex items-center justify-center font-black text-xl">04</div>
-            <h2 className="text-4xl font-black uppercase tracking-tight">Management Hierarchy</h2>
+          <div className="flex flex-col items-center mb-8">
+            <h2 className="text-xl font-medium tracking-[0.2em] text-gray-400 uppercase">Management Hierarchy</h2>
           </div>
 
           <div className="max-w-full overflow-hidden">
-            <div className="flex flex-col items-center scale-[0.7] origin-top">
+            <div className="flex flex-col items-center scale-[0.65] origin-top">
               {/* Management Tier */}
               <div className="bg-black text-white px-10 py-5 font-black uppercase tracking-[0.3em] text-sm shadow-2xl border border-white/20">
                 Board of Directors / Management
@@ -217,10 +237,16 @@ export function CompanyProfile() {
 
               {/* Partners Tier */}
               <div className="flex gap-20 relative">
+                {/* Horizontal Dashed Line between Themba and Solomon */}
+                <div className="absolute top-[60px] left-[144px] right-[144px] h-0.5 border-t-2 border-dashed border-blue-400/30"></div>
+                
+                {/* Vertical line from center of dashed line */}
+                <div className="absolute top-[60px] left-1/2 -translate-x-1/2 w-0.5 h-16 border-l-2 border-dashed border-gray-400"></div>
+
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[calc(100%-160px)] h-1 bg-black"></div>
                 <div className="flex flex-col items-center">
                   <div className="w-1 h-8 bg-black"></div>
-                  <div className="bg-blue-700 text-white p-6 w-72 text-center shadow-xl border-b-4 border-blue-900">
+                  <div className="bg-blue-700 text-white p-6 w-72 text-center shadow-xl border-b-4 border-blue-900 relative z-10">
                     <div className="font-black uppercase text-xl tracking-tight">Themba Nkosi</div>
                     <div className="text-xs font-bold opacity-90 uppercase tracking-[0.2em] mt-2">Executive Partner</div>
                   </div>
@@ -228,7 +254,7 @@ export function CompanyProfile() {
                 </div>
                 <div className="flex flex-col items-center">
                   <div className="w-1 h-8 bg-black"></div>
-                  <div className="bg-blue-700 text-white p-6 w-72 text-center shadow-xl border-b-4 border-blue-900">
+                  <div className="bg-blue-700 text-white p-6 w-72 text-center shadow-xl border-b-4 border-blue-900 relative z-10">
                     <div className="font-black uppercase text-xl tracking-tight">Solomon Howard</div>
                     <div className="text-xs font-bold opacity-90 uppercase tracking-[0.2em] mt-2">Operations Partner</div>
                   </div>
@@ -237,7 +263,7 @@ export function CompanyProfile() {
               </div>
 
               {/* Departmental Tier */}
-              <div className="flex gap-6 relative w-full justify-center">
+              <div className="flex gap-6 relative w-full justify-center mt-12">
                 <div className="absolute top-0 left-[5%] right-[5%] h-1 bg-black"></div>
                 
                 {/* Business Development */}
@@ -278,7 +304,7 @@ export function CompanyProfile() {
                 </div>
 
                 {/* Operations Management */}
-                <div className="flex flex-col items-center w-[400px]">
+                <div className="flex flex-col items-center w-[500px]">
                   <div className="w-1 h-8 bg-black"></div>
                   <div className="bg-emerald-700 text-white p-4 w-full text-center text-xs font-black uppercase tracking-widest shadow-lg border-b-4 border-emerald-900">
                     Operations Management
@@ -289,6 +315,22 @@ export function CompanyProfile() {
                     <div className="flex flex-col items-center">
                       <div className="bg-amber-500 text-black p-4 w-full text-center text-[9px] font-black uppercase shadow-md border-b-2 border-amber-700 leading-tight min-h-[60px] flex items-center justify-center">
                         Logistics Fleet Superintendent
+                      </div>
+                      <div className="w-0.5 h-6 bg-gray-400"></div>
+                      <div className="bg-amber-100 text-black p-2 w-full text-center text-[8px] font-bold uppercase border border-amber-300">
+                        Shift Supervisors
+                      </div>
+                      <div className="w-0.5 h-6 bg-gray-400"></div>
+                      <div className="bg-amber-100 text-black p-2 w-full text-center text-[8px] font-bold uppercase border border-amber-300">
+                        Drivers, Fleet Operators & Mechanics
+                      </div>
+                      <div className="w-0.5 h-6 bg-gray-400"></div>
+                      <div className="bg-amber-50 text-black p-2 w-full text-center text-[7px] font-bold uppercase border border-amber-200 italic">
+                        Site Foreman
+                      </div>
+                      <div className="w-0.5 h-6 bg-gray-400"></div>
+                      <div className="bg-amber-50 text-black p-2 w-full text-center text-[7px] font-bold uppercase border border-amber-200">
+                        Machinery, Civil Operators & Mechanics
                       </div>
                     </div>
                     {/* Plant & Civils Branch */}
@@ -412,41 +454,70 @@ export function CompanyProfile() {
         </div>
       </div>
 
-      {/* 7. Our Commitment */}
+      {/* 8. Our Commitment */}
       <div className="min-h-[1056px] p-12 mb-16 page-break-after-always">
         <div className="flex items-center gap-4 mb-12">
           <div className="w-12 h-12 bg-black text-white flex items-center justify-center font-black text-xl">08</div>
           <h2 className="text-4xl font-black uppercase tracking-tight">Our Commitment</h2>
         </div>
 
-        <div className="space-y-16">
-          <div className="flex gap-8">
-            <div className="w-24 h-24 shrink-0 bg-black flex items-center justify-center">
-              <CheckCircle2 className="w-12 h-12 text-white" />
-            </div>
-            <div>
-              <h3 className="text-2xl font-black uppercase mb-4 tracking-tight">Safety First</h3>
+        <div className="grid grid-cols-2 gap-8">
+          <div className="space-y-8">
+            <div className="border-l-8 border-black pl-6">
+              <div className="flex items-center gap-2 mb-4">
+                <div className="w-8 h-8 bg-blue-500 flex items-center justify-center rounded-sm">
+                  <CheckCircle2 className="text-white w-5 h-5" />
+                </div>
+                <h3 className="text-2xl font-black uppercase tracking-tight">Safety First</h3>
+              </div>
               <p className="text-gray-600 leading-relaxed text-sm">
-                Our 30,000+ hour incident free record is our greatest achievement. Safety is the foundation of our culture. We train thoroughly, we speak up about concerns, and we stop work if something is not right.
+                "Zero harm philosophy." We maintain a safety record second to none, prioritizing the well-being of our workforce and communities above all operational targets.
+              </p>
+            </div>
+            
+            <div className="border-l-8 border-black pl-6">
+              <div className="flex items-center gap-2 mb-4">
+                <div className="w-8 h-8 bg-amber-500 flex items-center justify-center rounded-sm">
+                  <CheckCircle2 className="text-white w-5 h-5" />
+                </div>
+                <h3 className="text-2xl font-black uppercase tracking-tight">Excellent Quality</h3>
+              </div>
+              <p className="text-gray-600 leading-relaxed text-sm">
+                We deliver on-schedule with the highest standards of proficiency. Our commitment to quality ensures efficiency and reliability in every project we undertake.
+              </p>
+            </div>
+
+            <div className="border-l-8 border-green-600 pl-6">
+              <div className="flex items-center gap-2 mb-4">
+                <div className="w-8 h-8 bg-green-500 flex items-center justify-center rounded-sm">
+                  <CheckCircle2 className="text-white w-5 h-5" />
+                </div>
+                <h3 className="text-2xl font-black uppercase tracking-tight text-green-700">Environmental Care</h3>
+              </div>
+              <p className="text-gray-600 leading-relaxed text-sm">
+                We take our environmental responsibility seriously. Our rehabilitation work uses proven scientific methods to return land to a healthy, sustainable condition.
               </p>
             </div>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-12">
-            <div>
-              <h3 className="text-xl font-black uppercase mb-4 border-l-4 border-black pl-4">Environmental Care</h3>
-              <p className="text-sm text-gray-600 leading-relaxed">
-                We take our environmental responsibility seriously. Our rehabilitation work uses proven scientific methods to return land to a healthy, sustainable condition.
+          <div className="space-y-8">
+            <div className="border-l-8 border-[#8B4513] pl-6">
+              <h3 className="text-2xl font-black uppercase mb-4 tracking-tight text-[#8B4513]">Community Investment</h3>
+              <p className="text-gray-600 leading-relaxed text-sm mb-6">
+                "We invest in the communities where we operate. Our commitment goes beyond our work sites. We focus on skills improvement and creating opportunities that empower people."
               </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-black uppercase mb-4 border-l-4 border-black pl-4">Community Investment</h3>
-              <p className="text-sm text-gray-600 leading-relaxed mb-4 font-medium">
-                "We invest in the communities where we operate. Our commitment goes beyond our work sites. We focus on skills improvement and creating opportunities that empower people. We support initiatives that build confidence and motivation for a better future. We believe that by helping communities grow stronger, we all move forward together. Our involvement reflects our core values of responsibility and progress."
-              </p>
-              <div className="flex gap-4">
-                <span className="text-[10px] font-bold bg-gray-100 px-3 py-1 uppercase tracking-tighter">Chakalaka Future Stars</span>
-                <span className="text-[10px] font-bold bg-gray-100 px-3 py-1 uppercase tracking-tighter">ECD Supplies</span>
+              <div className="bg-[#8B4513]/5 p-6 border border-[#8B4513]/20">
+                <h4 className="font-black text-xs uppercase tracking-widest mb-4 text-[#8B4513]">Focus Areas</h4>
+                <ul className="space-y-3 text-xs font-bold uppercase tracking-wider">
+                  <li className="flex items-center gap-3">
+                    <div className="w-1.5 h-1.5 bg-[#8B4513]"></div>
+                    Local Skills Development
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <div className="w-1.5 h-1.5 bg-[#8B4513]"></div>
+                    SME Support Programs
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
