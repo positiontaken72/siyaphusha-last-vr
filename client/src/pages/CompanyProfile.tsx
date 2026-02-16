@@ -386,15 +386,15 @@ export function CompanyProfile() {
             </div>
           </section>
 
-          <div className="p-8 border-2 border-black flex flex-col items-center justify-center text-center bg-black text-white">
-            <h3 className="text-xl font-black uppercase mb-4 tracking-tighter">A Proven Track Record</h3>
-            <p className="opacity-80 max-w-xl text-sm italic">
+          <div className="p-4 border-2 border-black flex flex-col items-center justify-center text-center bg-black text-white">
+            <h3 className="text-lg font-black uppercase mb-2 tracking-tighter">A Proven Track Record</h3>
+            <p className="opacity-80 max-w-2xl text-[10px] italic leading-tight">
               "We measure our success by the trust our clients place in us. Our 30,000+ hour incident free record is our greatest achievement. Safety is not just a rule here. It is the foundation of our culture."
             </p>
           </div>
 
-          <section className="pt-8">
-            <h3 className="text-xl font-black uppercase mb-8 border-b-4 border-black inline-block">Scope of Work</h3>
+          <section className="pt-2">
+            <h3 className="text-xl font-black uppercase mb-6 border-b-4 border-black inline-block">Scope of Work</h3>
             <div className="overflow-hidden border border-gray-200">
               <table className="w-full text-left border-collapse">
                 <thead>
@@ -411,13 +411,13 @@ export function CompanyProfile() {
                     { client: "Thungela Resources", project: "Phola Plant", desc: "Coal Hauling", vol: "500,000 Tons", color: "text-blue-600" },
                     { client: "Thungela Resources", project: "Isibonelo", desc: "Coal Hauling", vol: "800,000 Tons", color: "text-emerald-600" },
                     { client: "Glencore / Eskom", project: "Umsimbithi Mine", desc: "Coal Hauling to Power Stations", vol: "750,000 Tons", color: "text-orange-600" },
-                    { client: "Transnet", project: "Zibulo Colliery", desc: "34-ton Side Tipper Truck Operations", vol: "25,000 Tons", color: "text-lime-600" }
+                    { client: "Transnet", project: "", desc: "34-ton Side Tipper Truck Operations", vol: "25,000 Tons", color: "text-lime-600" }
                   ].map((row, i) => (
                     <tr key={i} className="hover:bg-gray-50 transition-colors">
                       <td className="p-4 font-black border-b border-gray-100">{i + 1}</td>
                       <td className="p-4 border-b border-gray-100">
                         <div className="font-black uppercase tracking-tight">{row.client}</div>
-                        <div className="text-[9px] text-gray-500 font-bold uppercase">{row.project}</div>
+                        {row.project && <div className="text-[9px] text-gray-500 font-bold uppercase">{row.project}</div>}
                       </td>
                       <td className="p-4 font-bold border-b border-gray-100 uppercase text-gray-600">{row.desc}</td>
                       <td className={cn("p-4 font-black text-base border-b border-gray-100", row.color)}>{row.vol}</td>
