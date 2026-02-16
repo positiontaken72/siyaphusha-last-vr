@@ -193,14 +193,14 @@ export function Layout({ children }: { children: React.ReactNode }) {
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="h-5 w-5 text-white shrink-0" />
-                <span>info@siyaphusha.co.za</span>
+                <span>info@siyaphushaconsortium.co.za</span>
               </li>
             </ul>
           </div>
         </div>
 
         <div className="container mx-auto px-4 pt-8 border-t border-white/10 text-center text-[10px] sm:text-xs text-gray-500 relative z-10 font-bold uppercase tracking-[0.2em]">
-          <p className="mb-2">WWW.SIYAPHUSHA.CO.ZA | INFO@SIYAPHUSHA.CO.ZA</p>
+          <p className="mb-2">WWW.SIYAPHUSHACONSORTIUM.CO.ZA | INFO@SIYAPHUSHACONSORTIUM.CO.ZA</p>
           <p className="opacity-60">&copy; {new Date().getFullYear()} SIYAPHUSHA CONSORTIUM (PTY) LTD. ALL RIGHTS RESERVED.</p>
         </div>
       </footer>

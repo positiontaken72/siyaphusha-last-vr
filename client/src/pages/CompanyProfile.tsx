@@ -114,10 +114,10 @@ export function CompanyProfile() {
             {[
               { title: "Executive Summary", page: "01" },
               { title: "Our Story & Vision", page: "02" },
-              { title: "Leadership", page: "03" },
+              { title: "Leadership & Organizational Structure", page: "03" },
               { title: "Our Services", page: "04" },
               { title: "Operational Excellence", page: "05" },
-              { title: "Fleet & Assets", page: "06" },
+              { title: "Our Capabilities: Fleet & Technical Assets", page: "06" },
               { title: "Our Commitment", page: "07" },
               { title: "Partner With Us", page: "08" },
             ].map((item, i) => (
@@ -361,10 +361,67 @@ export function CompanyProfile() {
             </div>
       </div>
 
-      {/* 4. Operational Excellence */}
+      {/* 4. Our Services */}
+      <div className="min-h-[1056px] p-12 mb-16 page-break-after-always">
+        <div className="flex items-center gap-6 mb-16">
+          <div className="w-16 h-16 bg-black text-white flex items-center justify-center font-black text-2xl">04</div>
+          <h2 className="text-6xl font-black uppercase tracking-tighter">Our Services</h2>
+        </div>
+
+        <div className="space-y-12">
+          {[
+            {
+              num: "01",
+              title: "Logistics and Haulage",
+              desc: "We transport bulk materials safely across Mpumalanga. Our 34-ton side tippers form a core part of this capability, handling over 25,000 tons daily."
+            },
+            {
+              num: "02",
+              title: "Stockpile Management",
+              desc: "Good stockpile management prevents delays and ensures consistency. Our team has managed over 3,400,000 tons in stockpile volumes."
+            },
+            {
+              num: "03",
+              title: "Mine Rehabilitation",
+              desc: "We restore mining land to a productive state. Our work follows careful plans and meets all regulations to leave the land better for future use."
+            },
+            {
+              num: "04",
+              title: "Crushing and Plant Hire",
+              desc: "We process raw materials to meet specific client grades using mobile plants on site. We also hire out this equipment to other operators."
+            },
+            {
+              num: "05",
+              title: "Civil Works",
+              desc: "We build strong, durable infrastructure including haul roads, dams, and site facilities. We build things right the first time to avoid problems later."
+            },
+            {
+              num: "06",
+              title: "Soil Stripping",
+              desc: "We remove overburden to access resources efficiently. We handle topsoil with care so it can be reused later, protecting the environment."
+            }
+          ].map((service, i) => (
+            <div key={i} className="flex gap-8 group">
+              <div className="text-5xl font-black text-gray-100 group-hover:text-black transition-colors duration-500 w-20 shrink-0 leading-none">
+                {service.num}
+              </div>
+              <div className="pt-1 border-l-2 border-gray-100 pl-8 group-hover:border-black transition-colors duration-500">
+                <h3 className="text-2xl font-black uppercase tracking-tight mb-3">
+                  {service.title}
+                </h3>
+                <p className="text-gray-600 leading-relaxed max-w-2xl font-medium">
+                  {service.desc}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* 5. Operational Excellence */}
       <div className="min-h-[1056px] p-12 mb-16 page-break-after-always">
         <div className="flex items-center gap-4 mb-12">
-          <div className="w-12 h-12 bg-black text-white flex items-center justify-center font-black text-xl">04</div>
+          <div className="w-12 h-12 bg-black text-white flex items-center justify-center font-black text-xl">05</div>
           <h2 className="text-4xl font-black uppercase tracking-tight">Operational Excellence</h2>
         </div>
 
@@ -431,10 +488,10 @@ export function CompanyProfile() {
         </div>
       </div>
 
-      {/* 5. Fleet & Assets */}
+      {/* 6. Fleet & Assets */}
       <div className="min-h-[1056px] p-12 mb-16 page-break-after-always">
         <div className="flex items-center gap-4 mb-12">
-          <div className="w-12 h-12 bg-black text-white flex items-center justify-center font-black text-xl">05</div>
+          <div className="w-12 h-12 bg-black text-white flex items-center justify-center font-black text-xl">06</div>
           <h2 className="text-4xl font-black uppercase tracking-tight">Fleet & Assets</h2>
         </div>
 
@@ -476,10 +533,10 @@ export function CompanyProfile() {
         </div>
       </div>
 
-      {/* 6. Our Commitment */}
+      {/* 7. Our Commitment */}
       <div className="min-h-[1056px] p-12 mb-16 page-break-after-always">
         <div className="flex items-center gap-4 mb-12">
-          <div className="w-12 h-12 bg-black text-white flex items-center justify-center font-black text-xl">06</div>
+          <div className="w-12 h-12 bg-black text-white flex items-center justify-center font-black text-xl">07</div>
           <h2 className="text-4xl font-black uppercase tracking-tight">Our Commitment</h2>
         </div>
 
@@ -546,11 +603,11 @@ export function CompanyProfile() {
         </div>
       </div>
 
-      {/* 7. Partner With Us */}
+      {/* 8. Partner With Us */}
       <div className="min-h-[1056px] p-12 mb-16 flex flex-col justify-between">
         <div>
           <div className="flex items-center gap-4 mb-12">
-            <div className="w-12 h-12 bg-black text-white flex items-center justify-center font-black text-xl">07</div>
+            <div className="w-12 h-12 bg-black text-white flex items-center justify-center font-black text-xl">08</div>
             <h2 className="text-4xl font-black uppercase tracking-tight">Partner With Us</h2>
           </div>
 
@@ -564,10 +621,10 @@ export function CompanyProfile() {
               </TableHeader>
               <TableBody>
                 {[
-                  { purpose: "Strategic Projects", channel: "Themba Nkosi / themba@siyaphusha.co.za" },
-                  { purpose: "Operations & Fleet", channel: "Solomon Howard / solly@siyaphusha.co.za" },
-                  { purpose: "Daily Operations", channel: "operations@siyaphusha.co.za" },
-                  { purpose: "General Info", channel: "info@siyaphusha.co.za" }
+                  { purpose: "Strategic Projects", channel: "Themba Nkosi / themba@siyaphushaconsortium.co.za" },
+                  { purpose: "Operations & Fleet", channel: "Solomon Howard / solly@siyaphushaconsortium.co.za" },
+                  { purpose: "Daily Operations", channel: "operations@siyaphushaconsortium.co.za" },
+                  { purpose: "General Info", channel: "info@siyaphushaconsortium.co.za" }
                 ].map((row, i) => (
                   <TableRow key={i} className="border-b border-black">
                     <TableCell className="font-bold text-xs uppercase py-6">{row.purpose}</TableCell>
@@ -590,11 +647,11 @@ export function CompanyProfile() {
                 </div>
                 <div className="flex items-center gap-3">
                   <Globe className="w-4 h-4" />
-                  <span>www.siyaphusha.co.za</span>
+                  <span>www.siyaphushaconsortium.co.za</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <Mail className="w-4 h-4" />
-                  <span>info@siyaphusha.co.za</span>
+                  <span>info@siyaphushaconsortium.co.za</span>
                 </div>
               </div>
             </div>
