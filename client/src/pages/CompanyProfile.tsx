@@ -58,7 +58,7 @@ export function CompanyProfile() {
       <div className="hidden print:block page-footer">
         <div className="flex flex-col items-center gap-2">
           <img src="/attached_assets/SIYAPHUSHA_LOGO_B_W__2_-removebg-preview_(1)_1770360132076.png" alt="Siyaphusha Logo" className="h-8 w-auto opacity-40 grayscale" />
-          <span>WWW.SIYAPHUSHA.CO.ZA | INFO@SIYAPHUSHA.CO.ZA</span>
+          <span>WWW.SIYAPHUSHACONSORTIUM.CO.ZA | INFO@SIYAPHUSHACONSORTIUM.CO.ZA</span>
         </div>
       </div>
 
@@ -115,10 +115,11 @@ export function CompanyProfile() {
               { title: "Executive Summary", page: "01" },
               { title: "Our Story & Vision", page: "02" },
               { title: "Leadership", page: "03" },
-              { title: "Operational Excellence", page: "04" },
-              { title: "Fleet & Assets", page: "05" },
-              { title: "Our Commitment", page: "06" },
-              { title: "Partner With Us", page: "07" },
+              { title: "Our Services", page: "04" },
+              { title: "Operational Excellence", page: "05" },
+              { title: "Fleet & Assets", page: "06" },
+              { title: "Our Commitment", page: "07" },
+              { title: "Partner With Us", page: "08" },
             ].map((item, i) => (
               <div key={i} className="flex items-end gap-4 group cursor-default">
                 <span className="text-sm font-black text-gray-400 group-hover:text-black transition-colors w-6">0{i + 1}</span>
