@@ -73,7 +73,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
                 />
               </Link>
             ))}
-            <a href="/assets/company-profile.pdf" download="SIYAPHUSHA-Company-Profile.pdf">
+            <a href="/company-profile.pdf" download="SIYAPHUSHA-Company-Profile.pdf">
               <Button 
                 className="font-heading font-bold bg-white text-black hover:bg-white/90 px-4 lg:px-5 uppercase tracking-widest text-xs transition-transform duration-200 hover:-translate-y-0.5"
                 data-testid="button-download-profile"
@@ -115,7 +115,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
                 {link.label}
               </Link>
             ))}
-            <a href="/assets/company-profile.pdf" download="SIYAPHUSHA-Company-Profile.pdf" className="w-full">
+            <a href="/company-profile.pdf" download="SIYAPHUSHA-Company-Profile.pdf" className="w-full">
               <Button 
                 className="font-heading font-bold w-full bg-black text-white hover:bg-gray-800 uppercase mt-2 text-sm"
                 data-testid="mobile-button-download-profile"
@@ -164,7 +164,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
               <li><Link href="/about" className="hover:text-white transition-colors cursor-pointer">About Us</Link></li>
               <li><Link href="/projects" className="hover:text-white transition-colors cursor-pointer">Projects</Link></li>
               <li><Link href="/contact" className="hover:text-white transition-colors cursor-pointer">Contact</Link></li>
-              <li><a href="/assets/company-profile.pdf" download className="hover:text-white transition-colors">Company Profile</a></li>
+              <li><a href="/company-profile.pdf" download className="hover:text-white transition-colors">Company Profile</a></li>
             </ul>
           </div>
 
@@ -189,7 +189,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="h-5 w-5 text-white shrink-0" />
-                <span>+27 (0) 13 648 0000</span>
+                <span>+27 73 256 7948</span>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="h-5 w-5 text-white shrink-0" />

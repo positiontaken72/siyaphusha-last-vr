@@ -38,7 +38,7 @@ export function Contact() {
                   </div>
                   <div>
                     <h4 className="font-bold text-lg text-black mb-1">Phone</h4>
-                    <p className="text-gray-600">+27 (0) 13 648 0000</p>
+                    <p className="text-gray-600">+27 73 256 7948</p>
                   </div>
                 </div>
 
