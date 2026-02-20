@@ -1,5 +1,5 @@
 import { Card } from "@/components/ui/card";
-import { Mail, Phone, Globe, MapPin } from "lucide-react";
+import { Mail, Phone, Globe, MapPin, Download } from "lucide-react";
 
 interface SignatureProps {
   name?: string;
@@ -10,8 +10,108 @@ interface SignatureProps {
 }
 
 function EmailSignature({ name, title, emails, phones, website }: SignatureProps) {
+  const downloadHtml = () => {
+    const htmlContent = `
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  .signature-container {
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+    color: #ffffff;
+    padding: 24px;
+    max-width: 500px;
+    border-left: 4px solid #eab308;
+  }
+  .flex-container {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+  .logo {
+    height: 64px;
+    width: auto;
+  }
+  .content {
+    flex: 1;
+  }
+  .name {
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 20px;
+    margin: 0;
+    line-height: 1;
+  }
+  .title {
+    color: #eab308;
+    font-size: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    margin: 4px 0 12px 0;
+  }
+  .details {
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .detail-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #ffffff;
+    text-decoration: none;
+  }
+  .detail-item:hover {
+    color: #eab308;
+  }
+  .icon {
+    width: 12px;
+    height: 12px;
+  }
+</style>
+</head>
+<body>
+  <div class="signature-container">
+    <div class="flex-container">
+      <img src="https://www.siyaphushaconsortium.co.za/logo-white.png" alt="Siyaphusha Logo" class="logo">
+      <div class="content">
+        ${name ? `<h3 class="name">${name}</h3><p class="title">${title}</p>` : ''}
+        <div class="details">
+          ${phones.map(p => `<a href="tel:${p.replace(/\s/g, '')}" class="detail-item">${p}</a>`).join('')}
+          ${emails.map(e => `<a href="mailto:${e}" class="detail-item">${e}</a>`).join('')}
+          <a href="https://${website}" class="detail-item">${website}</a>
+          <div class="detail-item" style="opacity: 0.7;">Phola, Ogies, Mpumalanga</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>`;
+
+    const blob = new Blob([htmlContent], { type: 'text/html' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `signature-${name ? name.replace(/\s+/g, '-').toLowerCase() : emails[0].split('@')[0]}.html`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  };
+
   return (
-    <Card className="bg-black text-white p-6 max-w-xl border-l-4 border-yellow-500 rounded-none overflow-hidden">
+    <Card className="bg-black text-white p-6 max-w-xl border-l-4 border-yellow-500 rounded-none overflow-hidden group relative">
+      <button 
+        onClick={downloadHtml}
+        className="absolute top-4 right-4 p-2 bg-yellow-500 text-black hover:bg-yellow-400 transition-colors rounded-sm opacity-0 group-hover:opacity-100 flex items-center gap-2 text-[10px] font-black uppercase tracking-widest"
+      >
+        <Download className="w-3 h-3" />
+        Download HTML
+      </button>
       <div className="flex flex-col md:flex-row gap-6 items-start md:items-center">
         <div className="shrink-0">
           <img 
