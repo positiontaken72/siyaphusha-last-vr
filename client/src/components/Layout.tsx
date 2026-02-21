@@ -79,7 +79,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
                 className="font-heading font-bold bg-white text-black hover:bg-white/90 px-4 lg:px-5 uppercase tracking-widest text-xs transition-transform duration-200 hover:-translate-y-0.5"
                 data-testid="button-download-profile"
               >
-                <UserCircle className="mr-2 h-4 w-4" />
+                <Download className="mr-2 h-3.5 w-3.5" />
                 PROFILE
               </Button>
             </a>
@@ -121,7 +121,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
                 className="font-heading font-bold w-full bg-black text-white hover:bg-gray-800 uppercase mt-2 text-sm"
                 data-testid="mobile-button-download-profile"
               >
-                <UserCircle className="mr-2 h-4 w-4" />
+                <Download className="mr-2 h-4 w-4" />
                 Download Profile
               </Button>
             </a>
