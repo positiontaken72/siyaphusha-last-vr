@@ -1,5 +1,7 @@
 import { Card } from "@/components/ui/card";
-import { Mail, Phone, Globe, MapPin, Download } from "lucide-react";
+import { Mail, Phone, Globe, MapPin, Download, ArrowLeft } from "lucide-react";
+import { Link, useParams } from "wouter";
+import { Button } from "@/components/ui/button";
 
 interface SignatureProps {
   name?: string;
@@ -8,6 +10,33 @@ interface SignatureProps {
   phones: string[];
   website: string;
 }
+
+const SIGNATURES_DATA: Record<string, SignatureProps> = {
+  "general": {
+    emails: ["info@siyaphushaconsortium.co.za"],
+    phones: ["+27 73 064 1347", "+27 73 256 7948"],
+    website: "www.siyaphushaconsortium.co.za"
+  },
+  "admin": {
+    emails: ["admin@siyaphushaconsortium.co.za"],
+    phones: ["+27 73 064 1347", "+27 73 256 7948"],
+    website: "www.siyaphushaconsortium.co.za"
+  },
+  "themba": {
+    name: "Themba Nkosi",
+    title: "Executive Director",
+    emails: ["info@siyaphushaconsortium.co.za"],
+    phones: ["+27 73 256 7948"],
+    website: "www.siyaphushaconsortium.co.za"
+  },
+  "solomon": {
+    name: "Solomon Howard",
+    title: "Operations Director",
+    emails: ["solly@siyaphushaconsortium.co.za"],
+    phones: ["+27 73 064 1347"],
+    website: "www.siyaphushaconsortium.co.za"
+  }
+};
 
 function EmailSignature({ name, title, emails, phones, website }: SignatureProps) {
   const downloadHtml = () => {
@@ -160,48 +189,61 @@ function EmailSignature({ name, title, emails, phones, website }: SignatureProps
   );
 }
 
+export function SignatureDetail() {
+  const { slug } = useParams<{ slug: string }>();
+  const signature = SIGNATURES_DATA[slug];
+
+  if (!signature) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-gray-100">
+        <div className="text-center space-y-4">
+          <h1 className="text-2xl font-bold">Signature Not Found</h1>
+          <Link href="/signatures">
+            <Button variant="outline">Back to All Signatures</Button>
+          </Link>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="min-h-screen bg-gray-100 p-8">
+      <div className="max-w-4xl mx-auto space-y-8">
+        <Link href="/signatures">
+          <Button variant="ghost" className="gap-2">
+            <ArrowLeft className="w-4 h-4" />
+            Back to All
+          </Button>
+        </Link>
+        <h1 className="text-3xl font-black uppercase tracking-tighter">
+          {signature.name || "General"} Email Signature
+        </h1>
+        <EmailSignature {...signature} />
+      </div>
+    </div>
+  );
+}
+
 export function EmailSignatures() {
-  const commonPhones = ["+27 73 064 1347", "+27 73 256 7948"];
-  
   return (
     <div className="min-h-screen bg-gray-100 p-8 space-y-12">
       <div className="max-w-4xl mx-auto space-y-8">
         <h1 className="text-3xl font-black uppercase tracking-tighter">Corporate Email Signatures</h1>
         
-        <div className="space-y-6">
-          <h2 className="text-sm font-bold uppercase tracking-widest text-gray-500">General & Admin</h2>
-          <div className="grid gap-6">
-            <EmailSignature 
-              emails={["info@siyaphushaconsortium.co.za"]} 
-              phones={commonPhones}
-              website="www.siyaphushaconsortium.co.za"
-            />
-            <EmailSignature 
-              emails={["admin@siyaphushaconsortium.co.za"]} 
-              phones={commonPhones}
-              website="www.siyaphushaconsortium.co.za"
-            />
-          </div>
-        </div>
-
-        <div className="space-y-6">
-          <h2 className="text-sm font-bold uppercase tracking-widest text-gray-500">Executive Leadership</h2>
-          <div className="grid gap-6">
-            <EmailSignature 
-              name="Themba Nkosi"
-              title="Executive Director"
-              emails={["info@siyaphushaconsortium.co.za"]}
-              phones={["+27 73 256 7948"]}
-              website="www.siyaphushaconsortium.co.za"
-            />
-            <EmailSignature 
-              name="Solomon Howard"
-              title="Operations Director"
-              emails={["solly@siyaphushaconsortium.co.za"]}
-              phones={["+27 73 064 1347"]}
-              website="www.siyaphushaconsortium.co.za"
-            />
-          </div>
+        <div className="grid sm:grid-cols-2 gap-4">
+          {Object.entries(SIGNATURES_DATA).map(([slug, sig]) => (
+            <Link key={slug} href={`/signatures/${slug}`}>
+              <Card className="p-6 hover:border-yellow-500 transition-colors cursor-pointer group">
+                <div className="flex justify-between items-center">
+                  <div>
+                    <h3 className="font-bold uppercase">{sig.name || slug}</h3>
+                    <p className="text-xs text-gray-500 uppercase tracking-widest">{sig.title || "Corporate"}</p>
+                  </div>
+                  <ArrowLeft className="w-4 h-4 rotate-180 opacity-0 group-hover:opacity-100 transition-opacity" />
+                </div>
+              </Card>
+            </Link>
+          ))}
         </div>
       </div>
     </div>

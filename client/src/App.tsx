@@ -8,7 +8,7 @@ import { About } from "@/pages/About";
 import { Projects } from "@/pages/Projects";
 import { Contact } from "@/pages/Contact";
 import { CompanyProfile } from "@/pages/CompanyProfile";
-import { EmailSignatures } from "@/pages/EmailSignatures";
+import { EmailSignatures, SignatureDetail } from "@/pages/EmailSignatures";
 import NotFound from "@/pages/not-found";
 import { useEffect } from "react";
 
@@ -22,7 +22,7 @@ function ScrollToTop() {
 
 function Router() {
   const [location] = useLocation();
-  const isProfilePage = location === "/profile" || location === "/signatures";
+  const isProfilePage = location === "/profile" || location.startsWith("/signatures");
 
   const content = (
     <>
@@ -34,6 +34,7 @@ function Router() {
         <Route path="/contact" component={Contact} />
         <Route path="/profile" component={CompanyProfile} />
         <Route path="/signatures" component={EmailSignatures} />
+        <Route path="/signatures/:slug" component={SignatureDetail} />
         <Route component={NotFound} />
       </Switch>
     </>

@@ -5,7 +5,8 @@ import { RouteMap } from "@/components/RouteMap";
 import { ESGSection } from "@/components/ESGSection";
 import { CommunityImpact } from "@/components/CommunityImpact";
 import { Button } from "@/components/ui/button";
-import { Download } from "lucide-react";
+import { UserCircle } from "lucide-react";
+import companyProfilePdf from "@assets/SIYAPHUSHA_CONSORTIUM_(PTY)_LTD_COMPANY_PROFILE_1771543783518.pdf";
 
 // Logos
 import transnetLogo from "@assets/transnet-1-360x195-removebg-preview_1770227873561.png";
@@ -59,10 +60,10 @@ export function Home() {
             Download our full company profile to learn more about our capabilities, fleet, and safety record.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/company-profile.pdf" download="SIYAPHUSHA-Company-Profile.pdf">
+            <a href={companyProfilePdf} download="SIYAPHUSHA-Company-Profile.pdf">
               <Button size="lg" className="w-full sm:w-auto font-heading font-black bg-white text-black hover:bg-white/90 uppercase h-12 sm:h-14 md:h-16 px-6 sm:px-10 text-sm sm:text-base md:text-lg rounded-sm tracking-[0.15em] transition-all duration-500 overflow-hidden relative group">
                 <span className="relative z-10 group-hover:text-black flex items-center transition-colors">
-                  <Download className="mr-3 h-4 sm:h-5 md:h-6 w-4 sm:w-5 md:w-6" />
+                  <UserCircle className="mr-3 h-4 sm:h-5 md:h-6 w-4 sm:w-5 md:w-6" />
                   View Company Profile
                 </span>
               </Button>

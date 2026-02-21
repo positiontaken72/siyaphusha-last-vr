@@ -1,10 +1,11 @@
 import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Download, Phone, Mail, MapPin, Facebook, Linkedin, Twitter } from "lucide-react";
+import { Menu, X, Download, Phone, Mail, MapPin, Facebook, Linkedin, Twitter, UserCircle } from "lucide-react";
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 
 import logoImg from "@assets/SIYAPHUSHA_LOGO_B_W__2_-removebg-preview_(1)_1770263085249.png";
+import companyProfilePdf from "@assets/SIYAPHUSHA_CONSORTIUM_(PTY)_LTD_COMPANY_PROFILE_1771543783518.pdf";
 
 export function Layout({ children }: { children: React.ReactNode }) {
   const [location] = useLocation();
@@ -73,12 +74,12 @@ export function Layout({ children }: { children: React.ReactNode }) {
                 />
               </Link>
             ))}
-            <a href="/company-profile.pdf" download="SIYAPHUSHA-Company-Profile.pdf">
+            <a href={companyProfilePdf} download="SIYAPHUSHA-Company-Profile.pdf">
               <Button 
                 className="font-heading font-bold bg-white text-black hover:bg-white/90 px-4 lg:px-5 uppercase tracking-widest text-xs transition-transform duration-200 hover:-translate-y-0.5"
                 data-testid="button-download-profile"
               >
-                <Download className="mr-2 h-3.5 w-3.5" />
+                <UserCircle className="mr-2 h-4 w-4" />
                 PROFILE
               </Button>
             </a>
@@ -115,12 +116,12 @@ export function Layout({ children }: { children: React.ReactNode }) {
                 {link.label}
               </Link>
             ))}
-            <a href="/company-profile.pdf" download="SIYAPHUSHA-Company-Profile.pdf" className="w-full">
+            <a href={companyProfilePdf} download="SIYAPHUSHA-Company-Profile.pdf" className="w-full">
               <Button 
                 className="font-heading font-bold w-full bg-black text-white hover:bg-gray-800 uppercase mt-2 text-sm"
                 data-testid="mobile-button-download-profile"
               >
-                <Download className="mr-2 h-4 w-4" />
+                <UserCircle className="mr-2 h-4 w-4" />
                 Download Profile
               </Button>
             </a>
@@ -164,7 +165,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
               <li><Link href="/about" className="hover:text-white transition-colors cursor-pointer">About Us</Link></li>
               <li><Link href="/projects" className="hover:text-white transition-colors cursor-pointer">Projects</Link></li>
               <li><Link href="/contact" className="hover:text-white transition-colors cursor-pointer">Contact</Link></li>
-              <li><a href="/company-profile.pdf" download className="hover:text-white transition-colors">Company Profile</a></li>
+              <li><a href={companyProfilePdf} download="SIYAPHUSHA-Company-Profile.pdf" className="hover:text-white transition-colors">Company Profile</a></li>
             </ul>
           </div>
 
