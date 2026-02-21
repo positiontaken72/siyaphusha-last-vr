@@ -623,7 +623,7 @@ export function CompanyProfile() {
                 {[
                   { purpose: "Strategic Projects", channel: "Themba Nkosi / themba@siyaphushaconsortium.co.za" },
                   { purpose: "Operations & Fleet", channel: "Solomon Howard / solly@siyaphushaconsortium.co.za" },
-                  { purpose: "Procurement & Admin (Finances)", channel: "admin@siyaphushaconsortium.co.za" },
+                  { purpose: "Admin/Procurement", channel: "admin@siyaphushaconsortium.co.za" },
                   { purpose: "Daily Operations", channel: "operations@siyaphushaconsortium.co.za" },
                   { purpose: "General Info", channel: "info@siyaphushaconsortium.co.za" }
                 ].map((row, i) => (
