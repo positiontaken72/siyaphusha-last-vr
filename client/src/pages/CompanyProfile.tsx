@@ -58,7 +58,7 @@ export function CompanyProfile() {
       <div className="hidden print:block page-footer">
         <div className="flex flex-col items-center gap-2">
           <img src="/attached_assets/SIYAPHUSHA_LOGO_B_W__2_-removebg-preview_(1)_1770360132076.png" alt="Siyaphusha Logo" className="h-8 w-auto opacity-40 grayscale" />
-          <span>WWW.SIYAPHUSHACONSORTIUM.CO.ZA | INFO@SIYAPHUSHACONSORTIUM.CO.ZA</span>
+          <span className="font-bold tracking-widest text-[8px] opacity-60 uppercase">SIYAPHUSHA CONSORTIUM (PTY) LTD | POWERING PROGRESS, RESPONSIBLY.</span>
         </div>
       </div>
 
