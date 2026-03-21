@@ -44,7 +44,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
             <img 
               src={logoImg} 
               alt="Siyaphusha Consortium (PTY) Ltd Logo" 
-              className="h-9 sm:h-11 w-auto object-contain transition-all duration-300"
+              className="h-14 sm:h-16 w-auto object-contain transition-all duration-300"
               style={{ filter: isScrolled ? 'invert(1)' : 'none' }}
             />
           </Link>
@@ -152,7 +152,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
               <img 
                 src={logoImg} 
                 alt="Siyaphusha Consortium (PTY) Ltd Logo" 
-                className="h-10 sm:h-12 w-auto object-contain" 
+                className="h-14 sm:h-16 w-auto object-contain" 
               />
             </div>
             <p className="text-gray-400 text-xs sm:text-sm leading-relaxed mb-6">
