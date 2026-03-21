@@ -75,7 +75,7 @@ export function CompanyProfile() {
         <div className="relative z-10 flex flex-col h-full text-white">
           <div className="flex justify-between items-start mb-24">
             <div className="flex items-center gap-4">
-              <img src="/siyaphusha-logo-white.png" alt="Siyaphusha Logo" className="h-28 w-auto object-contain drop-shadow-2xl" />
+              <img src="/siyaphusha-logo-white.png" alt="Siyaphusha Logo" className="h-[123px] w-auto object-contain drop-shadow-2xl" />
             </div>
             <div className="text-right uppercase tracking-[0.2em] font-bold text-sm">
               Established 2020

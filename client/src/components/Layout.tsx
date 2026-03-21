@@ -46,7 +46,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
             <img 
               src={isScrolled ? logoGreyImg : logoWhiteImg} 
               alt="Siyaphusha Consortium (PTY) Ltd Logo" 
-              className="h-16 sm:h-20 w-auto object-contain transition-all duration-300" 
+              className={cn("w-auto object-contain transition-all duration-300", isScrolled ? "h-16 sm:h-20" : "h-[70px] sm:h-[88px]")} 
             />
           </Link>
 
