@@ -75,7 +75,7 @@ export function CompanyProfile() {
         <div className="relative z-10 flex flex-col h-full text-white">
           <div className="flex justify-between items-start mb-24">
             <div className="flex items-center gap-4">
-              <img src="/siyaphusha-logo.png" alt="Siyaphusha Logo" className="h-28 w-auto drop-shadow-2xl" />
+              <img src="/siyaphusha-logo-white.png" alt="Siyaphusha Logo" className="h-28 w-auto object-contain drop-shadow-2xl" />
             </div>
             <div className="text-right uppercase tracking-[0.2em] font-bold text-sm">
               Established 2020
@@ -657,7 +657,7 @@ export function CompanyProfile() {
               </div>
             </div>
             <div className="flex flex-col justify-end items-end gap-4">
-              <img src="/siyaphusha-logo.png" alt="Siyaphusha Logo" className="h-12 w-auto brightness-0 invert" />
+              <img src="/siyaphusha-logo-white.png" alt="Siyaphusha Logo" className="h-12 w-auto object-contain" />
               <p className="text-[10px] opacity-40 uppercase tracking-[0.2em]">&copy; 2026 Siyaphusha Consortium (PTY) Ltd</p>
             </div>
           </div>

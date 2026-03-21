@@ -4,8 +4,10 @@ import { Menu, X, Download, Phone, Mail, MapPin, Facebook, Linkedin, Twitter, Us
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 
-import logoImg from "@assets/SIYAPHUSHA_MAIN_LOGO_GREY_1774125571379.png";
+import logoGreyImg from "@assets/SIYAPHUSHA_MAIN_LOGO_GREY_1774125571379.png";
 import companyProfilePdf from "@assets/SIYAPHUSHA_CONSORTIUM_(PTY)_LTD_COMPANY_PROFILE_1771543783518.pdf";
+
+const logoWhiteImg = "/siyaphusha-logo-white.png";
 
 export function Layout({ children }: { children: React.ReactNode }) {
   const [location] = useLocation();
@@ -42,7 +44,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
           {/* Logotype */}
           <Link href="/" className="flex items-center gap-3 cursor-pointer group" data-testid="logo-link">
             <img 
-              src={logoImg} 
+              src={isScrolled ? logoGreyImg : logoWhiteImg} 
               alt="Siyaphusha Consortium (PTY) Ltd Logo" 
               className="h-16 sm:h-20 w-auto object-contain transition-all duration-300" 
             />
@@ -149,7 +151,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
           <div>
             <div className="mb-6">
               <img 
-                src={logoImg} 
+                src={logoWhiteImg} 
                 alt="Siyaphusha Consortium (PTY) Ltd Logo" 
                 className="h-16 sm:h-20 w-auto object-contain" 
               />
