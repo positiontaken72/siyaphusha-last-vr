@@ -4,7 +4,7 @@ import { Menu, X, Download, Phone, Mail, MapPin, Facebook, Linkedin, Twitter, Us
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 
-import logoImg from "@assets/SIYAPHUSHA_MAIN_LOGO_GREY_1774125571379.png";
+import logoImg from "@assets/SIYAPHUSHA_MAIN_LOGO_GREY-removebg-preview_1774125819725.png";
 import companyProfilePdf from "@assets/SIYAPHUSHA_CONSORTIUM_(PTY)_LTD_COMPANY_PROFILE_1771543783518.pdf";
 
 export function Layout({ children }: { children: React.ReactNode }) {
