@@ -4,7 +4,7 @@ import { Menu, X, Download, Phone, Mail, MapPin, Facebook, Linkedin, Twitter, Us
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 
-import logoImg from "@assets/SIYAPHUSHA_LOGO_B_W__2_-removebg-preview_(1)_1770263085249.png";
+import logoImg from "@assets/SIYAPHUSHA_MAIN_LOGO_GREY_1774125571379.png";
 import companyProfilePdf from "@assets/SIYAPHUSHA_CONSORTIUM_(PTY)_LTD_COMPANY_PROFILE_1771543783518.pdf";
 
 export function Layout({ children }: { children: React.ReactNode }) {
@@ -33,7 +33,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <header 
         className={cn(
           "fixed top-0 z-50 w-full transition-all duration-300",
-          isScrolled ? "bg-black/80 backdrop-blur-md py-3" : "bg-transparent py-4 sm:py-5"
+          isScrolled ? "bg-white shadow-md py-3" : "bg-transparent py-4 sm:py-5"
         )}
         style={{ borderRadius: 0 }}
         data-testid="main-header"
@@ -60,7 +60,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
                 <span 
                   className={cn(
                     "font-heading font-bold text-xs uppercase tracking-wide transition-colors duration-300 drop-shadow-sm",
-                    location === link.href ? "text-white" : "text-white/70 group-hover:text-white"
+                    isScrolled
+                      ? location === link.href ? "text-black" : "text-gray-600 group-hover:text-black"
+                      : location === link.href ? "text-white" : "text-white/70 group-hover:text-white"
                   )}
                 >
                   {link.label}
@@ -68,7 +70,8 @@ export function Layout({ children }: { children: React.ReactNode }) {
                 {/* Underline on hover */}
                 <span 
                   className={cn(
-                    "absolute bottom-0 left-0 h-[1px] bg-white transition-all duration-300",
+                    "absolute bottom-0 left-0 h-[1px] transition-all duration-300",
+                    isScrolled ? "bg-black" : "bg-white",
                     location === link.href ? "w-full" : "w-0 group-hover:w-full"
                   )}
                 />
@@ -76,7 +79,10 @@ export function Layout({ children }: { children: React.ReactNode }) {
             ))}
             <a href={companyProfilePdf} download="SIYAPHUSHA-Company-Profile.pdf">
               <Button 
-                className="font-heading font-bold bg-white text-black hover:bg-white/90 px-4 lg:px-5 uppercase tracking-widest text-xs transition-transform duration-200 hover:-translate-y-0.5"
+                className={cn(
+                  "font-heading font-bold px-4 lg:px-5 uppercase tracking-widest text-xs transition-transform duration-200 hover:-translate-y-0.5",
+                  isScrolled ? "bg-black text-white hover:bg-gray-800" : "bg-white text-black hover:bg-white/90"
+                )}
                 data-testid="button-download-profile"
               >
                 <Download className="mr-2 h-3.5 w-3.5" />
@@ -87,7 +93,10 @@ export function Layout({ children }: { children: React.ReactNode }) {
 
           {/* Mobile Toggle */}
           <button 
-            className="md:hidden p-2 bg-white/10 backdrop-blur-sm text-white transition-all duration-200 hover:bg-white/20"
+            className={cn(
+              "md:hidden p-2 transition-all duration-200",
+              isScrolled ? "bg-black/10 text-black hover:bg-black/20" : "bg-white/10 backdrop-blur-sm text-white hover:bg-white/20"
+            )}
             style={{ borderRadius: 0 }}
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             data-testid="button-mobile-menu"

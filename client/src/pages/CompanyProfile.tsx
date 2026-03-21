@@ -57,7 +57,7 @@ export function CompanyProfile() {
       {/* Page Footer for Print */}
       <div className="hidden print:block page-footer">
         <div className="flex flex-col items-center gap-2">
-          <img src="/attached_assets/SIYAPHUSHA_LOGO_B_W__2_-removebg-preview_(1)_1770360132076.png" alt="Siyaphusha Logo" className="h-8 w-auto opacity-40 grayscale" />
+          <img src="/siyaphusha-logo.png" alt="Siyaphusha Logo" className="h-8 w-auto opacity-40 grayscale" />
           <span className="font-bold tracking-widest text-[8px] opacity-60 uppercase">SIYAPHUSHA CONSORTIUM (PTY) LTD | POWERING PROGRESS, RESPONSIBLY.</span>
         </div>
       </div>
@@ -75,7 +75,7 @@ export function CompanyProfile() {
         <div className="relative z-10 flex flex-col h-full text-white">
           <div className="flex justify-between items-start mb-24">
             <div className="flex items-center gap-4">
-              <img src="/attached_assets/SIYAPHUSHA_LOGO_B_W__2_-removebg-preview_(1)_1770360132076.png" alt="Siyaphusha Logo" className="h-28 w-auto drop-shadow-2xl" />
+              <img src="/siyaphusha-logo.png" alt="Siyaphusha Logo" className="h-28 w-auto drop-shadow-2xl" />
             </div>
             <div className="text-right uppercase tracking-[0.2em] font-bold text-sm">
               Established 2020
@@ -623,7 +623,7 @@ export function CompanyProfile() {
                 {[
                   { purpose: "Strategic Projects", channel: "Themba Nkosi / themba@siyaphushaconsortium.co.za" },
                   { purpose: "Operations & Fleet", channel: "Solomon Howard / solly@siyaphushaconsortium.co.za" },
-                  { purpose: "Admin/Procurement", channel: "admin@siyaphushaconsortium.co.za" },
+                  { purpose: "Admin & Procurement", channel: "admin@siyaphushaconsortium.co.za" },
                   { purpose: "Daily Operations", channel: "operations@siyaphushaconsortium.co.za" },
                   { purpose: "General Info", channel: "info@siyaphushaconsortium.co.za" }
                 ].map((row, i) => (
@@ -657,7 +657,7 @@ export function CompanyProfile() {
               </div>
             </div>
             <div className="flex flex-col justify-end items-end gap-4">
-              <img src="/attached_assets/Copy_of_SIYAPHUSHA_LOGO_WHITE_(1)_1770260074500.png" alt="Siyaphusha Logo" className="h-12 w-auto brightness-0 invert" />
+              <img src="/siyaphusha-logo.png" alt="Siyaphusha Logo" className="h-12 w-auto brightness-0 invert" />
               <p className="text-[10px] opacity-40 uppercase tracking-[0.2em]">&copy; 2026 Siyaphusha Consortium (PTY) Ltd</p>
             </div>
           </div>
