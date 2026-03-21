@@ -4,8 +4,9 @@ import { Menu, X, Download, Phone, Mail, MapPin, Facebook, Linkedin, Twitter, Us
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 
-import logoImg from "@assets/ChatGPT_Image_Mar_21__2026__11_17_32_PM-removebg-preview_(1)_1774128158121.png";
 import companyProfilePdf from "@assets/SIYAPHUSHA_CONSORTIUM_(PTY)_LTD_COMPANY_PROFILE_1771543783518.pdf";
+
+const logoImg = "/siyaphusha-logo.png";
 
 export function Layout({ children }: { children: React.ReactNode }) {
   const [location] = useLocation();
@@ -45,7 +46,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
               src={logoImg} 
               alt="Siyaphusha Consortium (PTY) Ltd Logo" 
               className="object-contain transition-all duration-300"
-              style={{ height: '75px', width: 'auto', filter: isScrolled ? 'invert(1)' : 'none' }}
+              style={{ height: '48px', width: 'auto', filter: isScrolled ? 'invert(1)' : 'none' }}
             />
           </Link>
 
@@ -153,7 +154,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
                 src={logoImg} 
                 alt="Siyaphusha Consortium (PTY) Ltd Logo" 
                 className="object-contain"
-                style={{ height: '50px', width: 'auto' }} 
+                style={{ height: '48px', width: 'auto' }} 
               />
             </div>
             <p className="text-gray-400 text-xs sm:text-sm leading-relaxed mb-6">
