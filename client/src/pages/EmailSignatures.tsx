@@ -144,10 +144,9 @@ function EmailSignature({ name, title, emails, phones, website }: SignatureProps
       <div className="flex flex-col md:flex-row gap-6 items-start md:items-center">
         <div className="shrink-0">
           <img 
-            src="/siyaphusha-logo.png" 
+            src="/attached_assets/Copy_of_SIYAPHUSHA_LOGO_WHITE_(1)_1770260074500.png" 
             alt="Siyaphusha Logo" 
-            className="w-auto"
-            style={{ height: '52px' }}
+            className="h-16 w-auto"
           />
         </div>
         

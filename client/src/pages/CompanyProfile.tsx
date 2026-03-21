@@ -57,7 +57,7 @@ export function CompanyProfile() {
       {/* Page Footer for Print */}
       <div className="hidden print:block page-footer">
         <div className="flex flex-col items-center gap-2">
-          <img src="/siyaphusha-logo.png" alt="Siyaphusha Logo" className="h-8 w-auto brightness-0 opacity-40" />
+          <img src="/siyaphusha-logo.png" alt="Siyaphusha Logo" className="h-8 w-auto opacity-40 grayscale" />
           <span className="font-bold tracking-widest text-[8px] opacity-60 uppercase">SIYAPHUSHA CONSORTIUM (PTY) LTD | POWERING PROGRESS, RESPONSIBLY.</span>
         </div>
       </div>
@@ -75,7 +75,7 @@ export function CompanyProfile() {
         <div className="relative z-10 flex flex-col h-full text-white">
           <div className="flex justify-between items-start mb-24">
             <div className="flex items-center gap-4">
-              <img src="/siyaphusha-logo.png" alt="Siyaphusha Logo" className="w-auto drop-shadow-2xl" style={{ height: '56px' }} />
+              <img src="/siyaphusha-logo.png" alt="Siyaphusha Logo" className="h-28 w-auto drop-shadow-2xl" />
             </div>
             <div className="text-right uppercase tracking-[0.2em] font-bold text-sm">
               Established 2020
