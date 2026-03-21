@@ -45,7 +45,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
               src={logoImg} 
               alt="Siyaphusha Consortium (PTY) Ltd Logo" 
               className="object-contain transition-all duration-300"
-              style={{ height: '50px', width: 'auto', filter: isScrolled ? 'invert(1)' : 'none' }}
+              style={{ height: '75px', width: 'auto', filter: isScrolled ? 'invert(1)' : 'none' }}
             />
           </Link>
 
