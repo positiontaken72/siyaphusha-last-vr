@@ -57,7 +57,7 @@ export function CompanyProfile() {
       {/* Page Footer for Print */}
       <div className="hidden print:block page-footer">
         <div className="flex flex-col items-center gap-2">
-          <img src="/siyaphusha-logo.png" alt="Siyaphusha Logo" className="h-8 w-auto opacity-40 grayscale" />
+          <img src="/siyaphusha-logo.png" alt="Siyaphusha Logo" className="h-8 w-auto brightness-0 opacity-40" />
           <span className="font-bold tracking-widest text-[8px] opacity-60 uppercase">SIYAPHUSHA CONSORTIUM (PTY) LTD | POWERING PROGRESS, RESPONSIBLY.</span>
         </div>
       </div>
