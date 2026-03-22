@@ -1,19 +1,21 @@
-import { useRef, useState } from "react";
+import { useRef, useState, type CSSProperties } from "react";
 import html2canvas from "html2canvas";
 import { Download, Loader2 } from "lucide-react";
 
-/* ─── Inline SVG Icons (html2canvas safe) ─────────────────────── */
+/* ─── Inline SVG Icons — matching original letterhead style ──── */
+const ICON_STYLE: CSSProperties = { flexShrink: 0, display: "block" };
+
 function IconPin() {
   return (
-    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#555" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0, marginTop: "1px" }}>
-      <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/>
+    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#5a5a5a" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" style={ICON_STYLE}>
+      <path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"/>
       <circle cx="12" cy="10" r="3"/>
     </svg>
   );
 }
 function IconMail() {
   return (
-    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#555" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0, marginTop: "1px" }}>
+    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#5a5a5a" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" style={ICON_STYLE}>
       <rect x="2" y="4" width="20" height="16" rx="2"/>
       <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
     </svg>
@@ -21,7 +23,7 @@ function IconMail() {
 }
 function IconGlobe() {
   return (
-    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#555" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0, marginTop: "1px" }}>
+    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#5a5a5a" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" style={ICON_STYLE}>
       <circle cx="12" cy="12" r="10"/>
       <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/>
       <path d="M2 12h20"/>
@@ -30,23 +32,33 @@ function IconGlobe() {
 }
 function IconPhone() {
   return (
-    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#555" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0, marginTop: "1px" }}>
+    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#5a5a5a" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" style={ICON_STYLE}>
       <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.51a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
     </svg>
   );
 }
 
-/* ─── Single contact row ───────────────────────────────────────── */
-function InfoRow({ icon, text }: { icon: React.ReactNode; text: string }) {
+/* ─── Single contact row — original style ─────────────────────── */
+function InfoRow({
+  icon,
+  text,
+  bold = false,
+}: {
+  icon: React.ReactNode;
+  text: string;
+  bold?: boolean;
+}) {
   return (
-    <div style={{ display: "flex", alignItems: "flex-start", gap: "8px" }}>
+    <div style={{ display: "flex", alignItems: "center", gap: "7px" }}>
       {icon}
       <span
         style={{
-          fontSize: "9.5px",
-          color: "#3a3a3a",
-          letterSpacing: "0.04em",
-          lineHeight: 1.5,
+          fontSize: "10px",
+          color: "#5a5a5a",
+          letterSpacing: "0.03em",
+          lineHeight: 1.4,
+          fontFamily: "Arial, 'Helvetica Neue', Helvetica, sans-serif",
+          fontWeight: bold ? 700 : 400,
           textTransform: "uppercase",
         }}
       >
@@ -202,9 +214,9 @@ function LetterheadHeader() {
               gap: "5px",
             }}
           >
-            <InfoRow icon={<IconPin />} text="1855 Finca Street, Phola Ogies, eMalahleni 2233, Mpumalanga" />
+            <InfoRow icon={<IconPin />} text="1855 Finca Street, Phola Ogies, Emalahleni 2233 Mpumalanga" />
             <InfoRow icon={<IconMail />} text="info@siyaphushaconsortium.co.za" />
-            <InfoRow icon={<IconGlobe />} text="www.siyaphushaconsortium.co.za" />
+            <InfoRow icon={<IconGlobe />} text="www.siyaphushaconsortium.co.za" bold />
             <InfoRow icon={<IconPhone />} text="073 256 7948  /  073 064 1347" />
           </div>
         </div>
