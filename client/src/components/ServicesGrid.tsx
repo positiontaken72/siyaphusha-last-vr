@@ -15,7 +15,7 @@ const services = [
     image: logisticsImg,
   },
   {
-    title: "Stock Pile",
+    title: "Stockpile Management",
     description: "Managing inventory for seamless supply. Our stockpile management ensures consistent quality and availability for our mining partners.",
     image: stockpileImg,
   },

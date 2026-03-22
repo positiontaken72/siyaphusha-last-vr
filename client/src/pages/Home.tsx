@@ -14,7 +14,6 @@ import transnetLogo from "@assets/transnet-1-360x195-removebg-preview_1770227873
 import eskomLogo from "@assets/eskom-logo2_1763669662961.jpeg";
 import glencoreLogo from "@assets/Glencore-Logo.wine_1763669624672.png";
 import thungelaLogo from "@assets/1361743_1763669642408.png";
-import angloLogo from "@assets/1361911_1763669684570.png";
 
 export function Home() {
   usePageTitle();
@@ -40,9 +39,6 @@ export function Home() {
                </div>
                <div className="h-12 sm:h-16 md:h-20 flex items-center justify-center">
                  <img src={eskomLogo} alt="Eskom" className="h-full w-auto object-contain hover:grayscale-0 transition-all duration-300" />
-               </div>
-               <div className="h-12 sm:h-16 md:h-20 flex items-center justify-center">
-                 <img src={angloLogo} alt="Anglo American" className="h-full w-auto object-contain hover:grayscale-0 transition-all duration-300" />
                </div>
             </div>
           ))}
