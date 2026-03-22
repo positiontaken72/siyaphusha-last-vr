@@ -2,7 +2,8 @@ import { MapContainer, TileLayer, Marker, Popup, Polyline, Tooltip } from "react
 import { Icon, divIcon } from "leaflet";
 import "leaflet/dist/leaflet.css";
 import { cn } from "@/lib/utils";
-import { useState } from "react";
+import { useState, useRef, useCallback, useEffect } from "react";
+import { Maximize2, Minimize2 } from "lucide-react";
 
 // Fix Leaflet default icon issue
 import markerIconPng from "leaflet/dist/images/marker-icon.png";
@@ -66,6 +67,25 @@ const routes = [
 
 export function RouteMap() {
   const [activeRoute, setActiveRoute] = useState<number | null>(null);
+  const [isFullscreen, setIsFullscreen] = useState(false);
+  const mapWrapperRef = useRef<HTMLDivElement>(null);
+
+  const toggleFullscreen = useCallback(async () => {
+    if (!document.fullscreenElement) {
+      await mapWrapperRef.current?.requestFullscreen();
+      setIsFullscreen(true);
+    } else {
+      await document.exitFullscreen();
+      setIsFullscreen(false);
+    }
+  }, []);
+
+  // Sync state when user presses Escape to exit fullscreen
+  useEffect(() => {
+    const handler = () => setIsFullscreen(!!document.fullscreenElement);
+    document.addEventListener("fullscreenchange", handler);
+    return () => document.removeEventListener("fullscreenchange", handler);
+  }, []);
 
   return (
     <section className="py-20 bg-white">
@@ -104,7 +124,17 @@ export function RouteMap() {
           </div>
 
           {/* Map Container */}
-          <div className="md:w-2/3 h-[500px] rounded-xl overflow-hidden shadow-2xl border-4 border-white relative z-0">
+          <div
+            ref={mapWrapperRef}
+            className="md:w-2/3 h-[500px] rounded-xl overflow-hidden shadow-2xl border-4 border-white relative z-0 [&:fullscreen]:h-screen [&:fullscreen]:w-screen [&:fullscreen]:rounded-none [&:fullscreen]:border-0"
+          >
+             <button
+              onClick={toggleFullscreen}
+              title={isFullscreen ? "Exit fullscreen" : "Open fullscreen"}
+              className="absolute top-3 right-3 z-[1000] bg-white/90 hover:bg-white text-black p-2 rounded shadow-md transition-all duration-200 hover:shadow-lg"
+            >
+              {isFullscreen ? <Minimize2 className="h-4 w-4" /> : <Maximize2 className="h-4 w-4" />}
+            </button>
              <MapContainer 
               center={[-26.15, 29.5]} 
               zoom={9} 
