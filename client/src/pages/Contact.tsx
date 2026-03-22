@@ -1,7 +1,9 @@
 import { ContactForm } from "@/components/ContactForm";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { usePageTitle } from "@/hooks/use-page-title";
 
 export function Contact() {
+  usePageTitle("Contact Us");
   return (
     <div className="animate-in fade-in duration-500">
       {/* Hero header with proper spacing for fixed navbar */}

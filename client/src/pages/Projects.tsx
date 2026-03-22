@@ -1,5 +1,6 @@
 import { Badge } from "@/components/ui/badge";
 import { useState } from "react";
+import { usePageTitle } from "@/hooks/use-page-title";
 import { cn } from "@/lib/utils";
 import { ChevronRight } from "lucide-react";
 
@@ -50,6 +51,7 @@ const projects = [
 const clients = ["All", "Thungela Resources", "Glencore", "Eskom", "Transnet"];
 
 export function Projects() {
+  usePageTitle("Our Projects");
   const [filter, setFilter] = useState("All");
 
   const filteredProjects = filter === "All" 

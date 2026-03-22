@@ -1,3 +1,4 @@
+import { usePageTitle } from "@/hooks/use-page-title";
 import { Hero } from "@/components/Hero";
 import { StatsBar } from "@/components/StatsBar";
 import { ServicesGrid } from "@/components/ServicesGrid";
@@ -16,6 +17,7 @@ import thungelaLogo from "@assets/1361743_1763669642408.png";
 import angloLogo from "@assets/1361911_1763669684570.png";
 
 export function Home() {
+  usePageTitle();
   return (
     <div className="animate-in fade-in duration-500">
       <Hero />

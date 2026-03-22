@@ -1,4 +1,5 @@
 import { Target, Award, Mail, Linkedin } from "lucide-react";
+import { usePageTitle } from "@/hooks/use-page-title";
 
 const leaders = [
   {
@@ -31,6 +32,7 @@ const visionMission = [
 ];
 
 export function About() {
+  usePageTitle("About Us");
   return (
     <div className="animate-in fade-in duration-500">
       {/* Hero header with proper spacing for fixed navbar */}
