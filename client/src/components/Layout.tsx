@@ -61,7 +61,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
               >
                 <span 
                   className={cn(
-                    "font-heading font-bold text-xs uppercase tracking-wide transition-colors duration-300 drop-shadow-sm",
+                    "font-heading font-semibold text-xs uppercase tracking-wide transition-colors duration-300 drop-shadow-sm",
                     isScrolled
                       ? location === link.href ? "text-black" : "text-gray-600 group-hover:text-black"
                       : location === link.href ? "text-white" : "text-white/70 group-hover:text-white"
