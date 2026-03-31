@@ -46,9 +46,9 @@ export function Home() {
       </section>
 
       <ServicesGrid />
-      <RouteMap />
+      <div id="operations-footprint"><RouteMap /></div>
       <ESGSection />
-      <CommunityImpact />
+      <div id="community-impact"><CommunityImpact /></div>
 
       {/* Final CTA */}
       <section className="py-16 sm:py-24 bg-gray-900 text-center w-full">
