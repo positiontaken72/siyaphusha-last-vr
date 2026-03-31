@@ -1,11 +1,13 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
+import { Send, Loader2 } from "lucide-react";
 
 const formSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),
@@ -16,6 +18,8 @@ const formSchema = z.object({
 
 export function ContactForm() {
   const { toast } = useToast();
+  const [isSending, setIsSending] = useState(false);
+
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -26,18 +30,41 @@ export function ContactForm() {
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    toast({
-      title: "Message Sent (Simulated)",
-      description: "We've received your inquiry and an email would be sent to eddienkuna735@gmail.com.",
-    });
-    console.log("Email sent to eddienkuna735@gmail.com with values:", values);
-    form.reset();
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    setIsSending(true);
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(values),
+      });
+
+      const data = await res.json();
+
+      if (!res.ok) {
+        throw new Error(data.error || "Something went wrong.");
+      }
+
+      toast({
+        title: "Message Sent",
+        description: "Thank you for reaching out. We'll get back to you shortly.",
+      });
+      form.reset();
+    } catch (err: any) {
+      toast({
+        title: "Failed to Send",
+        description: err.message || "Please try again or email us directly.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSending(false);
+    }
   }
 
   return (
     <div className="bg-white p-8 rounded-lg shadow-lg border border-gray-200">
-      <h3 className="font-heading font-bold text-2xl text-black mb-6">Request a Quote</h3>
+      <h3 className="font-heading font-bold text-2xl text-black mb-2">Request a Quote</h3>
+      <p className="text-gray-500 text-sm mb-6">Your message will be sent to <span className="font-medium text-black">info@siyaphushaconsortium.co.za</span></p>
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
           <div className="grid md:grid-cols-2 gap-6">
@@ -48,7 +75,7 @@ export function ContactForm() {
                 <FormItem>
                   <FormLabel>Full Name</FormLabel>
                   <FormControl>
-                    <Input placeholder="John Doe" {...field} className="bg-white border-gray-300" />
+                    <Input placeholder="John Doe" {...field} className="bg-white border-gray-300" data-testid="input-name" />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -61,7 +88,7 @@ export function ContactForm() {
                 <FormItem>
                   <FormLabel>Email Address</FormLabel>
                   <FormControl>
-                    <Input placeholder="john@company.com" {...field} className="bg-white border-gray-300" />
+                    <Input placeholder="john@company.com" {...field} className="bg-white border-gray-300" data-testid="input-email" />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -76,7 +103,7 @@ export function ContactForm() {
               <FormItem>
                 <FormLabel>Company Name (Optional)</FormLabel>
                 <FormControl>
-                  <Input placeholder="Company Ltd" {...field} className="bg-white border-gray-300" />
+                  <Input placeholder="Company Ltd" {...field} className="bg-white border-gray-300" data-testid="input-company" />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -92,8 +119,9 @@ export function ContactForm() {
                 <FormControl>
                   <Textarea 
                     placeholder="Please describe your project requirements..." 
-                    className="min-h-[120px] bg-white border-gray-300" 
-                    {...field} 
+                    className="min-h-[140px] bg-white border-gray-300" 
+                    {...field}
+                    data-testid="input-message"
                   />
                 </FormControl>
                 <FormMessage />
@@ -101,8 +129,23 @@ export function ContactForm() {
             )}
           />
 
-          <Button type="submit" className="w-full bg-black text-white hover:bg-gray-800 font-bold uppercase h-12">
-            Send Message
+          <Button
+            type="submit"
+            disabled={isSending}
+            className="w-full bg-black text-white hover:bg-gray-800 font-bold uppercase h-12 tracking-widest"
+            data-testid="button-send-message"
+          >
+            {isSending ? (
+              <>
+                <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                Sending...
+              </>
+            ) : (
+              <>
+                <Send className="mr-2 h-4 w-4" />
+                Send Message
+              </>
+            )}
           </Button>
         </form>
       </Form>
