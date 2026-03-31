@@ -66,7 +66,7 @@ export function ServicesGrid() {
           {services.map((service, index) => (
             <div
               key={index}
-              className="group bg-white border border-gray-200 overflow-hidden transition-all duration-500 hover:shadow-xl shadow-sm"
+              className="group bg-white overflow-hidden transition-all duration-500"
             >
               <div className="aspect-[16/10] overflow-hidden">
                 <img
